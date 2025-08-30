@@ -2,5 +2,4 @@ pytesseract
 Pillow
 opencv-python-headless
 tk
-re  # Built-in, but listed for completeness
 spacy
