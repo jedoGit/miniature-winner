@@ -1,6 +1,6 @@
 # Image Text and PII Detector
 
-This is a simple Python application that uses OCR to extract text from images and detects Personally Identifiable Information (PII) using a hybrid of NLP (spaCy) and regex.
+This is a Python application that uses OCR to extract text from images and detects Personally Identifiable Information (PII) using a hybrid of NLP (spaCy) and regex.
 
 ## Features
 
