@@ -6,9 +6,6 @@ from app.rag_chain import build_qa_chain
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OpenAIEmbeddings
 
-
-from config import OPENAI_API_KEY
-
 CHROMA_PATH = "vectorstore"
 app = FastAPI()
 
