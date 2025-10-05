@@ -206,3 +206,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 *.exe
+
+
+__pycache__/
+*.pyc
+vectorstore/
+.env
+RAG-App/docs/*.*
+RAG-App/.env*
+RAG-App/.env
