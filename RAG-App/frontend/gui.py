@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("🧠 RAG Q&A App")
+st.title("RAG Q&A App")
 
 uploaded_file = st.file_uploader("Upload a document", type=["md", "txt"])
 tags = st.text_input("Optional tags (comma-separated)")
