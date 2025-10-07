@@ -211,7 +211,6 @@ __marimo__/
 __pycache__/
 *.pyc
 vectorstore/
-.env
-RAG-App/docs/*.*
-RAG-App/.env*
-RAG-App/.env
+.env*
+*/.env*
+
