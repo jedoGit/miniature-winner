@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("Gemini 4B RAG App")
+st.title("Gemma3 4B RAG App")
 
 uploaded_file = st.file_uploader("Upload a document", type=["txt", "pdf"])
 if uploaded_file:

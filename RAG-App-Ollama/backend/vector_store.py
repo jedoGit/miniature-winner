@@ -5,7 +5,7 @@ db = None
 
 def store_chunks(chunks):
     global db
-    embeddings = OllamaEmbeddings(model="gemini:4b")
+    embeddings = OllamaEmbeddings(model="nomic-embed-text:v1.5")
     db = FAISS.from_documents(chunks, embeddings)
 
 def retrieve_chunks(query):

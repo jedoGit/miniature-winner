@@ -1,3 +1,3 @@
-OLLAMA_MODEL = "gemini:4b"
+OLLAMA_MODEL = "gemini3:4b"
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
