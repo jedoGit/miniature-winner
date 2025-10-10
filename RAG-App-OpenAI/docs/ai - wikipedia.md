@@ -1,0 +1,3537 @@
+﻿Artificial intelligence
+Artificial intelligence (AI) is the capability of computational systems to perform tasks typically
+associated with human intelligence, such as learning, reasoning, problem-solving, perception, and
+decision-making. It is a field of research in computer science that develops and studies methods and
+software that enable machines to perceive their environment and use learning and intelligence to take
+actions that maximize their chances of achieving defined goals.[1]
+High-profile applications of AI include advanced web search engines (e.g., Google Search);
+recommendation systems (used by YouTube, Amazon, and Netflix); virtual assistants (e.g., Google
+Assistant, Siri, and Alexa); autonomous vehicles (e.g., Waymo); generative and creative tools (e.g.,
+language models and AI art); and superhuman play and analysis in strategy games (e.g., chess and
+Go). However, many AI applications are not perceived as AI: "A lot of cutting edge AI has filtered into
+general applications, often without being called AI because once something becomes useful enough
+and common enough it's not labeled AI anymore."[2][3]
+Various subfields of AI research are centered around particular goals and the use of particular tools.
+The traditional goals of AI research include learning, reasoning, knowledge representation, planning,
+natural language processing, perception, and support for robotics.
+[a] To reach these goals, AI
+researchers have adapted and integrated a wide range of techniques, including search and
+mathematical optimization, formal logic, artificial neural networks, and methods based on statistics,
+operations research, and economics.
+[b] AI also draws upon psychology, linguistics, philosophy,
+neuroscience, and other fields.[4] Some companies, such as OpenAI, Google DeepMind and Meta,
+[5]
+aim to create artificial general intelligence (AGI)—AI that can complete virtually any cognitive task at
+least as well as a human.
+Artificial intelligence was founded as an academic discipline in 1956,[6] and the field went through
+multiple cycles of optimism throughout its history,
+[7][8]
+followed by periods of disappointment and
+loss of funding, known as AI winters.
+[9][10] Funding and interest vastly increased after 2012 when
+graphics processing units started being used to accelerate neural networks and deep learning
+outperformed previous AI techniques.[11] This growth accelerated further after 2017 with the
+transformer architecture.
+[12]
+In the 2020s, an ongoing period of rapid progress in advanced
+generative AI became known as the AI boom. Generative AI's ability to create and modify content has
+led to several unintended consequences and harms, which has raised ethical concerns about AI's long-term effects and potential existential risks, prompting discussions about regulatory policies to ensure
+the safety and benefits of the technology.
+An ontology represents knowledge as a set of
+concepts within a domain and the relationships
+between those concepts.
+The general problem of simulating (or creating) intelligence has been broken into subproblems. These
+consist of particular traits or capabilities that researchers expect an intelligent system to display. The
+traits described below have received the most attention and cover the scope of AI research.[a]
+Early researchers developed algorithms that imitated step-by-step reasoning that humans use when
+they solve puzzles or make logical deductions.
+[13] By the late 1980s and 1990s, methods were
+developed for dealing with uncertain or incomplete information, employing concepts from probability
+and economics.
+[14]
+Many of these algorithms are insufficient for solving large reasoning problems because they
+experience a "combinatorial explosion": They become exponentially slower as the problems grow.[15]
+Even humans rarely use the step-by-step deduction that early AI research could model. They solve
+most of their problems using fast, intuitive judgments.[16] Accurate and efficient reasoning is an
+unsolved problem.
+Knowledge representation and knowledge
+engineering[17] allow AI programs to answer questions
+intelligently and make deductions about real-world
+facts. Formal knowledge representations are used in
+content-based indexing and retrieval,[18] scene
+interpretation,[19] clinical decision support,[20]
+knowledge discovery (mining "interesting" and
+actionable inferences from large databases),[21] and
+other areas.[22]
+A knowledge base is a body of knowledge represented
+in a form that can be used by a program. An ontology is
+the set of objects, relations, concepts, and properties
+used by a particular domain of knowledge.[23]
+Knowledge bases need to represent things such as
+objects, properties, categories, and relations between
+objects;[24] situations, events, states, and time;[25]
+causes and effects;[26] knowledge about knowledge
+(what we know about what other people know);[27]
+default reasoning (things that humans assume are true until they are told differently and will remain
+true even when other facts are changing);[28]
+ and many other aspects and domains of knowledge.
+Goals
+Reasoning and problem-solving
+Knowledge representation
+Among the most difficult problems in knowledge representation are the breadth of commonsense
+knowledge (the set of atomic facts that the average person knows is enormous);[29] and the sub-symbolic form of most commonsense knowledge (much of what people know is not represented as
+"facts" or "statements" that they could express verbally).[16] There is also the difficulty of knowledge
+acquisition, the problem of obtaining knowledge for AI applications.[c]
+An "agent" is anything that perceives and takes actions in the world. A rational agent has goals or
+preferences and takes actions to make them happen.[d][32]
+In automated planning, the agent has a
+specific goal.[33]
+In automated decision-making, the agent has preferences—there are some situations
+it would prefer to be in, and some situations it is trying to avoid. The decision-making agent assigns a
+number to each situation (called the "utility") that measures how much the agent prefers it. For each
+possible action, it can calculate the "expected utility": the utility of all possible outcomes of the action,
+weighted by the probability that the outcome will occur. It can then choose the action with the
+maximum expected utility.[34]
+In classical planning, the agent knows exactly what the effect of any action will be.[35]
+In most real-world problems, however, the agent may not be certain about the situation they are in (it is
+"unknown" or "unobservable") and it may not know for certain what will happen after each possible
+action (it is not "deterministic"). It must choose an action by making a probabilistic guess and then
+reassess the situation to see if the action worked.[36]
+In some problems, the agent's preferences may be uncertain, especially if there are other agents or
+humans involved. These can be learned (e.g., with inverse reinforcement learning), or the agent can
+seek information to improve its preferences.[37] Information value theory can be used to weigh the
+value of exploratory or experimental actions.[38] The space of possible future actions and situations is
+typically intractably large, so the agents must take actions and evaluate situations while being
+uncertain of what the outcome will be.
+A Markov decision process has a transition model that describes the probability that a particular
+action will change the state in a particular way and a reward function that supplies the utility of each
+state and the cost of each action. A policy associates a decision with each possible state. The policy
+could be calculated (e.g., by iteration), be heuristic, or it can be learned.[39]
+Game theory describes the rational behavior of multiple interacting agents and is used in AI programs
+that make decisions that involve other agents.[40]
+Machine learning is the study of programs that can improve their performance on a given task
+automatically.[41]
+ It has been a part of AI from the beginning.[e]
+There are several kinds of machine learning. Unsupervised learning analyzes a stream of data and
+finds patterns and makes predictions without any other guidance.[44] Supervised learning requires
+labeling the training data with the expected answers, and comes in two main varieties: classification
+Planning and decision-making
+Learning
+In supervised learning, the training data is labelled with
+the expected answers, while in unsupervised learning, the
+model identifies patterns or structures in unlabelled data.
+(where the program must learn to predict what
+category the input belongs in) and regression
+(where the program must deduce a numeric
+function based on numeric input).[45]
+In reinforcement learning, the agent is
+rewarded for good responses and punished for
+bad ones. The agent learns to choose responses
+that are classified as "good".[46] Transfer
+learning is when the knowledge gained from
+one problem is applied to a new problem.[47]
+Deep learning is a type of machine learning that
+runs inputs through biologically inspired
+artificial neural networks for all of these types of learning.[48]
+Computational learning theory can assess learners by computational complexity, by sample
+complexity (how much data is required), or by other notions of optimization.
+[49]
+Natural language processing (NLP) allows programs to read, write and communicate in human
+languages.[50] Specific problems include speech recognition, speech synthesis, machine translation,
+information extraction, information retrieval and question answering.
+[51]
+Early work, based on Noam Chomsky's generative grammar and semantic networks, had difficulty
+with word-sense disambiguation[f] unless restricted to small domains called "micro-worlds" (due to
+the common sense knowledge problem[29]
+). Margaret Masterman believed that it was meaning and
+not grammar that was the key to understanding languages, and that thesauri and not dictionaries
+should be the basis of computational language structure.
+Modern deep learning techniques for NLP include word embedding (representing words, typically as
+vectors encoding their meaning),[52]
+transformers (a deep learning architecture using an attention
+mechanism),[53] and others.[54]
+In 2019, generative pre-trained transformer (or "GPT") language
+models began to generate coherent text,[55][56] and by 2023, these models were able to get human-level scores on the bar exam, SAT test, GRE test, and many other real-world applications.[57]
+Machine perception is the ability to use input from sensors (such as cameras, microphones, wireless
+signals, active lidar, sonar, radar, and tactile sensors) to deduce aspects of the world. Computer vision
+is the ability to analyze visual input.[58]
+The field includes speech recognition,
+[59]
+image classification,
+[60]
+facial recognition, object
+recognition,
+[61] object tracking,
+[62]
+ and robotic perception.
+[63]
+Natural language processing
+Perception
+Kismet, a robot head which was made in
+the 1990s; it is a machine that can
+recognize and simulate emotions.
+[64]
+Affective computing is a field that comprises systems that
+recognize, interpret, process, or simulate human feeling,
+emotion, and mood.
+[65] For example, some virtual assistants
+are programmed to speak conversationally or even to banter
+humorously; it makes them appear more sensitive to the
+emotional dynamics of human interaction, or to otherwise
+facilitate human–computer interaction.
+However, this tends to give naïve users an unrealistic
+conception of the intelligence of existing computer agents.[66]
+Moderate successes related to affective computing include
+textual sentiment analysis and, more recently, multimodal
+sentiment analysis, wherein AI classifies the effects displayed
+by a videotaped subject.[67]
+A machine with artificial general intelligence would be able to solve a wide variety of problems with
+breadth and versatility similar to human intelligence.
+[68]
+AI research uses a wide variety of techniques to accomplish the goals above.[b]
+AI can solve many problems by intelligently searching through many possible solutions.[69] There are
+two very different kinds of search used in AI: state space search and local search.
+State space search searches through a tree of possible states to try to find a goal state.[70] For example,
+planning algorithms search through trees of goals and subgoals, attempting to find a path to a target
+goal, a process called means-ends analysis.
+[71]
+Simple exhaustive searches[72] are rarely sufficient for most real-world problems: the search space
+(the number of places to search) quickly grows to astronomical numbers. The result is a search that is
+too slow or never completes.[15] "Heuristics" or "rules of thumb" can help prioritize choices that are
+more likely to reach a goal.[73]
+Adversarial search is used for game-playing programs, such as chess or Go. It searches through a tree
+of possible moves and countermoves, looking for a winning position.[74]
+Social intelligence
+General intelligence
+Techniques
+Search and optimization
+State space search
+Illustration of gradient descent for 3
+different starting points; two parameters
+(represented by the plan coordinates) are
+adjusted in order to minimize the loss
+function (the height)
+Local search uses mathematical optimization to find a
+solution to a problem. It begins with some form of guess and
+refines it incrementally.[75]
+Gradient descent is a type of local search that optimizes a set
+of numerical parameters by incrementally adjusting them to
+minimize a loss function. Variants of gradient descent are
+commonly used to train neural networks,
+[76]
+through the
+backpropagation algorithm.
+Another type of local search is evolutionary computation,
+which aims to iteratively improve a set of candidate solutions
+by "mutating" and "recombining" them, selecting only the
+fittest to survive each generation.[77]
+Distributed search processes can coordinate via swarm
+intelligence algorithms. Two popular swarm algorithms used
+in search are particle swarm optimization (inspired by bird flocking) and ant colony optimization
+(inspired by ant trails).[78]
+Formal logic is used for reasoning and knowledge representation.
+[79] Formal logic comes in two main
+forms: propositional logic (which operates on statements that are true or false and uses logical
+connectives such as "and", "or", "not" and "implies")[80] and predicate logic (which also operates on
+objects, predicates and relations and uses quantifiers such as "Every X is a Y" and "There are some Xs
+that are Ys").[81]
+Deductive reasoning in logic is the process of proving a new statement (conclusion) from other
+statements that are given and assumed to be true (the premises).[82] Proofs can be structured as proof
+trees, in which nodes are labelled by sentences, and children nodes are connected to parent nodes by
+inference rules.
+Given a problem and a set of premises, problem-solving reduces to searching for a proof tree whose
+root node is labelled by a solution of the problem and whose leaf nodes are labelled by premises or
+axioms. In the case of Horn clauses, problem-solving search can be performed by reasoning forwards
+from the premises or backwards from the problem.[83]
+In the more general case of the clausal form of
+first-order logic, resolution is a single, axiom-free rule of inference, in which a problem is solved by
+proving a contradiction from premises that include the negation of the problem to be solved.[84]
+Inference in both Horn clause logic and first-order logic is undecidable, and therefore intractable.
+However, backward reasoning with Horn clauses, which underpins computation in the logic
+programming language Prolog, is Turing complete. Moreover, its efficiency is competitive with
+computation in other symbolic programming languages.[85]
+Local search
+Logic
+A simple Bayesian network, with the associated conditional probability
+tables
+Fuzzy logic assigns a "degree of truth" between 0 and 1. It can therefore handle propositions that are
+vague and partially true.[86]
+Non-monotonic logics, including logic programming with negation as failure, are designed to handle
+default reasoning.
+[28] Other specialized versions of logic have been developed to describe many
+complex domains.
+Many problems in AI (including
+reasoning, planning, learning,
+perception, and robotics) require the
+agent to operate with incomplete or
+uncertain information. AI
+researchers have devised a number
+of tools to solve these problems
+using methods from probability
+theory and economics.[87] Precise
+mathematical tools have been
+developed that analyze how an agent
+can make choices and plan, using
+decision theory, decision
+analysis,
+[88] and information value
+theory.
+[89] These tools include
+models such as Markov decision processes,
+[90] dynamic decision networks,
+[91] game theory and
+mechanism design.
+[92]
+Bayesian networks[93] are a tool that can be used for reasoning (using the Bayesian inference
+algorithm),[g][95]
+learning (using the expectation–maximization algorithm),[h][97] planning (using
+decision networks)
+[98]
+ and perception (using dynamic Bayesian networks).[91]
+Probabilistic algorithms can also be used for filtering, prediction, smoothing, and finding explanations
+for streams of data, thus helping perception systems analyze processes that occur over time (e.g.,
+hidden Markov models or Kalman filters).[91]
+The simplest AI applications can be divided into two types: classifiers (e.g., "if shiny then diamond"),
+on one hand, and controllers (e.g., "if diamond then pick up"), on the other hand. Classifiers[99] are
+functions that use pattern matching to determine the closest match. They can be fine-tuned based on
+chosen examples using supervised learning. Each pattern (also called an "observation") is labeled with
+a certain predefined class. All the observations combined with their class labels are known as a data
+set. When a new observation is received, that observation is classified based on previous
+experience.[45]
+Probabilistic methods for uncertain reasoning
+Classifiers and statistical learning methods
+Expectation–maximization clustering of Old
+Faithful eruption data starts from a random guess
+but then successfully converges on an accurate
+clustering of the two physically distinct modes of
+eruption.
+A neural network is an interconnected
+group of nodes, akin to the vast network
+of neurons in the human brain.
+There are many kinds of classifiers in use.[100] The
+decision tree is the simplest and most widely used
+symbolic machine learning algorithm.[101] K-nearest
+neighbor algorithm was the most widely used
+analogical AI until the mid-1990s, and Kernel methods
+such as the support vector machine (SVM) displaced k-nearest neighbor in the 1990s.[102] The naive Bayes
+classifier is reportedly the "most widely used
+learner"[103] at Google, due in part to its
+scalability.[104] Neural networks are also used as
+classifiers.[105]
+An artificial neural network is based on a collection of
+nodes also known as artificial neurons, which loosely
+model the neurons in a biological brain. It is trained to
+recognise patterns; once trained, it can recognise those
+patterns in fresh data. There is an input, at least one
+hidden layer of nodes and an output. Each node applies a
+function and once the weight crosses its specified threshold,
+the data is transmitted to the next layer. A network is typically
+called a deep neural network if it has at least 2 hidden
+layers.[105]
+Learning algorithms for neural networks use local search to
+choose the weights that will get the right output for each input
+during training. The most common training technique is the
+backpropagation algorithm.[106] Neural networks learn to
+model complex relationships between inputs and outputs and
+find patterns in data. In theory, a neural network can learn
+any function.[107]
+In feedforward neural networks the signal passes in only one
+direction.[108] The term perceptron typically refers to a single-layer neural network.[109]
+In contrast, deep learning uses many layers.[110] Recurrent neural networks
+(RNNs) feed the output signal back into the input, which allows short-term memories of previous
+input events. Long short-term memory networks (LSTMs) are recurrent neural networks that better
+preserve longterm dependencies and are less sensitive to the vanishing gradient problem.
+[111]
+Convolutional neural networks (CNNs) use layers of kernels to more efficiently process local patterns.
+This local processing is especially important in image processing, where the early CNN layers typically
+identify simple local patterns such as edges and curves, with subsequent layers detecting more
+complex patterns like textures, and eventually whole objects.[112]
+Artificial neural networks
+Deep learning is a subset of
+machine learning, which is
+itself a subset of artificial
+intelligence.
+[113]
+Deep learning uses several layers of neurons between the network's
+inputs and outputs.[110] The multiple layers can progressively extract
+higher-level features from the raw input. For example, in image
+processing, lower layers may identify edges, while higher layers may
+identify the concepts relevant to a human such as digits, letters, or
+faces.[114]
+Deep learning has profoundly improved the performance of programs
+in many important subfields of artificial intelligence, including
+computer vision, speech recognition, natural language processing,
+image classification,
+[115] and others. The reason that deep learning
+performs so well in so many applications is not known as of 2021.[116]
+The sudden success of deep learning in 2012–2015 did not occur
+because of some new discovery or theoretical breakthrough (deep
+neural networks and backpropagation had been described by many
+people, as far back as the 1950s)[i] but because of two factors: the incredible increase in computer
+power (including the hundred-fold increase in speed by switching to GPUs) and the availability of vast
+amounts of training data, especially the giant curated datasets used for benchmark testing, such as
+ImageNet.
+[j]
+Generative pre-trained transformers (GPT) are large language models (LLMs) that generate text
+based on the semantic relationships between words in sentences. Text-based GPT models are pre-trained on a large corpus of text that can be from the Internet. The pretraining consists of predicting
+the next token (a token being usually a word, subword, or punctuation). Throughout this pretraining,
+GPT models accumulate knowledge about the world and can then generate human-like text by
+repeatedly predicting the next token. Typically, a subsequent training phase makes the model more
+truthful, useful, and harmless, usually with a technique called reinforcement learning from human
+feedback (RLHF). Current GPT models are prone to generating falsehoods called "hallucinations".
+These can be reduced with RLHF and quality data, but the problem has been getting worse for
+reasoning systems.[124] Such systems are used in chatbots, which allow people to ask a question or
+request a task in simple text.[125][126]
+Current models and services include ChatGPT, Claude, Gemini, Copilot, and Meta AI.
+[127] Multimodal
+GPT models can process different types of data (modalities) such as images, videos, sound, and
+text.[128]
+In the late 2010s, graphics processing units (GPUs) that were increasingly designed with AI-specific
+enhancements and used with specialized TensorFlow software had replaced previously used central
+processing unit (CPUs) as the dominant means for large-scale (commercial and academic) machine
+Deep learning
+GPT
+Hardware and software
+learning models' training.[129] Specialized programming languages such as Prolog were used in early
+AI research,[130] but general-purpose programming languages like Python have become
+predominant.[131]
+The transistor density in integrated circuits has been observed to roughly double every 18 months—a
+trend known as Moore's law, named after the Intel co-founder Gordon Moore, who first identified it.
+Improvements in GPUs have been even faster,[132] a trend sometimes called Huang's law,
+[133] named
+after Nvidia co-founder and CEO Jensen Huang.
+AI and machine learning technology is used in most of the essential applications of the 2020s,
+including: search engines (such as Google Search), targeting online advertisements, recommendation
+systems (offered by Netflix, YouTube or Amazon), driving internet traffic, targeted advertising
+(AdSense, Facebook), virtual assistants (such as Siri or Alexa), autonomous vehicles (including
+drones, ADAS and self-driving cars), automatic language translation (Microsoft Translator, Google
+Translate), facial recognition (Apple's FaceID or Microsoft's DeepFace and Google's FaceNet) and
+image labeling (used by Facebook, Apple's Photos and TikTok). The deployment of AI may be
+overseen by a chief automation officer (CAO).
+The application of AI in medicine and medical research has the potential to increase patient care and
+quality of life.[134] Through the lens of the Hippocratic Oath, medical professionals are ethically
+compelled to use AI, if applications can more accurately diagnose and treat patients.[135][136]
+For medical research, AI is an important tool for processing and integrating big data. This is
+particularly important for organoid and tissue engineering development which use microscopy
+imaging as a key technique in fabrication.[137]
+It has been suggested that AI can overcome
+discrepancies in funding allocated to different fields of research.[137][138] New AI tools can deepen the
+understanding of biomedically relevant pathways. For example, AlphaFold 2 (2021) demonstrated the
+ability to approximate, in hours rather than months, the 3D structure of a protein.
+[139]
+In 2023, it was
+reported that AI-guided drug discovery helped find a class of antibiotics capable of killing two
+different types of drug-resistant bacteria.[140]
+In 2024, researchers used machine learning to
+accelerate the search for Parkinson's disease drug treatments. Their aim was to identify compounds
+that block the clumping, or aggregation, of alpha-synuclein (the protein that characterises Parkinson's
+disease). They were able to speed up the initial screening process ten-fold and reduce the cost by a
+thousand-fold.[141][142]
+Game playing programs have been used since the 1950s to demonstrate and test AI's most advanced
+techniques.[143] Deep Blue became the first computer chess-playing system to beat a reigning world
+chess champion, Garry Kasparov, on 11 May 1997.[144]
+In 2011, in a Jeopardy! quiz show exhibition
+match, IBM's question answering system, Watson, defeated the two greatest Jeopardy! champions,
+Applications
+Health and medicine
+Games
+Brad Rutter and Ken Jennings, by a significant margin.[145]
+In March 2016, AlphaGo won 4 out of 5
+games of Go in a match with Go champion Lee Sedol, becoming the first computer Go-playing system
+to beat a professional Go player without handicaps. Then, in 2017, it defeated Ke Jie, who was the best
+Go player in the world.[146] Other programs handle imperfect-information games, such as the poker-playing program Pluribus.
+[147] DeepMind developed increasingly generalistic reinforcement learning
+models, such as with MuZero, which could be trained to play chess, Go, or Atari games.[148]
+In 2019,
+DeepMind's AlphaStar achieved grandmaster level in StarCraft II, a particularly challenging real-time
+strategy game that involves incomplete knowledge of what happens on the map.[149]
+In 2021, an AI
+agent competed in a PlayStation Gran Turismo competition, winning against four of the world's best
+Gran Turismo drivers using deep reinforcement learning.[150]
+In 2024, Google DeepMind introduced
+SIMA, a type of AI capable of autonomously playing nine previously unseen open-world video games
+by observing screen output, as well as executing short, specific tasks in response to natural language
+instructions.[151]
+Large language models, such as GPT-4, Gemini, Claude, Llama or Mistral, are increasingly used in
+mathematics. These probabilistic models are versatile, but can also produce wrong answers in the
+form of hallucinations. They sometimes need a large database of mathematical problems to learn
+from, but also methods such as supervised fine-tuning[152] or trained classifiers with human-annotated data to improve answers for new problems and learn from corrections.[153] A February
+2024 study showed that the performance of some language models for reasoning capabilities in
+solving math problems not included in their training data was low, even for problems with only minor
+deviations from trained data.[154] One technique to improve their performance involves training the
+models to produce correct reasoning steps, rather than just the correct result.[155] The Alibaba Group
+developed a version of its Qwen models called Qwen2-Math, that achieved state-of-the-art
+performance on several mathematical benchmarks, including 84% accuracy on the MATH dataset of
+competition mathematics problems.[156]
+In January 2025, Microsoft proposed the technique rStar-Math that leverages Monte Carlo tree search and step-by-step reasoning, enabling a relatively small
+language model like Qwen-7B to solve 53% of the AIME 2024 and 90% of the MATH benchmark
+problems.[157]
+Alternatively, dedicated models for mathematical problem solving with higher precision for the
+outcome including proof of theorems have been developed such as AlphaTensor, AlphaGeometry,
+AlphaProof and AlphaEvolve[158] all from Google DeepMind,
+[159] Llemma from EleutherAI[160] or
+Julius.
+[161]
+When natural language is used to describe mathematical problems, converters can transform such
+prompts into a formal language such as Lean to define mathematical tasks. The experimental model
+Gemini Deep Think accepts natural language prompts directly and achieved gold medal results in the
+International Math Olympiad of 2025.[162]
+Some models have been developed to solve challenging problems and reach good results in
+benchmark tests, others to serve as educational tools in mathematics.[163]
+Topological deep learning integrates various topological approaches.
+Mathematics
+Vincent van Gogh in watercolour created
+by generative AI software
+Finance is one of the fastest growing sectors where applied AI tools are being deployed: from retail
+online banking to investment advice and insurance, where automated "robot advisers" have been in
+use for some years.[164]
+According to Nicolas Firzli, director of the World Pensions & Investments Forum, it may be too early
+to see the emergence of highly innovative AI-informed financial products and services. He argues that
+"the deployment of AI tools will simply further automatise things: destroying tens of thousands of jobs
+in banking, financial planning, and pension advice in the process, but I'm not sure it will unleash a
+new wave of [e.g., sophisticated] pension innovation."[165]
+Various countries are deploying AI military applications.[166] The main applications enhance
+command and control, communications, sensors, integration and interoperability.[167] Research is
+targeting intelligence collection and analysis, logistics, cyber operations, information operations, and
+semiautonomous and autonomous vehicles.
+[166] AI technologies enable coordination of sensors and
+effectors, threat detection and identification, marking of enemy positions, target acquisition,
+coordination and deconfliction of distributed Joint Fires between networked combat vehicles, both
+human-operated and autonomous.
+[167]
+AI has been used in military operations in Iraq, Syria, Israel and Ukraine.[166][168][169][170]
+Generative artificial intelligence (Generative AI, GenAI,[171] or
+GAI) is a subfield of artificial intelligence that uses generative
+models to produce text, images, videos, audio, software code
+or other forms of data.[172][173][174] These models learn the
+underlying patterns and structures of their training data and
+use them to produce new data[175][176] based on the input,
+which often comes in the form of natural language
+prompts.
+[177][178]
+Generative AI tools have become more common since the AI
+boom in the 2020s. This boom was made possible by
+improvements in transformer-based deep neural networks,
+particularly large language models (LLMs). Major tools
+include chatbots such as ChatGPT, Copilot, Gemini, Claude,
+Grok, and DeepSeek; text-to-image models such as Stable
+Diffusion, Midjourney, and DALL-E; and text-to-video models
+such as Veo and Sora.
+[179][180][181][182][183] Technology companies developing generative AI include
+OpenAI, xAI, Anthropic, Meta AI, Microsoft, Google, DeepSeek, and Baidu.
+[177][184][185]
+Generative AI is used across many industries, including software development,[186]
+ healthcare,[187]
+finance,[188]
+ entertainment,[189]
+ customer service,[190]
+ sales and marketing,[191]
+ art, writing,[192]
+Finance
+Military
+Generative AI
+fashion,[193]
+ and product design.[194]
+ The production of generative AI systems requires large scale
+data centers using specialized chips which require a lot of electricity for processing and water for
+cooling.[195]
+AI agents are software entities designed to perceive their environment, make decisions, and take
+actions autonomously to achieve specific goals. These agents can interact with users, their
+environment, or other agents. AI agents are used in various applications, including virtual assistants,
+chatbots, autonomous vehicles, game-playing systems, and industrial robotics. AI agents operate
+within the constraints of their programming, available computational resources, and hardware
+limitations. This means they are restricted to performing tasks within their defined scope and have
+finite memory and processing capabilities. In real-world applications, AI agents often face time
+constraints for decision-making and action execution. Many AI agents incorporate learning
+algorithms, enabling them to improve their performance over time through experience or training.
+Using machine learning, AI agents can adapt to new situations and optimise their behaviour for their
+designated tasks.[196][197][198]
+Microsoft introduced Copilot Search in February 2023 under the name Bing Chat, as a built-in feature
+for Microsoft Edge and Bing mobile app. Copilot Search provides AI-generated summaries[199] and
+step-by-step reasoning based of information from web publishers, ranked in Bing Search.[200] For
+safety, Copilot uses AI-based classifiers and filters to reduce potentially harmful content.[201]
+Google officially pushed its AI Search at its Google I/O event on May 20, 2025.[202]
+It keeps people
+looking at Google instead of clicking on a search result. AI Overviews uses Gemini 2.5 to provide
+contextual answers to user queries based on web content.[203]
+Applications of AI in this domain include AI-enabled menstruation and fertility trackers that analyze
+user data to offer predictions,[204] AI-integrated sex toys (e.g., teledildonics),[205] AI-generated sexual
+education content,[206] and AI agents that simulate sexual and romantic partners (e.g., Replika).[207]
+AI is also used for the production of non-consensual deepfake pornography, raising significant ethical
+and legal concerns.[208]
+AI technologies have also been used to attempt to identify online gender-based violence and online
+sexual grooming of minors.[209][210]
+There are also thousands of successful AI applications used to solve specific problems for specific
+industries or institutions. In a 2017 survey, one in five companies reported having incorporated "AI"
+in some offerings or processes.[211] A few examples are energy storage, medical diagnosis, military
+Agents
+Web search
+Sexuality
+Other industry-specific tasks
+Street art in Tel Aviv
+[216][217]
+logistics, applications that predict the result of judicial decisions, foreign policy, or supply chain
+management.
+AI applications for evacuation and disaster management are growing. AI has been used to investigate
+patterns in large-scale and small-scale evacuations using historical data from GPS, videos or social
+media. Furthermore, AI can provide real-time information on the evacuation conditions.[212][213][214]
+In agriculture, AI has helped farmers to increase yield and identify areas that need irrigation,
+fertilization, pesticide treatments. Agronomists use AI to conduct research and development. AI has
+been used to predict the ripening time for crops such as tomatoes, monitor soil moisture, operate
+agricultural robots, conduct predictive analytics, classify livestock pig call emotions, automate
+greenhouses, detect diseases and pests, and save water.
+Artificial intelligence is used in astronomy to analyze increasing amounts of available data and
+applications, mainly for "classification, regression, clustering, forecasting, generation, discovery, and
+the development of new scientific insights." For example, it is used for discovering exoplanets,
+forecasting solar activity, and distinguishing between signals and instrumental effects in gravitational
+wave astronomy. Additionally, it could be used for activities in space, such as space exploration,
+including the analysis of data from space missions, real-time science decisions of spacecraft, space
+debris avoidance, and more autonomous operation.
+During the 2024 Indian elections, US$50 million was spent on authorized AI-generated content,
+notably by creating deepfakes of allied (including sometimes deceased) politicians to better engage
+with voters, and by translating speeches to various local languages.[215]
+AI has potential benefits and potential risks.[218] AI may be
+able to advance science and find solutions for serious
+problems: Demis Hassabis of DeepMind hopes to "solve
+intelligence, and then use that to solve everything else".[219]
+However, as the use of AI has become widespread, several
+unintended consequences and risks have been
+identified.[220][221]
+In-production systems can sometimes not
+factor ethics and bias into their AI training processes,
+especially when the AI algorithms are inherently
+unexplainable in deep learning.[222]
+Machine learning algorithms require large amounts of data.
+The techniques used to acquire this data have raised concerns
+about privacy, surveillance and copyright.
+Ethics
+Risks and harm
+Privacy and copyright
+AI-powered devices and services, such as virtual assistants and IoT products, continuously collect
+personal information, raising concerns about intrusive data gathering and unauthorized access by
+third parties. The loss of privacy is further exacerbated by AI's ability to process and combine vast
+amounts of data, potentially leading to a surveillance society where individual activities are constantly
+monitored and analyzed without adequate safeguards or transparency.
+Sensitive user data collected may include online activity records, geolocation data, video, or
+audio.[223] For example, in order to build speech recognition algorithms, Amazon has recorded
+millions of private conversations and allowed temporary workers to listen to and transcribe some of
+them.[224] Opinions about this widespread surveillance range from those who see it as a necessary evil
+to those for whom it is clearly unethical and a violation of the right to privacy.
+[225]
+AI developers argue that this is the only way to deliver valuable applications and have developed
+several techniques that attempt to preserve privacy while still obtaining the data, such as data
+aggregation, de-identification and differential privacy.
+[226] Since 2016, some privacy experts, such as
+Cynthia Dwork, have begun to view privacy in terms of fairness. Brian Christian wrote that experts
+have pivoted "from the question of 'what they know' to the question of 'what they're doing with
+it'."[227]
+Generative AI is often trained on unlicensed copyrighted works, including in domains such as images
+or computer code; the output is then used under the rationale of "fair use". Experts disagree about
+how well and under what circumstances this rationale will hold up in courts of law; relevant factors
+may include "the purpose and character of the use of the copyrighted work" and "the effect upon the
+potential market for the copyrighted work".[228][229] Website owners who do not wish to have their
+content scraped can indicate it in a "robots.txt" file.[230]
+In 2023, leading authors (including John
+Grisham and Jonathan Franzen) sued AI companies for using their work to train generative
+AI.[231][232] Another discussed approach is to envision a separate sui generis system of protection for
+creations generated by AI to ensure fair attribution and compensation for human authors.[233]
+The commercial AI scene is dominated by Big Tech companies such as Alphabet Inc., Amazon, Apple
+Inc., Meta Platforms, and Microsoft.
+[234][235][236] Some of these players already own the vast majority
+of existing cloud infrastructure and computing power from data centers, allowing them to entrench
+further in the marketplace.[237][238]
+In January 2024, the International Energy Agency (IEA) released Electricity 2024, Analysis and
+Forecast to 2026, forecasting electric power use.[239] This is the first IEA report to make projections
+for data centers and power consumption for artificial intelligence and cryptocurrency. The report
+states that power demand for these uses might double by 2026, with additional electric power usage
+equal to electricity used by the whole Japanese nation.[240]
+Prodigious power consumption by AI is responsible for the growth of fossil fuel use, and might delay
+closings of obsolete, carbon-emitting coal energy facilities. There is a feverish rise in the construction
+of data centers throughout the US, making large technology firms (e.g., Microsoft, Meta, Google,
+Dominance by tech giants
+Power needs and environmental impacts
+Amazon) into voracious consumers of electric power. Projected electric consumption is so immense
+that there is concern that it will be fulfilled no matter the source. A ChatGPT search involves the use of
+10 times the electrical energy as a Google search. The large firms are in haste to find power sources –
+from nuclear energy to geothermal to fusion. The tech firms argue that – in the long view – AI will be
+eventually kinder to the environment, but they need the energy now. AI makes the power grid more
+efficient and "intelligent", will assist in the growth of nuclear power, and track overall carbon
+emissions, according to technology firms.[241]
+A 2024 Goldman Sachs Research Paper, AI Data Centers and the Coming US Power Demand Surge,
+found "US power demand (is) likely to experience growth not seen in a generation...." and forecasts
+that, by 2030, US data centers will consume 8% of US power, as opposed to 3% in 2022, presaging
+growth for the electrical power generation industry by a variety of means.[242] Data centers' need for
+more and more electrical power is such that they might max out the electrical grid. The Big Tech
+companies counter that AI can be used to maximize the utilization of the grid by all.[243]
+In 2024, the Wall Street Journal reported that big AI companies have begun negotiations with the US
+nuclear power providers to provide electricity to the data centers. In March 2024 Amazon purchased a
+Pennsylvania nuclear-powered data center for US$650 million.[244] Nvidia CEO Jensen Huang said
+nuclear power is a good option for the data centers.[245]
+In September 2024, Microsoft announced an agreement with Constellation Energy to re-open the
+Three Mile Island nuclear power plant to provide Microsoft with 100% of all electric power produced
+by the plant for 20 years. Reopening the plant, which suffered a partial nuclear meltdown of its Unit 2
+reactor in 1979, will require Constellation to get through strict regulatory processes which will include
+extensive safety scrutiny from the US Nuclear Regulatory Commission. If approved (this will be the
+first ever US re-commissioning of a nuclear plant), over 835 megawatts of power – enough for
+800,000 homes – of energy will be produced. The cost for re-opening and upgrading is estimated at
+US$1.6 billion and is dependent on tax breaks for nuclear power contained in the 2022 US Inflation
+Reduction Act.
+[246] The US government and the state of Michigan are investing almost US$2 billion to
+reopen the Palisades Nuclear reactor on Lake Michigan. Closed since 2022, the plant is planned to be
+reopened in October 2025. The Three Mile Island facility will be renamed the Crane Clean Energy
+Center after Chris Crane, a nuclear proponent and former CEO of Exelon who was responsible for
+Exelon's spinoff of Constellation.[247]
+After the last approval in September 2023, Taiwan suspended the approval of data centers north of
+Taoyuan with a capacity of more than 5 MW in 2024, due to power supply shortages.[248] Taiwan
+aims to phase out nuclear power by 2025.[248] On the other hand, Singapore imposed a ban on the
+opening of data centers in 2019 due to electric power, but in 2022, lifted this ban.[248]
+Although most nuclear plants in Japan have been shut down after the 2011 Fukushima nuclear
+accident, according to an October 2024 Bloomberg article in Japanese, cloud gaming services
+company Ubitus, in which Nvidia has a stake, is looking for land in Japan near a nuclear power plant
+for a new data center for generative AI.[249] Ubitus CEO Wesley Kuo said nuclear power plants are the
+most efficient, cheap and stable power for AI.[249]
+On 1 November 2024, the Federal Energy Regulatory Commission (FERC) rejected an application
+submitted by Talen Energy for approval to supply some electricity from the nuclear power station
+Susquehanna to Amazon's data center.[250] According to the Commission Chairman Willie L. Phillips,
+it is a burden on the electricity grid as well as a significant cost shifting concern to households and
+other business sectors.[250]
+In 2025, a report prepared by the International Energy Agency estimated the greenhouse gas
+emissions from the energy consumption of AI at 180 million tons. By 2035, these emissions could rise
+to 300–500 million tonnes depending on what measures will be taken. This is below 1.5% of the
+energy sector emissions. The emissions reduction potential of AI was estimated at 5% of the energy
+sector emissions, but rebound effects (for example if people switch from public transport to
+autonomous cars) can reduce it.[251]
+YouTube, Facebook and others use recommender systems to guide users to more content. These AI
+programs were given the goal of maximizing user engagement (that is, the only goal was to keep
+people watching). The AI learned that users tended to choose misinformation, conspiracy theories,
+and extreme partisan content, and, to keep them watching, the AI recommended more of it. Users also
+tended to watch more content on the same subject, so the AI led people into filter bubbles where they
+received multiple versions of the same misinformation.[252] This convinced many users that the
+misinformation was true, and ultimately undermined trust in institutions, the media and the
+government.[253] The AI program had correctly learned to maximize its goal, but the result was
+harmful to society. After the U.S. election in 2016, major technology companies took some steps to
+mitigate the problem.[254]
+In the early 2020s, generative AI began to create images, audio, and texts that are virtually
+indistinguishable from real photographs, recordings, or human writing,[255] while realistic AI-generated videos became feasible in the mid-2020s.[256][257][258]
+It is possible for bad actors to use
+this technology to create massive amounts of misinformation or propaganda;[259] one such potential
+malicious use is deepfakes for computational propaganda.
+[260] AI pioneer Geoffrey Hinton expressed
+concern about AI enabling "authoritarian leaders to manipulate their electorates" on a large scale,
+among other risks.[261]
+AI researchers at Microsoft, OpenAI, universities and other organisations have suggested using
+"personhood credentials" as a way to overcome online deception enabled by AI models.[262]
+Machine learning applications will be biased[k]
+if they learn from biased data.[264] The developers may
+not be aware that the bias exists.[265] Bias can be introduced by the way training data is selected and
+by the way a model is deployed.[266][264]
+If a biased algorithm is used to make decisions that can
+seriously harm people (as it can in medicine, finance, recruitment, housing or policing) then the
+algorithm may cause discrimination.
+[267] The field of fairness studies how to prevent harms from
+algorithmic biases.
+Misinformation
+Algorithmic bias and fairness
+On June 28, 2015, Google Photos's new image labeling feature mistakenly identified Jacky Alcine and
+a friend as "gorillas" because they were black. The system was trained on a dataset that contained very
+few images of black people,[268] a problem called "sample size disparity".[269] Google "fixed" this
+problem by preventing the system from labelling anything as a "gorilla". Eight years later, in 2023,
+Google Photos still could not identify a gorilla, and neither could similar products from Apple,
+Facebook, Microsoft and Amazon.[270]
+COMPAS is a commercial program widely used by U.S. courts to assess the likelihood of a defendant
+becoming a recidivist. In 2016, Julia Angwin at ProPublica discovered that COMPAS exhibited racial
+bias, despite the fact that the program was not told the races of the defendants. Although the error
+rate for both whites and blacks was calibrated equal at exactly 61%, the errors for each race were
+different—the system consistently overestimated the chance that a black person would re-offend and
+would underestimate the chance that a white person would not re-offend.[271]
+In 2017, several
+researchers[l] showed that it was mathematically impossible for COMPAS to accommodate all possible
+measures of fairness when the base rates of re-offense were different for whites and blacks in the
+data.[273]
+A program can make biased decisions even if the data does not explicitly mention a problematic
+feature (such as "race" or "gender"). The feature will correlate with other features (like "address",
+"shopping history" or "first name"), and the program will make the same decisions based on these
+features as it would on "race" or "gender".[274] Moritz Hardt said "the most robust fact in this research
+area is that fairness through blindness doesn't work."[275]
+Criticism of COMPAS highlighted that machine learning models are designed to make "predictions"
+that are only valid if we assume that the future will resemble the past. If they are trained on data that
+includes the results of racist decisions in the past, machine learning models must predict that racist
+decisions will be made in the future. If an application then uses these predictions as
+recommendations, some of these "recommendations" will likely be racist.[276] Thus, machine learning
+is not well suited to help make decisions in areas where there is hope that the future will be better
+than the past. It is descriptive rather than prescriptive.[m]
+Bias and unfairness may go undetected because the developers are overwhelmingly white and male:
+among AI engineers, about 4% are black and 20% are women.[269]
+There are various conflicting definitions and mathematical models of fairness. These notions depend
+on ethical assumptions, and are influenced by beliefs about society. One broad category is distributive
+fairness, which focuses on the outcomes, often identifying groups and seeking to compensate for
+statistical disparities. Representational fairness tries to ensure that AI systems do not reinforce
+negative stereotypes or render certain groups invisible. Procedural fairness focuses on the decision
+process rather than the outcome. The most relevant notions of fairness may depend on the context,
+notably the type of AI application and the stakeholders. The subjectivity in the notions of bias and
+fairness makes it difficult for companies to operationalize them. Having access to sensitive attributes
+such as race or gender is also considered by many AI ethicists to be necessary in order to compensate
+for biases, but it may conflict with anti-discrimination laws.
+[263]
+At its 2022 Conference on Fairness, Accountability, and Transparency (ACM FAccT 2022), the
+Association for Computing Machinery, in Seoul, South Korea, presented and published findings that
+recommend that until AI and robotics systems are demonstrated to be free of bias mistakes, they are
+unsafe, and the use of self-learning neural networks trained on vast, unregulated sources of flawed
+internet data should be curtailed.[278]
+Many AI systems are so complex that their designers cannot explain how they reach their
+decisions.[279] Particularly with deep neural networks, in which there are many non-linear
+relationships between inputs and outputs. But some popular explainability techniques exist.[280]
+It is impossible to be certain that a program is operating correctly if no one knows how exactly it
+works. There have been many cases where a machine learning program passed rigorous tests, but
+nevertheless learned something different than what the programmers intended. For example, a
+system that could identify skin diseases better than medical professionals was found to actually have a
+strong tendency to classify images with a ruler as "cancerous", because pictures of malignancies
+typically include a ruler to show the scale.[281] Another machine learning system designed to help
+effectively allocate medical resources was found to classify patients with asthma as being at "low risk"
+of dying from pneumonia. Having asthma is actually a severe risk factor, but since the patients having
+asthma would usually get much more medical care, they were relatively unlikely to die according to
+the training data. The correlation between asthma and low risk of dying from pneumonia was real, but
+misleading.[282]
+People who have been harmed by an algorithm's decision have a right to an explanation.[283] Doctors,
+for example, are expected to clearly and completely explain to their colleagues the reasoning behind
+any decision they make. Early drafts of the European Union's General Data Protection Regulation in
+2016 included an explicit statement that this right exists.[n]
+Industry experts noted that this is an
+unsolved problem with no solution in sight. Regulators argued that nevertheless the harm is real: if
+the problem has no solution, the tools should not be used.[284]
+DARPA established the XAI ("Explainable Artificial Intelligence") program in 2014 to try to solve
+these problems.[285]
+Several approaches aim to address the transparency problem. SHAP enables to visualise the
+contribution of each feature to the output.[286] LIME can locally approximate a model's outputs with a
+simpler, interpretable model.[287] Multitask learning provides a large number of outputs in addition
+to the target classification. These other outputs can help developers deduce what the network has
+learned.[288] Deconvolution, DeepDream and other generative methods can allow developers to see
+what different layers of a deep network for computer vision have learned, and produce output that can
+suggest what the network is learning.[289] For generative pre-trained transformers, Anthropic
+developed a technique based on dictionary learning that associates patterns of neuron activations with
+human-understandable concepts.[290]
+Lack of transparency
+Artificial intelligence provides a number of tools that are useful to bad actors, such as authoritarian
+governments, terrorists, criminals or rogue states.
+A lethal autonomous weapon is a machine that locates, selects and engages human targets without
+human supervision.[o] Widely available AI tools can be used by bad actors to develop inexpensive
+autonomous weapons and, if produced at scale, they are potentially weapons of mass destruction.
+[292]
+Even when used in conventional warfare, they currently cannot reliably choose targets and could
+potentially kill an innocent person.
+[292]
+In 2014, 30 nations (including China) supported a ban on
+autonomous weapons under the United Nations' Convention on Certain Conventional Weapons,
+however the United States and others disagreed.[293] By 2015, over fifty countries were reported to be
+researching battlefield robots.[294]
+AI tools make it easier for authoritarian governments to efficiently control their citizens in several
+ways. Face and voice recognition allow widespread surveillance. Machine learning, operating this
+data, can classify potential enemies of the state and prevent them from hiding. Recommendation
+systems can precisely target propaganda and misinformation for maximum effect. Deepfakes and
+generative AI aid in producing misinformation. Advanced AI can make authoritarian centralized
+decision-making more competitive than liberal and decentralized systems such as markets. It lowers
+the cost and difficulty of digital warfare and advanced spyware.
+[295] All these technologies have been
+available since 2020 or earlier—AI facial recognition systems are already being used for mass
+surveillance in China.[296][297]
+There are many other ways in which AI is expected to help bad actors, some of which can not be
+foreseen. For example, machine-learning AI is able to design tens of thousands of toxic molecules in a
+matter of hours.[298]
+Economists have frequently highlighted the risks of redundancies from AI, and speculated about
+unemployment if there is no adequate social policy for full employment.[299]
+In the past, technology has tended to increase rather than reduce total employment, but economists
+acknowledge that "we're in uncharted territory" with AI.[300] A survey of economists showed
+disagreement about whether the increasing use of robots and AI will cause a substantial increase in
+long-term unemployment, but they generally agree that it could be a net benefit if productivity gains
+are redistributed.
+[301] Risk estimates vary; for example, in the 2010s, Michael Osborne and Carl
+Benedikt Frey estimated 47% of U.S. jobs are at "high risk" of potential automation, while an OECD
+report classified only 9% of U.S. jobs as "high risk".[p][303] The methodology of speculating about
+future employment levels has been criticised as lacking evidential foundation, and for implying that
+technology, rather than social policy, creates unemployment, as opposed to redundancies.[299]
+In
+April 2023, it was reported that 70% of the jobs for Chinese video game illustrators had been
+eliminated by generative artificial intelligence.[304][305]
+Unlike previous waves of automation, many middle-class jobs may be eliminated by artificial
+intelligence; The Economist stated in 2015 that "the worry that AI could do to white-collar jobs what
+steam power did to blue-collar ones during the Industrial Revolution" is "worth taking seriously".[306]
+Bad actors and weaponized AI
+Technological unemployment
+Jobs at extreme risk range from paralegals to fast food cooks, while job demand is likely to increase
+for care-related professions ranging from personal healthcare to the clergy.[307]
+From the early days of the development of artificial intelligence, there have been arguments, for
+example, those put forward by Joseph Weizenbaum, about whether tasks that can be done by
+computers actually should be done by them, given the difference between computers and humans,
+and between quantitative calculation and qualitative, value-based judgement.[308]
+It has been argued AI will become so powerful that humanity may irreversibly lose control of it. This
+could, as physicist Stephen Hawking stated, "spell the end of the human race".[309] This scenario has
+been common in science fiction, when a computer or robot suddenly develops a human-like "self-awareness" (or "sentience" or "consciousness") and becomes a malevolent character.[q] These sci-fi
+scenarios are misleading in several ways.
+First, AI does not require human-like sentience to be an existential risk. Modern AI programs are
+given specific goals and use learning and intelligence to achieve them. Philosopher Nick Bostrom
+argued that if one gives almost any goal to a sufficiently powerful AI, it may choose to destroy
+humanity to achieve it (he used the example of a paperclip maximizer).[311] Stuart Russell gives the
+example of household robot that tries to find a way to kill its owner to prevent it from being
+unplugged, reasoning that "you can't fetch the coffee if you're dead."[312]
+In order to be safe for
+humanity, a superintelligence would have to be genuinely aligned with humanity's morality and values
+so that it is "fundamentally on our side".[313]
+Second, Yuval Noah Harari argues that AI does not require a robot body or physical control to pose an
+existential risk. The essential parts of civilization are not physical. Things like ideologies, law,
+government, money and the economy are built on language; they exist because there are stories that
+billions of people believe. The current prevalence of misinformation suggests that an AI could use
+language to convince people to believe anything, even to take actions that are destructive.[314]
+The opinions amongst experts and industry insiders are mixed, with sizable fractions both concerned
+and unconcerned by risk from eventual superintelligent AI.[315] Personalities such as Stephen
+Hawking, Bill Gates, and Elon Musk,
+[316] as well as AI pioneers such as Yoshua Bengio, Stuart Russell,
+Demis Hassabis, and Sam Altman, have expressed concerns about existential risk from AI.
+In May 2023, Geoffrey Hinton announced his resignation from Google in order to be able to "freely
+speak out about the risks of AI" without "considering how this impacts Google".[317] He notably
+mentioned risks of an AI takeover,
+[318] and stressed that in order to avoid the worst outcomes,
+establishing safety guidelines will require cooperation among those competing in use of AI.[319]
+In 2023, many leading AI experts endorsed the joint statement that "Mitigating the risk of extinction
+from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear
+war".[320]
+Existential risk
+Some other researchers were more optimistic. AI pioneer Jürgen Schmidhuber did not sign the joint
+statement, emphasising that in 95% of all cases, AI research is about making "human lives longer and
+healthier and easier."[321] While the tools that are now being used to improve lives can also be used by
+bad actors, "they can also be used against the bad actors."[322][323] Andrew Ng also argued that "it's a
+mistake to fall for the doomsday hype on AI—and that regulators who do will only benefit vested
+interests."[324] Yann LeCun "scoffs at his peers' dystopian scenarios of supercharged misinformation
+and even, eventually, human extinction."[325]
+In the early 2010s, experts argued that the risks are too
+distant in the future to warrant research or that humans will be valuable from the perspective of a
+superintelligent machine.[326] However, after 2016, the study of current and future risks and possible
+solutions became a serious area of research.[327]
+Friendly AI are machines that have been designed from the beginning to minimize risks and to make
+choices that benefit humans. Eliezer Yudkowsky, who coined the term, argues that developing friendly
+AI should be a higher research priority: it may require a large investment and it must be completed
+before AI becomes an existential risk.[328]
+Machines with intelligence have the potential to use their intelligence to make ethical decisions. The
+field of machine ethics provides machines with ethical principles and procedures for resolving ethical
+dilemmas.[329] The field of machine ethics is also called computational morality,[329] and was founded
+at an AAAI symposium in 2005.[330]
+Other approaches include Wendell Wallach's "artificial moral agents"[331] and Stuart J. Russell's three
+principles for developing provably beneficial machines.[332]
+Active organizations in the AI open-source community include Hugging Face,
+[333] Google,
+[334]
+EleutherAI and Meta.
+[335] Various AI models, such as Llama 2, Mistral or Stable Diffusion, have been
+made open-weight,[336][337] meaning that their architecture and trained parameters (the "weights")
+are publicly available. Open-weight models can be freely fine-tuned, which allows companies to
+specialize them with their own data and for their own use-case.[338] Open-weight models are useful
+for research and innovation but can also be misused. Since they can be fine-tuned, any built-in
+security measure, such as objecting to harmful requests, can be trained away until it becomes
+ineffective. Some researchers warn that future AI models may develop dangerous capabilities (such as
+the potential to drastically facilitate bioterrorism) and that once released on the Internet, they cannot
+be deleted everywhere if needed. They recommend pre-release audits and cost-benefit analyses.[339]
+Artificial intelligence projects can be guided by ethical considerations during the design, development,
+and implementation of an AI system. An AI framework such as the Care and Act Framework,
+developed by the Alan Turing Institute and based on the SUM values, outlines four main ethical
+dimensions, defined as follows:[340][341]
+Ethical machines and alignment
+Open source
+Frameworks
+The first global AI Safety Summit was held in the
+United Kingdom in November 2023 with a
+declaration calling for international cooperation.
+Respect the dignity of individual people
+Connect with other people sincerely, openly, and inclusively
+Care for the wellbeing of everyone
+Protect social values, justice, and the public interest
+Other developments in ethical frameworks include those decided upon during the Asilomar
+Conference, the Montreal Declaration for Responsible AI, and the IEEE's Ethics of Autonomous
+Systems initiative, among others;[342] however, these principles are not without criticism, especially
+regarding the people chosen to contribute to these frameworks.[343]
+Promotion of the wellbeing of the people and communities that these technologies affect requires
+consideration of the social and ethical implications at all stages of AI system design, development and
+implementation, and collaboration between job roles such as data scientists, product managers, data
+engineers, domain experts, and delivery managers.[344]
+The UK AI Safety Institute released in 2024 a testing toolset called 'Inspect' for AI safety evaluations
+available under an MIT open-source licence which is freely available on GitHub and can be improved
+with third-party packages. It can be used to evaluate AI models in a range of areas including core
+knowledge, ability to reason, and autonomous capabilities.[345]
+The regulation of artificial intelligence is the
+development of public sector policies and laws for
+promoting and regulating AI; it is therefore related to
+the broader regulation of algorithms.[346] The
+regulatory and policy landscape for AI is an emerging
+issue in jurisdictions globally.[347] According to AI
+Index at Stanford, the annual number of AI-related
+laws passed in the 127 survey countries jumped from
+one passed in 2016 to 37 passed in 2022
+alone.[348][349] Between 2016 and 2020, more than 30
+countries adopted dedicated strategies for AI.[350]
+Most EU member states had released national AI
+strategies, as had Canada, China, India, Japan,
+Mauritius, the Russian Federation, Saudi Arabia,
+United Arab Emirates, U.S., and Vietnam. Others were in the process of elaborating their own AI
+strategy, including Bangladesh, Malaysia and Tunisia.[350] The Global Partnership on Artificial
+Intelligence was launched in June 2020, stating a need for AI to be developed in accordance with
+human rights and democratic values, to ensure public confidence and trust in the technology.[350]
+Henry Kissinger, Eric Schmidt, and Daniel Huttenlocher published a joint statement in November
+2021 calling for a government commission to regulate AI.[351]
+In 2023, OpenAI leaders published
+recommendations for the governance of superintelligence, which they believe may happen in less than
+10 years.[352]
+In 2023, the United Nations also launched an advisory body to provide
+recommendations on AI governance; the body comprises technology company executives, government
+officials and academics.[353] On 1 August 2024, the EU Artificial Intelligence Act entered into force,
+establishing the first comprehensive EU-wide AI regulation.[354]
+In 2024, the Council of Europe
+Regulation
+In 2024, AI patents in China and the US
+numbered more than three-fourths of AI
+patents worldwide.
+[364] Though China
+had more AI patents, the US had 35%
+more patents per AI patent-applicant
+company than China.
+[364]
+created the first international legally binding treaty on AI, called the "Framework Convention on
+Artificial Intelligence and Human Rights, Democracy and the Rule of Law". It was adopted by the
+European Union, the United States, the United Kingdom, and other signatories.[355]
+In a 2022 Ipsos survey, attitudes towards AI varied greatly by country; 78% of Chinese citizens, but
+only 35% of Americans, agreed that "products and services using AI have more benefits than
+drawbacks".[348] A 2023 Reuters/Ipsos poll found that 61% of Americans agree, and 22% disagree,
+that AI poses risks to humanity.[356]
+In a 2023 Fox News poll, 35% of Americans thought it "very
+important", and an additional 41% thought it "somewhat important", for the federal government to
+regulate AI, versus 13% responding "not very important" and 8% responding "not at all
+important".[357][358]
+In November 2023, the first global AI Safety Summit was held in Bletchley Park in the UK to discuss
+the near and far term risks of AI and the possibility of mandatory and voluntary regulatory
+frameworks.[359] 28 countries including the United States, China, and the European Union issued a
+declaration at the start of the summit, calling for international co-operation to manage the challenges
+and risks of artificial intelligence.[360][361]
+In May 2024 at the AI Seoul Summit, 16 global AI tech
+companies agreed to safety commitments on the development of AI.[362][363]
+The study of mechanical or "formal" reasoning began with
+philosophers and mathematicians in antiquity. The study of
+logic led directly to Alan Turing's theory of computation,
+which suggested that a machine, by shuffling symbols as
+simple as "0" and "1", could simulate any conceivable form of
+mathematical reasoning.[365][366] This, along with concurrent
+discoveries in cybernetics, information theory and
+neurobiology, led researchers to consider the possibility of
+building an "electronic brain".[r] They developed several areas
+of research that would become part of AI,[368] such as
+McCulloch and Pitts design for "artificial neurons" in
+1943,[117] and Turing's influential 1950 paper 'Computing
+Machinery and Intelligence', which introduced the Turing test
+and showed that "machine intelligence" was
+plausible.[369][366]
+The field of AI research was founded at a workshop at Dartmouth College in 1956.[s][6] The attendees
+became the leaders of AI research in the 1960s.[t] They and their students produced programs that the
+press described as "astonishing":[u] computers were learning checkers strategies, solving word
+problems in algebra, proving logical theorems and speaking English.[v][7] Artificial intelligence
+laboratories were set up at a number of British and U.S. universities in the latter 1950s and early
+1960s.[366]
+History
+Researchers in the 1960s and the 1970s were convinced that their methods would eventually succeed
+in creating a machine with general intelligence and considered this the goal of their field.[373]
+In 1965
+Herbert Simon predicted, "machines will be capable, within twenty years, of doing any work a man
+can do".[374]
+In 1967 Marvin Minsky agreed, writing that "within a generation ... the problem of
+creating 'artificial intelligence' will substantially be solved".[375] They had, however, underestimated
+the difficulty of the problem.[w]
+In 1974, both the U.S. and British governments cut off exploratory
+research in response to the criticism of Sir James Lighthill[377] and ongoing pressure from the U.S.
+Congress to fund more productive projects.
+[378] Minsky and Papert's book Perceptrons was
+understood as proving that artificial neural networks would never be useful for solving real-world
+tasks, thus discrediting the approach altogether.[379] The "AI winter", a period when obtaining
+funding for AI projects was difficult, followed.[9]
+In the early 1980s, AI research was revived by the commercial success of expert systems,
+[380] a form
+of AI program that simulated the knowledge and analytical skills of human experts. By 1985, the
+market for AI had reached over a billion dollars. At the same time, Japan's fifth generation computer
+project inspired the U.S. and British governments to restore funding for academic research.
+[8]
+However, beginning with the collapse of the Lisp Machine market in 1987, AI once again fell into
+disrepute, and a second, longer-lasting winter began.[10]
+Up to this point, most of AI's funding had gone to projects that used high-level symbols to represent
+mental objects like plans, goals, beliefs, and known facts. In the 1980s, some researchers began to
+doubt that this approach would be able to imitate all the processes of human cognition, especially
+perception, robotics, learning and pattern recognition,
+[381] and began to look into "sub-symbolic"
+approaches.[382] Rodney Brooks rejected "representation" in general and focussed directly on
+engineering machines that move and survive.[x] Judea Pearl, Lotfi Zadeh, and others developed
+methods that handled incomplete and uncertain information by making reasonable guesses rather
+than precise logic.[87][387] But the most important development was the revival of "connectionism",
+including neural network research, by Geoffrey Hinton and others.[388]
+In 1990, Yann LeCun
+successfully showed that convolutional neural networks can recognize handwritten digits, the first of
+many successful applications of neural networks.[389]
+AI gradually restored its reputation in the late 1990s and early 21st century by exploiting formal
+mathematical methods and by finding specific solutions to specific problems. This "narrow" and
+"formal" focus allowed researchers to produce verifiable results and collaborate with other fields (such
+as statistics, economics and mathematics).[390] By 2000, solutions developed by AI researchers were
+being widely used, although in the 1990s they were rarely described as "artificial intelligence" (a
+tendency known as the AI effect).[391] However, several academic researchers became concerned that
+AI was no longer pursuing its original goal of creating versatile, fully intelligent machines. Beginning
+around 2002, they founded the subfield of artificial general intelligence (or "AGI"), which had several
+well-funded institutions by the 2010s.[68]
+Deep learning began to dominate industry benchmarks in 2012 and was adopted throughout the
+field.[11] For many specific tasks, other methods were abandoned.[y] Deep learning's success was
+based on both hardware improvements (faster computers,
+[393] graphics processing units, cloud
+computing[394]
+) and access to large amounts of data[395]
+(including curated datasets,[394] such as
+The number of Google searches for the
+term "AI" accelerated in 2022.
+ImageNet). Deep learning's success led to an enormous increase in interest and funding in AI.[z] The
+amount of machine learning research (measured by total publications) increased by 50% in the years
+2015–2019.[350]
+In 2016, issues of fairness and the misuse of technology were
+catapulted into center stage at machine learning conferences,
+publications vastly increased, funding became available, and
+many researchers re-focussed their careers on these issues.
+The alignment problem became a serious field of academic
+study.[327]
+In the late 2010s and early 2020s, AGI companies began to
+deliver programs that created enormous interest. In 2015,
+AlphaGo, developed by DeepMind, beat the world champion
+Go player. The program taught only the game's rules and
+developed a strategy by itself. GPT-3 is a large language model
+that was released in 2020 by OpenAI and is capable of
+generating high-quality human-like text.[396] ChatGPT, launched on November 30, 2022, became the
+fastest-growing consumer software application in history, gaining over 100 million users in two
+months.[397]
+It marked what is widely regarded as AI's breakout year, bringing it into the public
+consciousness.[398] These programs, and others, inspired an aggressive AI boom, where large
+companies began investing billions of dollars in AI research. According to AI Impacts, about US$50
+billion annually was invested in "AI" around 2022 in the U.S. alone and about 20% of the new U.S.
+Computer Science PhD graduates have specialized in "AI".[399] About 800,000 "AI"-related U.S. job
+openings existed in 2022.[400] According to PitchBook research, 22% of newly funded startups in
+2024 claimed to be AI companies.[401]
+Philosophical debates have historically sought to determine the nature of intelligence and how to
+make intelligent machines.[402] Another major focus has been whether machines can be conscious,
+and the associated ethical implications.[403] Many other topics in philosophy are relevant to AI, such
+as epistemology and free will.
+[404] Rapid advancements have intensified public discussions on the
+philosophy and ethics of AI.
+[403]
+Alan Turing wrote in 1950 "I propose to consider the question 'can machines think'?"[405] He advised
+changing the question from whether a machine "thinks", to "whether or not it is possible for
+machinery to show intelligent behaviour".[405] He devised the Turing test, which measures the ability
+of a machine to simulate human conversation.[369] Since we can only observe the behavior of the
+machine, it does not matter if it is "actually" thinking or literally has a "mind". Turing notes that we
+can not determine these things about other people but "it is usual to have a polite convention that
+everyone thinks."[406]
+Philosophy
+Defining artificial intelligence
+The Turing test can provide some
+evidence of intelligence, but it penalizes
+non-human intelligent behavior.
+[407]
+Russell and Norvig agree with Turing that intelligence must
+be defined in terms of external behavior, not internal
+structure.[1] However, they are critical that the test requires
+the machine to imitate humans. "Aeronautical engineering
+texts", they wrote, "do not define the goal of their field as
+making 'machines that fly so exactly like pigeons that they can
+fool other pigeons.' "
+[408] AI founder John McCarthy agreed,
+writing that "Artificial intelligence is not, by definition,
+simulation of human intelligence".[409]
+McCarthy defines intelligence as "the computational part of
+the ability to achieve goals in the world".[410] Another AI
+founder, Marvin Minsky, similarly describes it as "the ability
+to solve hard problems".[411] The leading AI textbook defines
+it as the study of agents that perceive their environment and take actions that maximize their chances
+of achieving defined goals.[1] These definitions view intelligence in terms of well-defined problems
+with well-defined solutions, where both the difficulty of the problem and the performance of the
+program are direct measures of the "intelligence" of the machine—and no other philosophical
+discussion is required, or may not even be possible.
+Another definition has been adopted by Google,[412] a major practitioner in the field of AI. This
+definition stipulates the ability of systems to synthesize information as the manifestation of
+intelligence, similar to the way it is defined in biological intelligence.
+As a result of the many circulating definitions scholars have started to critically analyze and order the
+AI discourse itself[413]
+including discussing the many AI narratives and myths to be found within
+societal, political and academic discourses.[414] Similarly, in practice, some authors have suggested
+that the term 'AI' is often used too broadly and vaguely. This raises the question of where the line
+should be drawn between AI and classical algorithms,[415] with many companies during the early
+2020s AI boom using the term as a marketing buzzword, often even if they did "not actually use AI in
+a material way".[416]
+There has been debate over whether large language models exhibit genuine intelligence or merely
+simulate it by imitating human text.
+[417]
+No established unifying theory or paradigm has guided AI research for most of its history.[aa] The
+unprecedented success of statistical machine learning in the 2010s eclipsed all other approaches (so
+much so that some sources, especially in the business world, use the term "artificial intelligence" to
+mean "machine learning with neural networks"). This approach is mostly sub-symbolic, soft and
+narrow. Critics argue that these questions may have to be revisited by future generations of AI
+researchers.
+Evaluating approaches to AI
+Symbolic AI (or "GOFAI")[419] simulated the high-level conscious reasoning that people use when
+they solve puzzles, express legal reasoning and do mathematics. They were highly successful at
+"intelligent" tasks such as algebra or IQ tests. In the 1960s, Newell and Simon proposed the physical
+symbol systems hypothesis: "A physical symbol system has the necessary and sufficient means of
+general intelligent action."[420]
+However, the symbolic approach failed on many tasks that humans solve easily, such as learning,
+recognizing an object or commonsense reasoning. Moravec's paradox is the discovery that high-level
+"intelligent" tasks were easy for AI, but low level "instinctive" tasks were extremely difficult.[421]
+Philosopher Hubert Dreyfus had argued since the 1960s that human expertise depends on
+unconscious instinct rather than conscious symbol manipulation, and on having a "feel" for the
+situation, rather than explicit symbolic knowledge.[422] Although his arguments had been ridiculed
+and ignored when they were first presented, eventually, AI research came to agree with him.[ab][16]
+The issue is not resolved: sub-symbolic reasoning can make many of the same inscrutable mistakes
+that human intuition does, such as algorithmic bias. Critics such as Noam Chomsky argue continuing
+research into symbolic AI will still be necessary to attain general intelligence,[424][425]
+in part because
+sub-symbolic AI is a move away from explainable AI: it can be difficult or impossible to understand
+why a modern statistical AI program made a particular decision. The emerging field of neuro-symbolic artificial intelligence attempts to bridge the two approaches.
+"Neats" hope that intelligent behavior is described using simple, elegant principles (such as logic,
+optimization, or neural networks). "Scruffies" expect that it necessarily requires solving a large
+number of unrelated problems. Neats defend their programs with theoretical rigor, scruffies rely
+mainly on incremental testing to see if they work. This issue was actively discussed in the 1970s and
+1980s,[426]
+ but eventually was seen as irrelevant. Modern AI has elements of both.
+Finding a provably correct or optimal solution is intractable for many important problems.[15] Soft
+computing is a set of techniques, including genetic algorithms, fuzzy logic and neural networks, that
+are tolerant of imprecision, uncertainty, partial truth and approximation. Soft computing was
+introduced in the late 1980s and most successful AI programs in the 21st century are examples of soft
+computing with neural networks.
+AI researchers are divided as to whether to pursue the goals of artificial general intelligence and
+superintelligence directly or to solve as many specific problems as possible (narrow AI) in hopes these
+solutions will lead indirectly to the field's long-term goals.[427][428] General intelligence is difficult to
+define and difficult to measure, and modern AI has had more verifiable successes by focusing on
+specific problems with specific solutions. The sub-field of artificial general intelligence studies this
+area exclusively.
+Symbolic AI and its limits
+Neat vs. scruffy
+Soft vs. hard computing
+Narrow vs. general AI
+There is no settled consensus in philosophy of mind on whether a machine can have a mind,
+consciousness and mental states in the same sense that human beings do. This issue considers the
+internal experiences of the machine, rather than its external behavior. Mainstream AI research
+considers this issue irrelevant because it does not affect the goals of the field: to build machines that
+can solve problems using intelligence. Russell and Norvig add that "[t]he additional project of making
+a machine conscious in exactly the way humans are is not one that we are equipped to take on."[429]
+However, the question has become central to the philosophy of mind. It is also typically the central
+question at issue in artificial intelligence in fiction.
+David Chalmers identified two problems in understanding the mind, which he named the "hard" and
+"easy" problems of consciousness.[430] The easy problem is understanding how the brain processes
+signals, makes plans and controls behavior. The hard problem is explaining how this feels or why it
+should feel like anything at all, assuming we are right in thinking that it truly does feel like something
+(Dennett's consciousness illusionism says this is an illusion). While human information processing is
+easy to explain, human subjective experience is difficult to explain. For example, it is easy to imagine a
+color-blind person who has learned to identify which objects in their field of view are red, but it is not
+clear what would be required for the person to know what red looks like.
+[431]
+Computationalism is the position in the philosophy of mind that the human mind is an information
+processing system and that thinking is a form of computing. Computationalism argues that the
+relationship between mind and body is similar or identical to the relationship between software and
+hardware and thus may be a solution to the mind–body problem. This philosophical position was
+inspired by the work of AI researchers and cognitive scientists in the 1960s and was originally
+proposed by philosophers Jerry Fodor and Hilary Putnam.
+[432]
+Philosopher John Searle characterized this position as "strong AI": "The appropriately programmed
+computer with the right inputs and outputs would thereby have a mind in exactly the same sense
+human beings have minds."[ac] Searle challenges this claim with his Chinese room argument, which
+attempts to show that even a computer capable of perfectly simulating human behavior would not
+have a mind.[436]
+It is difficult or impossible to reliably evaluate whether an advanced AI is sentient (has the ability to
+feel), and if so, to what degree.[437] But if there is a significant chance that a given machine can feel
+and suffer, then it may be entitled to certain rights or welfare protection measures, similarly to
+animals.[438][439] Sapience (a set of capacities related to high intelligence, such as discernment or self-awareness) may provide another moral basis for AI rights.[438] Robot rights are also sometimes
+proposed as a practical way to integrate autonomous agents into society.[440]
+Machine consciousness, sentience, and mind
+Consciousness
+Computationalism and functionalism
+AI welfare and rights
+In 2017, the European Union considered granting "electronic personhood" to some of the most
+capable AI systems. Similarly to the legal status of companies, it would have conferred rights but also
+responsibilities.[441] Critics argued in 2018 that granting rights to AI systems would downplay the
+importance of human rights, and that legislation should focus on user needs rather than speculative
+futuristic scenarios. They also noted that robots lacked the autonomy to take part in society on their
+own.[442][443]
+Progress in AI increased interest in the topic. Proponents of AI welfare and rights often argue that AI
+sentience, if it emerges, would be particularly easy to deny. They warn that this may be a moral blind
+spot analogous to slavery or factory farming, which could lead to large-scale suffering if sentient AI is
+created and carelessly exploited.[439][438]
+A superintelligence is a hypothetical agent that would possess intelligence far surpassing that of the
+brightest and most gifted human mind.[428]
+If research into artificial general intelligence produced
+sufficiently intelligent software, it might be able to reprogram and improve itself. The improved
+software would be even better at improving itself, leading to what I. J. Good called an "intelligence
+explosion" and Vernor Vinge called a "singularity".[444]
+However, technologies cannot improve exponentially indefinitely, and typically follow an S-shaped
+curve, slowing when they reach the physical limits of what the technology can do.[445]
+Robot designer Hans Moravec, cyberneticist Kevin Warwick and inventor Ray Kurzweil have
+predicted that humans and machines may merge in the future into cyborgs that are more capable and
+powerful than either. This idea, called transhumanism, has roots in the writings of Aldous Huxley and
+Robert Ettinger.
+[446]
+Edward Fredkin argues that "artificial intelligence is the next step in evolution", an idea first proposed
+by Samuel Butler's "Darwin among the Machines" as far back as 1863, and expanded upon by George
+Dyson in his 1998 book Darwin Among the Machines: The Evolution of Global Intelligence.
+[447]
+Thought-capable artificial beings have appeared as storytelling devices since antiquity,[448] and have
+been a persistent theme in science fiction.
+[449]
+A common trope in these works began with Mary Shelley's Frankenstein, where a human creation
+becomes a threat to its masters. This includes such works as Arthur C. Clarke's and Stanley Kubrick's
+2001: A Space Odyssey (both 1968), with HAL 9000, the murderous computer in charge of the
+Future
+Superintelligence and the singularity
+Transhumanism
+In fiction
+The word "robot" itself was coined by Karel Čapek
+in his 1921 play R.U.R., the title standing for
+"Rossum's Universal Robots".
+Discovery One spaceship, as well as The Terminator
+(1984) and The Matrix (1999). In contrast, the rare
+loyal robots such as Gort from The Day the Earth
+Stood Still (1951) and Bishop from Aliens (1986) are
+less prominent in popular culture.[450]
+Isaac Asimov introduced the Three Laws of Robotics in
+many stories, most notably with the "Multivac" super-intelligent computer. Asimov's laws are often brought
+up during lay discussions of machine ethics;[451] while
+almost all artificial intelligence researchers are familiar
+with Asimov's laws through popular culture, they
+generally consider the laws useless for many reasons,
+one of which is their ambiguity.[452]
+Several works use AI to force us to confront the fundamental question of what makes us human,
+showing us artificial beings that have the ability to feel, and thus to suffer. This appears in Karel
+Čapek's R.U.R., the films A.I. Artificial Intelligence and Ex Machina, as well as the novel Do Androids
+Dream of Electric Sheep?, by Philip K. Dick. Dick considers the idea that our understanding of human
+subjectivity is altered by technology created with artificial intelligence.[453]
+Artificial consciousness – Field in cognitive science
+Artificial intelligence and elections – Use and impact of AI on political elections
+Artificial intelligence content detection – Software to detect AI-generated content
+Association for the Advancement of Artificial Intelligence (AAAI)
+Behavior selection algorithm – Algorithm that selects actions for intelligent agents
+Business process automation – Automation of business processes
+Case-based reasoning – Process of solving new problems based on the solutions of similar past
+problems
+Computational intelligence – Ability of a computer to learn a specific task from data or
+experimental observation
+Digital immortality – Hypothetical concept of storing a personality in digital form
+Emergent algorithm – Algorithm exhibiting emergent behavior
+Female gendering of AI technologies – Gender biases in digital technology
+Glossary of artificial intelligence – List of definitions of terms and concepts commonly used in the
+study of artificial intelligence
+Intelligence amplification – Use of information technology to augment human intelligence
+Intelligent agent – Software agent which acts autonomously
+Intelligent automation – Software process that combines robotic process automation and artificial
+intelligence
+List of artificial intelligence books
+List of artificial intelligence journals
+List of artificial intelligence projects
+See also
+Mind uploading – Hypothetical process of digitally emulating a brain
+Organoid intelligence – Use of brain cells and brain organoids for intelligent computing
+Robotic process automation – Form of business process automation technology
+The Last Day – 1967 Welsh science fiction novel
+Wetware computer – Computer composed of organic material
+DARWIN EU - A European Union initiative coordinated by the European Medicines Agency (EMA)
+to generate and utilize real-world evidence (RWE) to support the evaluation and supervision of
+medicines across the EU.
+Artificial intelligence in Wikimedia projects - Use of artificial intelligence to develop Wikipedia and
+other Wikimedia projects
+AI-generated content on Wikipedia - Use of artificial intelligence to generate articles or text on
+Wikipedia
+a. This list of intelligent traits is based on the topics covered by the major AI textbooks, including:
+Russell & Norvig (2021), Luger & Stubblefield (2004), Poole, Mackworth & Goebel (1998) and
+Nilsson (1998)
+b. This list of tools is based on the topics covered by the major AI textbooks, including: Russell &
+Norvig (2021), Luger & Stubblefield (2004), Poole, Mackworth & Goebel (1998) and Nilsson
+(1998)
+c. It is among the reasons that expert systems proved to be inefficient for capturing
+knowledge.[30][31]
+d. "Rational agent" is general term used in economics, philosophy and theoretical artificial
+intelligence. It can refer to anything that directs its behavior to accomplish goals, such as a
+person, an animal, a corporation, a nation, or in the case of AI, a computer program.
+e. Alan Turing discussed the centrality of learning as early as 1950, in his classic paper "Computing
+Machinery and Intelligence".[42]
+ In 1956, at the original Dartmouth AI summer conference, Ray
+Solomonoff wrote a report on unsupervised probabilistic machine learning: "An Inductive Inference
+Machine".[43]
+f. See AI winter § Machine translation and the ALPAC report of 1966
+g. Compared with symbolic logic, formal Bayesian inference is computationally expensive. For
+inference to be tractable, most observations must be conditionally independent of one another.
+AdSense uses a Bayesian network with over 300 million edges to learn which ads to serve.[94]
+h. Expectation–maximization, one of the most popular algorithms in machine learning, allows
+clustering in the presence of unknown latent variables.
+[96]
+i. Some form of deep neural networks (without a specific learning algorithm) were described by:
+Warren S. McCulloch and Walter Pitts (1943)[117] Alan Turing (1948);[118] Karl Steinbuch and
+Roger David Joseph (1961).[119]
+ Deep or recurrent networks that learned (or used gradient
+descent) were developed by: Frank Rosenblatt(1957);[118] Oliver Selfridge (1959);[119] Alexey
+Ivakhnenko and Valentin Lapa (1965);[120] Kaoru Nakano (1971);[121] Shun-Ichi Amari (1972);[121]
+John Joseph Hopfield (1982).[121]
+ Precursors to backpropagation were developed by: Henry J.
+Kelley (1960);[118] Arthur E. Bryson (1962);[118] Stuart Dreyfus (1962);[118] Arthur E. Bryson and
+Yu-Chi Ho (1969);[118]
+ Backpropagation was independently developed by: Seppo Linnainmaa
+(1970);[122] Paul Werbos (1974).[118]
+j. Geoffrey Hinton said, of his work on neural networks in the 1990s, "our labeled datasets were
+thousands of times too small. [And] our computers were millions of times too slow."[123]
+Explanatory notes
+k. In statistics, a bias is a systematic error or deviation from the correct value. But in the context of
+fairness, it refers to a tendency in favor or against a certain group or individual characteristic,
+usually in a way that is considered unfair or harmful. A statistically unbiased AI system that
+produces disparate outcomes for different demographic groups may thus be viewed as biased in
+the ethical sense.[263]
+l. Including Jon Kleinberg (Cornell University), Sendhil Mullainathan (University of Chicago), Cynthia
+Chouldechova (Carnegie Mellon) and Sam Corbett-Davis (Stanford)
+[272]
+m. Moritz Hardt (a director at the Max Planck Institute for Intelligent Systems) argues that machine
+learning "is fundamentally the wrong tool for a lot of domains, where you're trying to design
+interventions and mechanisms that change the world."[277]
+n. When the law was passed in 2018, it still contained a form of this provision.
+o. This is the United Nations' definition, and includes things like land mines as well.[291]
+p. See table 4; 9% is both the OECD average and the U.S. average.[302]
+q. Sometimes called a "robopocalypse"
+[310]
+r. "Electronic brain" was the term used by the press around this time.[365][367]
+s. Daniel Crevier wrote, "the conference is generally recognized as the official birthdate of the new
+science."[370] Russell and Norvig called the conference "the inception of artificial intelligence."[117]
+t. Russell and Norvig wrote "for the next 20 years the field would be dominated by these people and
+their students."[371]
+u. Russell and Norvig wrote, "it was astonishing whenever a computer did anything kind of
+smartish".[372]
+v. The programs described are Arthur Samuel's checkers program for the IBM 701, Daniel Bobrow's
+STUDENT, Newell and Simon's Logic Theorist and Terry Winograd's SHRDLU.
+w. Russell and Norvig write: "in almost all cases, these early systems failed on more difficult
+problems"[376]
+x. Embodied approaches to AI[383]
+ were championed by Hans Moravec[384]
+ and Rodney Brooks[385]
+and went by many names: Nouvelle AI.
+[385] Developmental robotics.
+[386]
+y. Matteo Wong wrote in The Atlantic: "Whereas for decades, computer-science fields such as
+natural-language processing, computer vision, and robotics used extremely different methods,
+now they all use a programming method called "deep learning". As a result, their code and
+approaches have become more similar, and their models are easier to integrate into one
+another."[392]
+z. Jack Clark wrote in Bloomberg: "After a half-decade of quiet breakthroughs in artificial intelligence,
+2015 has been a landmark year. Computers are smarter and learning faster than ever", and noted
+that the number of software projects that use machine learning at Google increased from a
+"sporadic usage" in 2012 to more than 2,700 projects in 2015.[394]
+aa. Nils Nilsson wrote in 1983: "Simply put, there is wide disagreement in the field about what AI is all
+about."[418]
+ab. Daniel Crevier wrote that "time has proven the accuracy and perceptiveness of some of Dreyfus's
+comments. Had he formulated them less aggressively, constructive actions they suggested might
+have been taken much earlier."[423]
+ac. Searle presented this definition of "Strong AI" in 1999.[433]
+ Searle's original formulation was "The
+appropriately programmed computer really is a mind, in the sense that computers given the right
+programs can be literally said to understand and have other cognitive states."[434]
+ Strong AI is
+defined similarly by Russell and Norvig: "Stong AI – the assertion that machines that do so are
+actually thinking (as opposed to simulating thinking)."[435]
+1. Russell & Norvig (2021), pp. 1–4.
+2. AI set to exceed human brain power (http://www.cnn.com/2006/TECH/science/07/24/ai.bostrom/)
+Archived (https://web.archive.org/web/20080219001624/http://www.cnn.com/2006/TECH/science/
+07/24/ai.bostrom/) 2008-02-19 at the Wayback Machine CNN.com (July 26, 2006)
+3. Kaplan, Andreas; Haenlein, Michael (2019). "Siri, Siri, in my hand: Who's the fairest in the land?
+On the interpretations, illustrations, and implications of artificial intelligence". Business Horizons.
+62: 15–25. doi:10.1016/j.bushor.2018.08.004 (https://doi.org/10.1016%2Fj.bushor.2018.08.004).
+ISSN 0007-6813 (https://search.worldcat.org/issn/0007-6813). S2CID 158433736 (https://api.sem
+anticscholar.org/CorpusID:158433736).
+4. Russell & Norvig (2021, §1.2).
+5. "Tech companies want to build artificial general intelligence. But who decides when AGI is
+attained?" (https://apnews.com/article/agi-artificial-general-intelligence-existential-risk-meta-opena
+i-deepmind-science-ff5662a056d3cf3c5889a73e929e5a34). AP News. 4 April 2024. Retrieved
+20 May 2025.
+6. Dartmouth workshop: Russell & Norvig (2021, p. 18), McCorduck (2004, pp. 111–136), NRC
+(1999, pp. 200–201)
+The proposal: McCarthy et al. (1955)
+7. Successful programs of the 1960s: McCorduck (2004, pp. 243–252), Crevier (1993, pp. 52–107),
+Moravec (1988, p. 9), Russell & Norvig (2021, pp. 19–21)
+8. Funding initiatives in the early 1980s: Fifth Generation Project (Japan), Alvey (UK),
+Microelectronics and Computer Technology Corporation (US), Strategic Computing Initiative (US):
+McCorduck (2004, pp. 426–441), Crevier (1993, pp. 161–162, 197–203, 211, 240), Russell &
+Norvig (2021, p. 23), NRC (1999, pp. 210–211), Newquist (1994, pp. 235–248)
+9. First AI Winter, Lighthill report, Mansfield Amendment: Crevier (1993, pp. 115–117), Russell &
+Norvig (2021, pp. 21–22), NRC (1999, pp. 212–213), Howe (1994), Newquist (1994, pp. 189–201)
+10. Second AI Winter: Russell & Norvig (2021, p. 24), McCorduck (2004, pp. 430–435), Crevier (1993,
+pp. 209–210), NRC (1999, pp. 214–216), Newquist (1994, pp. 301–318)
+11. Deep learning revolution, AlexNet: Goldman (2022), Russell & Norvig (2021, p. 26), McKinsey
+(2018)
+12. Toews (2023).
+13. Problem-solving, puzzle solving, game playing, and deduction: Russell & Norvig (2021, chpt. 3–5),
+Russell & Norvig (2021, chpt. 6) (constraint satisfaction), Poole, Mackworth & Goebel (1998, chpt.
+2, 3, 7, 9), Luger & Stubblefield (2004, chpt. 3, 4, 6, 8), Nilsson (1998, chpt. 7–12)
+14. Uncertain reasoning: Russell & Norvig (2021, chpt. 12–18), Poole, Mackworth & Goebel (1998,
+pp. 345–395), Luger & Stubblefield (2004, pp. 333–381), Nilsson (1998, chpt. 7–12)
+15. Intractability and efficiency and the combinatorial explosion: Russell & Norvig (2021, p. 21)
+16. Psychological evidence of the prevalence of sub-symbolic reasoning and knowledge: Kahneman
+(2011), Dreyfus & Dreyfus (1986), Wason & Shapiro (1966), Kahneman, Slovic & Tversky (1982)
+17. Knowledge representation and knowledge engineering: Russell & Norvig (2021, chpt. 10), Poole,
+Mackworth & Goebel (1998, pp. 23–46, 69–81, 169–233, 235–277, 281–298, 319–345), Luger &
+Stubblefield (2004, pp. 227–243), Nilsson (1998, chpt. 17.1–17.4, 18)
+18. Smoliar & Zhang (1994).
+19. Neumann & Möller (2008).
+20. Kuperman, Reichley & Bailey (2006).
+21. McGarry (2005).
+References
+22. Bertini, Del Bimbo & Torniai (2006).
+23. Russell & Norvig (2021), pp. 272.
+24. Representing categories and relations: Semantic networks, description logics, inheritance
+(including frames, and scripts): Russell & Norvig (2021, §10.2 & 10.5), Poole, Mackworth &
+Goebel (1998, pp. 174–177), Luger & Stubblefield (2004, pp. 248–258), Nilsson (1998, chpt. 18.3)
+25. Representing events and time:Situation calculus, event calculus, fluent calculus (including solving
+the frame problem): Russell & Norvig (2021, §10.3), Poole, Mackworth & Goebel (1998, pp. 281–
+298), Nilsson (1998, chpt. 18.2)
+26. Causal calculus: Poole, Mackworth & Goebel (1998, pp. 335–337)
+27. Representing knowledge about knowledge: Belief calculus, modal logics: Russell & Norvig (2021,
+§10.4), Poole, Mackworth & Goebel (1998, pp. 275–277)
+28. Default reasoning, Frame problem, default logic, non-monotonic logics, circumscription, closed
+world assumption, abduction: Russell & Norvig (2021, §10.6), Poole, Mackworth & Goebel (1998,
+pp. 248–256, 323–335), Luger & Stubblefield (2004, pp. 335–363), Nilsson (1998, ~18.3.3) (Poole
+et al. places abduction under "default reasoning". Luger et al. places this under "uncertain
+reasoning").
+29. Breadth of commonsense knowledge: Lenat & Guha (1989, Introduction), Crevier (1993, pp. 113–
+114), Moravec (1988, p. 13), Russell & Norvig (2021, pp. 241, 385, 982) (qualification problem)
+30. Newquist (1994), p. 296.
+31. Crevier (1993), pp. 204–208.
+32. Russell & Norvig (2021), p. 528.
+33. Automated planning: Russell & Norvig (2021, chpt. 11).
+34. Automated decision making, Decision theory: Russell & Norvig (2021, chpt. 16–18).
+35. Classical planning: Russell & Norvig (2021, Section 11.2).
+36. Sensorless or "conformant" planning, contingent planning, replanning (a.k.a. online planning):
+Russell & Norvig (2021, Section 11.5).
+37. Uncertain preferences: Russell & Norvig (2021, Section 16.7) Inverse reinforcement learning:
+Russell & Norvig (2021, Section 22.6)
+38. Information value theory: Russell & Norvig (2021, Section 16.6).
+39. Markov decision process: Russell & Norvig (2021, chpt. 17).
+40. Game theory and multi-agent decision theory: Russell & Norvig (2021, chpt. 18).
+41. Learning: Russell & Norvig (2021, chpt. 19–22), Poole, Mackworth & Goebel (1998, pp. 397–438),
+Luger & Stubblefield (2004, pp. 385–542), Nilsson (1998, chpt. 3.3, 10.3, 17.5, 20)
+42. Turing (1950).
+43. Solomonoff (1956).
+44. Unsupervised learning: Russell & Norvig (2021, pp. 653) (definition), Russell & Norvig (2021,
+pp. 738–740) (cluster analysis), Russell & Norvig (2021, pp. 846–860) (word embedding)
+45. Supervised learning: Russell & Norvig (2021, §19.2) (Definition), Russell & Norvig (2021, Chpt.
+19–20) (Techniques)
+46. Reinforcement learning: Russell & Norvig (2021, chpt. 22), Luger & Stubblefield (2004, pp. 442–
+449)
+47. Transfer learning: Russell & Norvig (2021, pp. 281), The Economist (2016)
+48. "Artificial Intelligence (AI): What Is AI and How Does It Work? | Built In" (https://builtin.com/artificial
+-intelligence). builtin.com. Retrieved 30 October 2023.
+49. Computational learning theory: Russell & Norvig (2021, pp. 672–674), Jordan & Mitchell (2015)
+50. Natural language processing (NLP): Russell & Norvig (2021, chpt. 23–24), Poole, Mackworth &
+Goebel (1998, pp. 91–104), Luger & Stubblefield (2004, pp. 591–632)
+51. Subproblems of NLP: Russell & Norvig (2021, pp. 849–850)
+52. Russell & Norvig (2021), pp. 856–858.
+53. Dickson (2022).
+54. Modern statistical and deep learning approaches to NLP: Russell & Norvig (2021, chpt. 24),
+Cambria & White (2014)
+55. Vincent (2019).
+56. Russell & Norvig (2021), pp. 875–878.
+57. Bushwick (2023).
+58. Computer vision: Russell & Norvig (2021, chpt. 25), Nilsson (1998, chpt. 6)
+59. Russell & Norvig (2021), pp. 849–850.
+60. Russell & Norvig (2021), pp. 895–899.
+61. Russell & Norvig (2021), pp. 899–901.
+62. Challa et al. (2011).
+63. Russell & Norvig (2021), pp. 931–938.
+64. MIT AIL (2014).
+65. Affective computing: Thro (1993), Edelson (1991), Tao & Tan (2005), Scassellati (2002)
+66. Waddell (2018).
+67. Poria et al. (2017).
+68. Artificial general intelligence: Russell & Norvig (2021, pp. 32–33, 1020–1021)
+Proposal for the modern version: Pennachin & Goertzel (2007)
+Warnings of overspecialization in AI from leading researchers: Nilsson (1995), McCarthy (2007),
+Beal & Winston (2009)
+69. Search algorithms: Russell & Norvig (2021, chpts. 3–5), Poole, Mackworth & Goebel (1998,
+pp. 113–163), Luger & Stubblefield (2004, pp. 79–164, 193–219), Nilsson (1998, chpts. 7–12)
+70. State space search: Russell & Norvig (2021, chpt. 3)
+71. Russell & Norvig (2021), sect. 11.2.
+72. Uninformed searches (breadth first search, depth-first search and general state space search):
+Russell & Norvig (2021, sect. 3.4), Poole, Mackworth & Goebel (1998, pp. 113–132), Luger &
+Stubblefield (2004, pp. 79–121), Nilsson (1998, chpt. 8)
+73. Heuristic or informed searches (e.g., greedy best first and A*): Russell & Norvig (2021, sect. 3.5),
+Poole, Mackworth & Goebel (1998, pp. 132–147), Poole & Mackworth (2017, sect. 3.6), Luger &
+Stubblefield (2004, pp. 133–150)
+74. Adversarial search: Russell & Norvig (2021, chpt. 5)
+75. Local or "optimization" search: Russell & Norvig (2021, chpt. 4)
+76. Singh Chauhan, Nagesh (18 December 2020). "Optimization Algorithms in Neural Networks" (http
+s://www.kdnuggets.com/optimization-algorithms-in-neural-networks). KDnuggets. Retrieved
+13 January 2024.
+77. Evolutionary computation: Russell & Norvig (2021, sect. 4.1.2)
+78. Merkle & Middendorf (2013).
+79. Logic: Russell & Norvig (2021, chpts. 6–9), Luger & Stubblefield (2004, pp. 35–77), Nilsson (1998,
+chpt. 13–16)
+80. Propositional logic: Russell & Norvig (2021, chpt. 6), Luger & Stubblefield (2004, pp. 45–50),
+Nilsson (1998, chpt. 13)
+81. First-order logic and features such as equality: Russell & Norvig (2021, chpt. 7), Poole, Mackworth
+& Goebel (1998, pp. 268–275), Luger & Stubblefield (2004, pp. 50–62), Nilsson (1998, chpt. 15)
+82. Logical inference: Russell & Norvig (2021, chpt. 10)
+83. logical deduction as search: Russell & Norvig (2021, sects. 9.3, 9.4), Poole, Mackworth & Goebel
+(1998, pp. ~46–52), Luger & Stubblefield (2004, pp. 62–73), Nilsson (1998, chpt. 4.2, 7.2)
+84. Resolution and unification: Russell & Norvig (2021, sections 7.5.2, 9.2, 9.5)
+85. Warren, D.H.; Pereira, L.M.; Pereira, F. (1977). "Prolog-the language and its implementation
+compared with Lisp". ACM SIGPLAN Notices. 12 (8): 109–115. doi:10.1145/872734.806939 (http
+s://doi.org/10.1145%2F872734.806939).
+86. Fuzzy logic: Russell & Norvig (2021, pp. 214, 255, 459), Scientific American (1999)
+87. Stochastic methods for uncertain reasoning: Russell & Norvig (2021, chpt. 12–18, 20), Poole,
+Mackworth & Goebel (1998, pp. 345–395), Luger & Stubblefield (2004, pp. 165–191, 333–381),
+Nilsson (1998, chpt. 19)
+88. decision theory and decision analysis: Russell & Norvig (2021, chpt. 16–18), Poole, Mackworth &
+Goebel (1998, pp. 381–394)
+89. Information value theory: Russell & Norvig (2021, sect. 16.6)
+90. Markov decision processes and dynamic decision networks: Russell & Norvig (2021, chpt. 17)
+91. Stochastic temporal models: Russell & Norvig (2021, chpt. 14) Hidden Markov model: Russell &
+Norvig (2021, sect. 14.3) Kalman filters: Russell & Norvig (2021, sect. 14.4) Dynamic Bayesian
+networks: Russell & Norvig (2021, sect. 14.5)
+92. Game theory and mechanism design: Russell & Norvig (2021, chpt. 18)
+93. Bayesian networks: Russell & Norvig (2021, sects. 12.5–12.6, 13.4–13.5, 14.3–14.5, 16.5, 20.2–
+20.3), Poole, Mackworth & Goebel (1998, pp. 361–381), Luger & Stubblefield (2004, pp. ~182–
+190, ≈363–379), Nilsson (1998, chpt. 19.3–19.4)
+94. Domingos (2015), chpt. 6.
+95. Bayesian inference algorithm: Russell & Norvig (2021, sect. 13.3–13.5), Poole, Mackworth &
+Goebel (1998, pp. 361–381), Luger & Stubblefield (2004, pp. ~363–379), Nilsson (1998, chpt.
+19.4 & 7)
+96. Domingos (2015), p. 210.
+97. Bayesian learning and the expectation–maximization algorithm: Russell & Norvig (2021, chpt. 20),
+Poole, Mackworth & Goebel (1998, pp. 424–433), Nilsson (1998, chpt. 20), Domingos (2015,
+p. 210)
+98. Bayesian decision theory and Bayesian decision networks: Russell & Norvig (2021, sect. 16.5)
+99. Statistical learning methods and classifiers: Russell & Norvig (2021, chpt. 20),
+100. Ciaramella, Alberto; Ciaramella, Marco (2024). Introduction to Artificial Intelligence: from data
+analysis to generative AI. Intellisemantic Editions. ISBN 978-8-8947-8760-3.
+101. Decision trees: Russell & Norvig (2021, sect. 19.3), Domingos (2015, p. 88)
+102. Non-parameteric learning models such as K-nearest neighbor and support vector machines:
+Russell & Norvig (2021, sect. 19.7), Domingos (2015, p. 187) (k-nearest neighbor)
+Domingos (2015, p. 88) (kernel methods)
+103. Domingos (2015), p. 152.
+104. Naive Bayes classifier: Russell & Norvig (2021, sect. 12.6), Domingos (2015, p. 152)
+105. Neural networks: Russell & Norvig (2021, chpt. 21), Domingos (2015, Chapter 4)
+106. Gradient calculation in computational graphs, backpropagation, automatic differentiation: Russell
+& Norvig (2021, sect. 21.2), Luger & Stubblefield (2004, pp. 467–474), Nilsson (1998, chpt. 3.3)
+107. Universal approximation theorem: Russell & Norvig (2021, p. 752) The theorem: Cybenko (1988),
+Hornik, Stinchcombe & White (1989)
+108. Feedforward neural networks: Russell & Norvig (2021, sect. 21.1)
+109. Perceptrons: Russell & Norvig (2021, pp. 21, 22, 683, 22)
+110. Deep learning: Russell & Norvig (2021, chpt. 21), Goodfellow, Bengio & Courville (2016), Hinton
+et al. (2016), Schmidhuber (2015)
+111. Recurrent neural networks: Russell & Norvig (2021, sect. 21.6)
+112. Convolutional neural networks: Russell & Norvig (2021, sect. 21.3)
+113. Sindhu V, Nivedha S, Prakash M (February 2020). "An Empirical Science Research on
+Bioinformatics in Machine Learning" (https://doi.org/10.26782%2Fjmcms.spl.7%2F2020.02.0000
+6). Journal of Mechanics of Continua and Mathematical Sciences (7).
+doi:10.26782/jmcms.spl.7/2020.02.00006 (https://doi.org/10.26782%2Fjmcms.spl.7%2F2020.02.0
+0006).
+114. Deng & Yu (2014), pp. 199–200.
+115. Ciresan, Meier & Schmidhuber (2012).
+116. Russell & Norvig (2021), p. 750.
+117. Russell & Norvig (2021), p. 17.
+118. Russell & Norvig (2021), p. 785.
+119. Schmidhuber (2022), sect. 5.
+120. Schmidhuber (2022), sect. 6.
+121. Schmidhuber (2022), sect. 7.
+122. Schmidhuber (2022), sect. 8.
+123. Quoted in Christian (2020, p. 22)
+124. Metz, Cade; Weise, Karen (5 May 2025). "A.I. Hallucinations Are Getting Worse, Even as New
+Systems Become More Powerful" (https://www.nytimes.com/2025/05/05/technology/ai-hallucinatio
+ns-chatgpt-google.html). The New York Times. ISSN 0362-4331 (https://search.worldcat.org/issn/
+0362-4331). Retrieved 6 May 2025.
+125. Smith (2023).
+126. "Explained: Generative AI" (https://news.mit.edu/2023/explained-generative-ai-1109). 9 November
+2023.
+127. "AI Writing and Content Creation Tools" (https://mitsloanedtech.mit.edu/ai/tools/writing). MIT Sloan
+Teaching & Learning Technologies. Archived (https://web.archive.org/web/20231225232503/http
+s://mitsloanedtech.mit.edu/ai/tools/writing/) from the original on 25 December 2023. Retrieved
+25 December 2023.
+128. Marmouyet (2023).
+129. Kobielus (2019).
+130. Thomason, James (21 May 2024). "Mojo Rising: The resurgence of AI-first programming
+languages" (https://venturebeat.com/ai/mojo-rising-the-resurgence-of-ai-first-programming-langua
+ges). VentureBeat. Archived (https://web.archive.org/web/20240627143853/https://venturebeat.co
+m/ai/mojo-rising-the-resurgence-of-ai-first-programming-languages/) from the original on 27 June
+2024. Retrieved 26 May 2024.
+131. Wodecki, Ben (5 May 2023). "7 AI Programming Languages You Need to Know" (https://aibusines
+s.com/verticals/7-ai-programming-languages-you-need-to-know). AI Business. Archived (https://w
+eb.archive.org/web/20240725164443/https://aibusiness.com/verticals/7-ai-programming-language
+s-you-need-to-know) from the original on 25 July 2024. Retrieved 5 October 2024.
+132. Plumb, Taryn (18 September 2024). "Why Jensen Huang and Marc Benioff see 'gigantic'
+opportunity for agentic AI" (https://venturebeat.com/ai/why-jensen-huang-and-marc-benioff-see-gi
+gantic-opportunity-for-agentic-ai/). VentureBeat. Archived (https://web.archive.org/web/202410051
+65649/https://venturebeat.com/ai/why-jensen-huang-and-marc-benioff-see-gigantic-opportunity-for
+-agentic-ai/) from the original on 5 October 2024. Retrieved 4 October 2024.
+133. Mims, Christopher (19 September 2020). "Huang's Law Is the New Moore's Law, and Explains
+Why Nvidia Wants Arm" (https://www.wsj.com/articles/huangs-law-is-the-new-moores-law-and-exp
+lains-why-nvidia-wants-arm-11600488001). Wall Street Journal. ISSN 0099-9660 (https://search.w
+orldcat.org/issn/0099-9660). Archived (https://web.archive.org/web/20231002080608/https://www.
+wsj.com/articles/huangs-law-is-the-new-moores-law-and-explains-why-nvidia-wants-arm-1160048
+8001) from the original on 2 October 2023. Retrieved 19 January 2025.
+134. Davenport, T; Kalakota, R (June 2019). "The potential for artificial intelligence in healthcare" (http
+s://www.ncbi.nlm.nih.gov/pmc/articles/PMC6616181). Future Healthc J. 6 (2): 94–98.
+doi:10.7861/futurehosp.6-2-94 (https://doi.org/10.7861%2Ffuturehosp.6-2-94). PMC 6616181 (htt
+ps://www.ncbi.nlm.nih.gov/pmc/articles/PMC6616181). PMID 31363513 (https://pubmed.ncbi.nlm.
+nih.gov/31363513).
+135. Lyakhova, U.A.; Lyakhov, P.A. (2024). "Systematic review of approaches to detection and
+classification of skin cancer using artificial intelligence: Development and prospects" (https://linkin
+ghub.elsevier.com/retrieve/pii/S0010482524008278). Computers in Biology and Medicine. 178
+108742. doi:10.1016/j.compbiomed.2024.108742 (https://doi.org/10.1016%2Fj.compbiomed.2024.
+108742). PMID 38875908 (https://pubmed.ncbi.nlm.nih.gov/38875908). Archived (https://web.arch
+ive.org/web/20241203172502/https://linkinghub.elsevier.com/retrieve/pii/S0010482524008278)
+from the original on 3 December 2024. Retrieved 10 October 2024.
+136. Alqudaihi, Kawther S.; Aslam, Nida; Khan, Irfan Ullah; Almuhaideb, Abdullah M.; Alsunaidi, Shikah
+J.; Ibrahim, Nehad M. Abdel Rahman; Alhaidari, Fahd A.; Shaikh, Fatema S.; Alsenbel, Yasmine
+M.; Alalharith, Dima M.; Alharthi, Hajar M.; Alghamdi, Wejdan M.; Alshahrani, Mohammed S.
+(2021). "Cough Sound Detection and Diagnosis Using Artificial Intelligence Techniques:
+Challenges and Opportunities" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8545201). IEEE
+Access. 9: 102327–102344. Bibcode:2021IEEEA...9j2327A (https://ui.adsabs.harvard.edu/abs/20
+21IEEEA...9j2327A). doi:10.1109/ACCESS.2021.3097559 (https://doi.org/10.1109%2FACCESS.2
+021.3097559). ISSN 2169-3536 (https://search.worldcat.org/issn/2169-3536). PMC 8545201 (http
+s://www.ncbi.nlm.nih.gov/pmc/articles/PMC8545201). PMID 34786317 (https://pubmed.ncbi.nlm.ni
+h.gov/34786317).
+137. Bax, Monique; Thorpe, Jordan; Romanov, Valentin (December 2023). "The future of personalized
+cardiovascular medicine demands 3D and 4D printing, stem cells, and artificial intelligence" (http
+s://doi.org/10.3389%2Ffsens.2023.1294721). Frontiers in Sensors. 4 1294721.
+doi:10.3389/fsens.2023.1294721 (https://doi.org/10.3389%2Ffsens.2023.1294721). ISSN 2673-
+5067 (https://search.worldcat.org/issn/2673-5067).
+138. Dankwa-Mullan, Irene (2024). "Health Equity and Ethical Considerations in Using Artificial
+Intelligence in Public Health and Medicine" (https://www.cdc.gov/pcd/issues/2024/24_0245.htm).
+Preventing Chronic Disease. 21 240245: E64. doi:10.5888/pcd21.240245 (https://doi.org/10.588
+8%2Fpcd21.240245). ISSN 1545-1151 (https://search.worldcat.org/issn/1545-1151).
+PMC 11364282 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11364282). PMID 39173183 (http
+s://pubmed.ncbi.nlm.nih.gov/39173183).
+139. Jumper, J; Evans, R; Pritzel, A (2021). "Highly accurate protein structure prediction with
+AlphaFold" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8371605). Nature. 596 (7873): 583–
+589. Bibcode:2021Natur.596..583J (https://ui.adsabs.harvard.edu/abs/2021Natur.596..583J).
+doi:10.1038/s41586-021-03819-2 (https://doi.org/10.1038%2Fs41586-021-03819-2).
+PMC 8371605 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8371605). PMID 34265844 (https://
+pubmed.ncbi.nlm.nih.gov/34265844).
+140. "AI discovers new class of antibiotics to kill drug-resistant bacteria" (https://www.newscientist.com/
+article/2409706-ai-discovers-new-class-of-antibiotics-to-kill-drug-resistant-bacteria/). 20 December
+2023. Archived (https://web.archive.org/web/20240916014421/https://www.newscientist.com/articl
+e/2409706-ai-discovers-new-class-of-antibiotics-to-kill-drug-resistant-bacteria/) from the original
+on 16 September 2024. Retrieved 5 October 2024.
+141. "AI speeds up drug design for Parkinson's ten-fold" (https://www.cam.ac.uk/research/news/ai-spee
+ds-up-drug-design-for-parkinsons-ten-fold). Cambridge University. 17 April 2024. Archived (https://
+web.archive.org/web/20241005165755/https://www.cam.ac.uk/research/news/ai-speeds-up-drug-design-for-parkinsons-ten-fold) from the original on 5 October 2024. Retrieved 5 October 2024.
+142. Horne, Robert I.; Andrzejewska, Ewa A.; Alam, Parvez; Brotzakis, Z. Faidon; Srivastava, Ankit;
+Aubert, Alice; Nowinska, Magdalena; Gregory, Rebecca C.; Staats, Roxine; Possenti, Andrea;
+Chia, Sean; Sormanni, Pietro; Ghetti, Bernardino; Caughey, Byron; Knowles, Tuomas P. J.;
+Vendruscolo, Michele (17 April 2024). "Discovery of potent inhibitors of α-synuclein aggregation
+using structure-based iterative learning" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1106290
+3). Nature Chemical Biology. 20 (5). Nature: 634–645. doi:10.1038/s41589-024-01580-x (https://d
+oi.org/10.1038%2Fs41589-024-01580-x). PMC 11062903 (https://www.ncbi.nlm.nih.gov/pmc/articl
+es/PMC11062903). PMID 38632492 (https://pubmed.ncbi.nlm.nih.gov/38632492).
+143. Grant, Eugene F.; Lardner, Rex (25 July 1952). "The Talk of the Town – It" (https://www.newyorker.
+com/magazine/1952/08/02/it). The New Yorker. ISSN 0028-792X (https://search.worldcat.org/issn/
+0028-792X). Archived (https://web.archive.org/web/20200216034025/https://www.newyorker.com/
+magazine/1952/08/02/it) from the original on 16 February 2020. Retrieved 28 January 2024.
+144. Anderson, Mark Robert (11 May 2017). "Twenty years on from Deep Blue vs Kasparov: how a
+chess match started the big data revolution" (https://theconversation.com/twenty-years-on-from-de
+ep-blue-vs-kasparov-how-a-chess-match-started-the-big-data-revolution-76882). The
+Conversation. Archived (https://web.archive.org/web/20240917000827/https://theconversation.co
+m/twenty-years-on-from-deep-blue-vs-kasparov-how-a-chess-match-started-the-big-data-revolutio
+n-76882) from the original on 17 September 2024. Retrieved 28 January 2024.
+145. Markoff, John (16 February 2011). "Computer Wins on 'Jeopardy!': Trivial, It's Not" (https://www.ny
+times.com/2011/02/17/science/17jeopardy-watson.html). The New York Times. ISSN 0362-4331
+(https://search.worldcat.org/issn/0362-4331). Archived (https://web.archive.org/web/20141022023
+202/http://www.nytimes.com/2011/02/17/science/17jeopardy-watson.html) from the original on 22
+October 2014. Retrieved 28 January 2024.
+146. Byford, Sam (27 May 2017). "AlphaGo retires from competitive Go after defeating world number
+one 3–0" (https://www.theverge.com/2017/5/27/15704088/alphago-ke-jie-game-3-result-retires-fut
+ure). The Verge. Archived (https://web.archive.org/web/20170607184301/https://www.theverge.co
+m/2017/5/27/15704088/alphago-ke-jie-game-3-result-retires-future) from the original on 7 June
+2017. Retrieved 28 January 2024.
+147. Brown, Noam; Sandholm, Tuomas (30 August 2019). "Superhuman AI for multiplayer poker" (http
+s://www.science.org/doi/10.1126/science.aay2400). Science. 365 (6456): 885–890.
+Bibcode:2019Sci...365..885B (https://ui.adsabs.harvard.edu/abs/2019Sci...365..885B).
+doi:10.1126/science.aay2400 (https://doi.org/10.1126%2Fscience.aay2400). ISSN 0036-8075 (htt
+ps://search.worldcat.org/issn/0036-8075). PMID 31296650 (https://pubmed.ncbi.nlm.nih.gov/3129
+6650).
+148. "MuZero: Mastering Go, chess, shogi and Atari without rules" (https://deepmind.google/discover/bl
+og/muzero-mastering-go-chess-shogi-and-atari-without-rules). Google DeepMind. 23 December
+2020. Retrieved 28 January 2024.
+149. Sample, Ian (30 October 2019). "AI becomes grandmaster in 'fiendishly complex' StarCraft II" (http
+s://www.theguardian.com/technology/2019/oct/30/ai-becomes-grandmaster-in-fiendishly-complex-starcraft-ii). The Guardian. ISSN 0261-3077 (https://search.worldcat.org/issn/0261-3077).
+Archived (https://web.archive.org/web/20201229185547/https://www.theguardian.com/technology/
+2019/oct/30/ai-becomes-grandmaster-in-fiendishly-complex-starcraft-ii) from the original on 29
+December 2020. Retrieved 28 January 2024.
+150. Wurman, P. R.; Barrett, S.; Kawamoto, K. (2022). "Outracing champion Gran Turismo drivers with
+deep reinforcement learning" (https://www.researchsquare.com/article/rs-795954/latest.pdf)
+(PDF). Nature. 602 (7896): 223–228. Bibcode:2022Natur.602..223W (https://ui.adsabs.harvard.ed
+u/abs/2022Natur.602..223W). doi:10.1038/s41586-021-04357-7 (https://doi.org/10.1038%2Fs415
+86-021-04357-7). PMID 35140384 (https://pubmed.ncbi.nlm.nih.gov/35140384).
+151. Wilkins, Alex (13 March 2024). "Google AI learns to play open-world video games by watching
+them" (https://www.newscientist.com/article/2422101-google-ai-learns-to-play-open-world-video-g
+ames-by-watching-them). New Scientist. Archived (https://web.archive.org/web/20240726182946/
+https://www.newscientist.com/article/2422101-google-ai-learns-to-play-open-world-video-games-b
+y-watching-them/) from the original on 26 July 2024. Retrieved 21 July 2024.
+152. Wu, Zhengxuan; Arora, Aryaman; Wang, Zheng; Geiger, Atticus; Jurafsky, Dan; Manning,
+Christopher D.; Potts, Christopher (2024). "ReFT: Representation Finetuning for Language
+Models". NeurIPS. arXiv:2404.03592 (https://arxiv.org/abs/2404.03592).
+153. "Improving mathematical reasoning with process supervision" (https://openai.com/index/improving
+-mathematical-reasoning-with-process-supervision/). OpenAI. 31 May 2023. Retrieved 26 January
+2025.
+154. Srivastava, Saurabh (29 February 2024). "Functional Benchmarks for Robust Evaluation of
+Reasoning Performance, and the Reasoning Gap". arXiv:2402.19450 (https://arxiv.org/abs/2402.1
+9450) [cs.AI (https://arxiv.org/archive/cs.AI)].
+155. Lightman, Hunter; Kosaraju, Vineet; Burda, Yura; Edwards, Harri; Baker, Bowen; Lee, Teddy;
+Leike, Jan; Schulman, John; Sutskever, Ilya; Cobbe, Karl (2023). "Let's Verify Step by Step".
+arXiv:2305.20050v1 (https://arxiv.org/abs/2305.20050v1) [cs.LG (https://arxiv.org/archive/cs.LG)].
+156. Franzen, Carl (8 August 2024). "Alibaba claims no. 1 spot in AI math models with Qwen2-Math" (h
+ttps://venturebeat.com/ai/alibaba-claims-no-1-spot-in-ai-math-models-with-qwen2-math/).
+VentureBeat. Retrieved 16 February 2025.
+157. Franzen, Carl (9 January 2025). "Microsoft's new rStar-Math technique upgrades small models to
+outperform OpenAI's o1-preview at math problems" (https://venturebeat.com/ai/microsofts-new-rst
+ar-math-technique-upgrades-small-models-to-outperform-openais-o1-preview-at-math-problems/).
+VentureBeat. Retrieved 26 January 2025.
+158. Gina Genkina: New AI Model Advances the "Kissing Problem" and More. AlphaEvolve made
+several mathematical discoveries and practical optimizations (https://spectrum.ieee.org/deepmind-alphaevolve?) IEEE Spectrum 2025-05-14. Retrieved 2025-06-07
+159. Roberts, Siobhan (25 July 2024). "AI achieves silver-medal standard solving International
+Mathematical Olympiad problems" (https://www.nytimes.com/2024/07/25/science/ai-math-alphapr
+oof-deepmind.html). The New York Times. Archived (https://web.archive.org/web/2024092613140
+2/https://www.nytimes.com/2024/07/25/science/ai-math-alphaproof-deepmind.html) from the
+original on 26 September 2024. Retrieved 7 August 2024.
+160. Azerbayev, Zhangir; Schoelkopf, Hailey; Paster, Keiran; Santos, Marco Dos; McAleer', Stephen;
+Jiang, Albert Q.; Deng, Jia; Biderman, Stella; Welleck, Sean (16 October 2023). "Llemma: An
+Open Language Model For Mathematics" (https://blog.eleuther.ai/llemma/). EleutherAI Blog.
+Retrieved 26 January 2025.
+161. "Julius AI" (https://julius.ai/home/ai-math). julius.ai.
+162. Metz, Cade (21 July 2025). "Google A.I. System Wins Gold Medal in International Math Olympiad"
+(https://www.nytimes.com/2025/07/21/technology/google-ai-international-mathematics-olympiad.ht
+ml). The New York Times. ISSN 0362-4331 (https://search.worldcat.org/issn/0362-4331).
+Retrieved 24 July 2025.
+163. McFarland, Alex (12 July 2024). "8 Best AI for Math Tools (January 2025)" (https://www.unite.ai/be
+st-ai-for-math-tools/). Unite.AI. Retrieved 26 January 2025.
+164. Matthew Finio & Amanda Downie: IBM Think 2024 Primer, "What is Artificial Intelligence (AI) in
+Finance?" 8 Dec. 2023
+165. M. Nicolas, J. Firzli: Pensions Age / European Pensions magazine, "Artificial Intelligence: Ask the
+Industry", May–June 2024. https://videovoice.org/ai-in-finance-innovation-entrepreneurship-vs-over-regulation-with-the-eus-artificial-intelligence-act-wont-work-as-intended/ Archived (https://we
+b.archive.org/web/20240911125502/https://videovoice.org/ai-in-finance-innovation-entrepreneursh
+ip-vs-over-regulation-with-the-eus-artificial-intelligence-act-wont-work-as-intended/) 11 September
+2024 at the Wayback Machine.
+166. Congressional Research Service (2019). Artificial Intelligence and National Security (https://fas.or
+g/sgp/crs/natsec/R45178.pdf) (PDF). Washington, DC: Congressional Research Service. Archived
+(https://web.archive.org/web/20200508062631/https://fas.org/sgp/crs/natsec/R45178.pdf) (PDF)
+from the original on 8 May 2020. Retrieved 25 February 2024.PD-notice
+167. Slyusar, Vadym (2019). Artificial intelligence as the basis of future control networks (Preprint).
+doi:10.13140/RG.2.2.30247.50087 (https://doi.org/10.13140%2FRG.2.2.30247.50087).
+168. Iraqi, Amjad (3 April 2024). " 'Lavender': The AI machine directing Israel's bombing spree in Gaza"
+(https://www.972mag.com/lavender-ai-israeli-army-gaza/). +972 Magazine. Archived (https://web.a
+rchive.org/web/20241010022042/https://www.972mag.com/lavender-ai-israeli-army-gaza/) from
+the original on 10 October 2024. Retrieved 6 April 2024.
+169. Davies, Harry; McKernan, Bethan; Sabbagh, Dan (1 December 2023). " 'The Gospel': how Israel
+uses AI to select bombing targets in Gaza" (https://www.theguardian.com/world/2023/dec/01/the-g
+ospel-how-israel-uses-ai-to-select-bombing-targets). The Guardian. Archived (https://web.archive.
+org/web/20231206213901/https://www.theguardian.com/world/2023/dec/01/the-gospel-how-israel-uses-ai-to-select-bombing-targets) from the original on 6 December 2023. Retrieved 4 December
+2023.
+170. Marti, J Werner (10 August 2024). "Drohnen haben den Krieg in der Ukraine revolutioniert, doch
+sie sind empfindlich auf Störsender – deshalb sollen sie jetzt autonom operieren" (https://www.nz
+z.ch/international/die-ukraine-setzt-auf-drohnen-die-autonom-navigieren-und-toeten-koennen-ld.1
+838731). Neue Zürcher Zeitung (in German). Archived (https://web.archive.org/web/20240810054
+043/https://www.nzz.ch/international/die-ukraine-setzt-auf-drohnen-die-autonom-navigieren-und-to
+eten-koennen-ld.1838731) from the original on 10 August 2024. Retrieved 10 August 2024.
+171. Newsom, Gavin; Weber, Shirley N. (5 September 2023). "Executive Order N-12-23" (https://www.g
+ov.ca.gov/wp-content/uploads/2023/09/AI-EO-No.12-_-GGN-Signed.pdf) (PDF). Executive
+Department, State of California. Archived (https://web.archive.org/web/20240221222035/https://w
+ww.gov.ca.gov/wp-content/uploads/2023/09/AI-EO-No.12-_-GGN-Signed.pdf) (PDF) from the
+original on 21 February 2024. Retrieved 7 September 2023.
+172. Pinaya, Walter H. L.; Graham, Mark S.; Kerfoot, Eric; Tudosiu, Petru-Daniel; Dafflon, Jessica;
+Fernandez, Virginia; Sanchez, Pedro; Wolleb, Julia; da Costa, Pedro F.; Patel, Ashay (2023).
+"Generative AI for Medical Imaging: extending the MONAI Framework". arXiv:2307.15208 (https://
+arxiv.org/abs/2307.15208) [eess.IV (https://arxiv.org/archive/eess.IV)].
+173. "What is ChatGPT, DALL-E, and generative AI?" (https://www.mckinsey.com/featured-insights/mck
+insey-explainers/what-is-generative-ai). McKinsey. Archived (https://web.archive.org/web/2023042
+3114030/https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai)
+from the original on 23 April 2023. Retrieved 14 December 2024.
+174. "What is generative AI?" (https://www.ibm.com/topics/generative-ai). IBM. 22 March 2024.
+Archived (https://web.archive.org/web/20241213143644/https://www.ibm.com/topics/generative-a
+i) from the original on 13 December 2024. Retrieved 13 December 2024.
+175. Pasick, Adam (27 March 2023). "Artificial Intelligence Glossary: Neural Networks and Other Terms
+Explained" (https://www.nytimes.com/article/ai-artificial-intelligence-glossary.html). The New York
+Times. ISSN 0362-4331 (https://search.worldcat.org/issn/0362-4331). Archived (https://web.archiv
+e.org/web/20230901183440/https://www.nytimes.com/article/ai-artificial-intelligence-glossary.html)
+from the original on 1 September 2023. Retrieved 22 April 2023.
+176. Karpathy, Andrej; Abbeel, Pieter; Brockman, Greg; Chen, Peter; Cheung, Vicki; Duan, Yan;
+Goodfellow, Ian; Kingma, Durk; Ho, Jonathan; Rein Houthooft; Tim Salimans; John Schulman; Ilya
+Sutskever; Wojciech Zaremba (16 June 2016). "Generative models" (https://openai.com/research/
+generative-models). OpenAI. Archived (https://web.archive.org/web/20231117151617/https://open
+ai.com/research/generative-models) from the original on 17 November 2023. Retrieved 15 March
+2023.
+177. Griffith, Erin; Metz, Cade (27 January 2023). "Anthropic Said to Be Closing In on $300 Million in
+New A.I. Funding" (https://www.nytimes.com/2023/01/27/technology/anthropic-ai-funding.html).
+The New York Times. Archived (https://web.archive.org/web/20231209074235/https://www.nytime
+s.com/2023/01/27/technology/anthropic-ai-funding.html) from the original on 9 December 2023.
+Retrieved 14 March 2023.
+178. Lanxon, Nate; Bass, Dina; Davalos, Jackie (10 March 2023). "A Cheat Sheet to AI Buzzwords and
+Their Meanings" (https://news.bloomberglaw.com/tech-and-telecom-law/a-cheat-sheet-to-ai-buzz
+words-and-their-meanings-quicktake). Bloomberg News. Archived (https://web.archive.org/web/20
+231117140835/https://news.bloomberglaw.com/tech-and-telecom-law/a-cheat-sheet-to-ai-buzzwor
+ds-and-their-meanings-quicktake) from the original on 17 November 2023. Retrieved 14 March
+2023.
+179. Metz, Cade (14 March 2023). "OpenAI Plans to Up the Ante in Tech's A.I. Race" (https://www.nyti
+mes.com/2023/03/14/technology/openai-gpt4-chatgpt.html). The New York Times. ISSN 0362-
+4331 (https://search.worldcat.org/issn/0362-4331). Archived (https://web.archive.org/web/2023033
+1011258/https://www.nytimes.com/2023/03/14/technology/openai-gpt4-chatgpt.html) from the
+original on 31 March 2023. Retrieved 31 March 2023.
+180. Thoppilan, Romal; De Freitas, Daniel; Hall, Jamie; Shazeer, Noam; Kulshreshtha, Apoorv (20
+January 2022). "LaMDA: Language Models for Dialog Applications". arXiv:2201.08239 (https://arxi
+v.org/abs/2201.08239) [cs.CL (https://arxiv.org/archive/cs.CL)].
+181. Roose, Kevin (21 October 2022). "A Coming-Out Party for Generative A.I., Silicon Valley's New
+Craze" (https://www.nytimes.com/2022/10/21/technology/generative-ai.html). The New York
+Times. Archived (https://web.archive.org/web/20230215010524/https://www.nytimes.com/2022/10/
+21/technology/generative-ai.html) from the original on 15 February 2023. Retrieved 14 March
+2023.
+182. Metz, Cade (15 February 2024). "OpenAI Unveils A.I. That Instantly Generates Eye-Popping
+Videos" (https://www.nytimes.com/2024/02/15/technology/openai-sora-videos.html). The New
+York Times. ISSN 0362-4331 (https://search.worldcat.org/issn/0362-4331). Archived (https://web.a
+rchive.org/web/20240215220626/https://www.nytimes.com/2024/02/15/technology/openai-sora-vid
+eos.html) from the original on 15 February 2024. Retrieved 16 February 2024.
+183. Fink, Charlie. "LTX Video Breaks The 60-Second Barrier, Redefining AI Video As A Longform
+Medium" (https://www.forbes.com/sites/charliefink/2025/07/16/ltx-video-breaks-the-60-second-barr
+ier-redefining-ai-video-as-a-longform-medium/). Forbes. Retrieved 24 July 2025.
+184. "The race of the AI labs heats up" (https://www.economist.com/business/2023/01/30/the-race-of-th
+e-ai-labs-heats-up). The Economist. 30 January 2023. Archived (https://web.archive.org/web/2023
+1117162947/https://www.economist.com/business/2023/01/30/the-race-of-the-ai-labs-heats-up)
+from the original on 17 November 2023. Retrieved 14 March 2023.
+185. Yang, June; Gokturk, Burak (14 March 2023). "Google Cloud brings generative AI to developers,
+businesses, and governments" (https://cloud.google.com/blog/products/ai-machine-learning/gener
+ative-ai-for-businesses-and-governments). Archived (https://web.archive.org/web/2023111716005
+9/https://cloud.google.com/blog/products/ai-machine-learning/generative-ai-for-businesses-and-go
+vernments) from the original on 17 November 2023. Retrieved 15 March 2023.
+186. "The Transformative Impact of Generative AI on Software Development and Quality Engineering"
+(https://www.unite.ai/the-transformative-impact-of-generative-ai-on-software-development-and-qua
+lity-engineering/). Unite.AI. 17 July 2024. Archived (https://web.archive.org/web/20250410183502/
+https://www.unite.ai/the-transformative-impact-of-generative-ai-on-software-development-and-qual
+ity-engineering/) from the original on 10 April 2025. Retrieved 10 April 2025.
+187. Raza, Marium M.; Venkatesh, Kaushik P.; Kvedar, Joseph C. (7 March 2024). "Generative AI and
+large language models in health care: pathways to implementation" (https://www.ncbi.nlm.nih.gov/
+pmc/articles/PMC10920625). npj Digital Medicine. 7 (1): 62. doi:10.1038/s41746-023-00988-4 (htt
+ps://doi.org/10.1038%2Fs41746-023-00988-4). ISSN 2398-6352 (https://search.worldcat.org/issn/
+2398-6352). PMC 10920625 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10920625).
+PMID 38454007 (https://pubmed.ncbi.nlm.nih.gov/38454007).
+188. Mogaji, Emmanuel (7 January 2025). "How generative AI is transforming financial services – and
+what it means for customers" (https://theconversation.com/how-generative-ai-is-transforming-finan
+cial-services-and-what-it-means-for-customers-246649). The Conversation. Retrieved 10 April
+2025.
+189. Bean, Thomas H. Davenport and Randy (19 June 2023). "The Impact of Generative AI on
+Hollywood and Entertainment" (https://sloanreview.mit.edu/article/the-impact-of-generative-ai-on-h
+ollywood-and-entertainment/). MIT Sloan Management Review. Archived (https://web.archive.org/
+web/20240806231801/https://sloanreview.mit.edu/article/the-impact-of-generative-ai-on-hollywood
+-and-entertainment/) from the original on 6 August 2024. Retrieved 10 April 2025.
+190. Brynjolfsson, Erik; Li, Danielle; Raymond, Lindsey R. (April 2023), Generative AI at Work (https://
+www.nber.org/papers/w31161) (Working Paper), Working Paper Series, doi:10.3386/w31161 (http
+s://doi.org/10.3386%2Fw31161), archived (https://web.archive.org/web/20240328004237/https://w
+ww.nber.org/papers/w31161) from the original on 28 March 2024, retrieved 21 January 2024
+191. "Don't fear an AI-induced jobs apocalypse just yet" (https://www.economist.com/business/2023/03/
+06/dont-fear-an-ai-induced-jobs-apocalypse-just-yet). The Economist. 6 March 2023. Archived (htt
+ps://web.archive.org/web/20231117160744/https://www.economist.com/business/2023/03/06/dont-fear-an-ai-induced-jobs-apocalypse-just-yet) from the original on 17 November 2023. Retrieved
+14 March 2023.
+192. Coyle, Jake (27 September 2023). "In Hollywood writers' battle against AI, humans win (for now)"
+(https://apnews.com/article/hollywood-ai-strike-wga-artificial-intelligence-39ab72582c3a15f77510c
+9c30a45ffc8). AP News. Associated Press. Archived (https://web.archive.org/web/2024040306090
+4/https://apnews.com/article/hollywood-ai-strike-wga-artificial-intelligence-39ab72582c3a15f77510
+c9c30a45ffc8) from the original on 3 April 2024. Retrieved 26 January 2024.
+193. Harreis, H.; Koullias, T.; Roberts, Roger. "Generative AI: Unlocking the future of fashion" (https://w
+ww.mckinsey.com/industries/retail/our-insights/generative-ai-unlocking-the-future-of-fashion).
+Archived (https://web.archive.org/web/20231117160809/https://www.mckinsey.com/industries/retai
+l/our-insights/generative-ai-unlocking-the-future-of-fashion) from the original on 17 November
+2023. Retrieved 14 March 2023.
+194. "How Generative AI Can Augment Human Creativity" (https://hbr.org/2023/07/how-generative-ai-c
+an-augment-human-creativity). Harvard Business Review. 16 June 2023. ISSN 0017-8012 (http
+s://search.worldcat.org/issn/0017-8012). Archived (https://web.archive.org/web/20230620073042/
+https://hbr.org/2023/07/how-generative-ai-can-augment-human-creativity) from the original on 20
+June 2023. Retrieved 20 June 2023.
+195. "AI has an environmental problem. Here's what the world can do about that" (https://www.unep.or
+g/news-and-stories/story/ai-has-environmental-problem-heres-what-world-can-do-about).
+www.unep.org. 21 September 2024. Retrieved 20 August 2025.
+196. Poole, David; Mackworth, Alan (2023). Artificial Intelligence, Foundations of Computational Agents
+(3rd ed.). Cambridge University Press. doi:10.1017/9781009258227 (https://doi.org/10.1017%2F9
+781009258227). ISBN 978-1-0092-5819-7.
+197. Russell, Stuart; Norvig, Peter (2020). Artificial Intelligence: A Modern Approach (4th ed.). Pearson.
+ISBN 978-0-1346-1099-3.
+198. "Why agents are the next frontier of generative AI" (https://www.mckinsey.com/capabilities/mckins
+ey-digital/our-insights/why-agents-are-the-next-frontier-of-generative-ai). McKinsey Digital. 24 July
+2024. Archived (https://web.archive.org/web/20241003212335/https://www.mckinsey.com/capabilit
+ies/mckinsey-digital/our-insights/why-agents-are-the-next-frontier-of-generative-ai) from the
+original on 3 October 2024. Retrieved 10 August 2024.
+199. "Introducing Copilot Search in Bing" (https://blogs.bing.com/search/April-2025/Introducing-Copilot-Search-in-Bing). blogs.bing.com. 4 April 2025.
+200. Peters, Jay (14 March 2023). "The Bing AI bot has been secretly running GPT-4" (https://www.the
+verge.com/2023/3/14/23639928/microsoft-bing-chatbot-ai-gpt-4-llm). The Verge. Retrieved
+31 August 2025.
+201. "Security for Microsoft 365 Copilot" (https://learn.microsoft.com/en-us/copilot/microsoft-365/micros
+oft-365-copilot-ai-security). learn.microsoft.com.
+202. O'Flaherty, Kate (21 May 2025). "Google AI Overviews — Everything You Need To Know" (https://
+www.forbes.com/sites/kateoflahertyuk/2025/05/21/google-ai-overviews-everything-you-need-to-kn
+ow/). Forbes.
+203. "Generative AI in Search: Let Google do the searching for you" (https://blog.google/products/searc
+h/generative-ai-google-search-may-2024/). Google. 14 May 2024.
+204. Figueiredo, Mayara Costa; Ankrah, Elizabeth; Powell, Jacquelyn E.; Epstein, Daniel A.; Chen,
+Yunan (12 January 2024). "Powered by AI: Examining How AI Descriptions Influence Perceptions
+of Fertility Tracking Applications" (https://dl.acm.org/doi/10.1145/3631414). Proceedings of the
+ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies. 7 (4): 1–24.
+doi:10.1145/3631414 (https://doi.org/10.1145%2F3631414).
+205. Power, Jennifer; Pym, Tinonee; James, Alexandra; Waling, Andrea (5 July 2024). "Smart Sex
+Toys: A Narrative Review of Recent Research on Cultural, Health and Safety Considerations" (http
+s://doi.org/10.1007%2Fs11930-024-00392-3). Current Sexual Health Reports. 16 (3): 199–215.
+doi:10.1007/s11930-024-00392-3 (https://doi.org/10.1007%2Fs11930-024-00392-3). ISSN 1548-
+3592 (https://search.worldcat.org/issn/1548-3592).
+206. Marcantonio, Tiffany L.; Avery, Gracie; Thrash, Anna; Leone, Ruschelle M. (10 September 2024).
+"Large Language Models in an App: Conducting a Qualitative Synthetic Data Analysis of How
+Snapchat's "My AI" Responds to Questions About Sexual Consent, Sexual Refusals, Sexual
+Assault, and Sexting" (https://www.tandfonline.com/doi/full/10.1080/00224499.2024.2396457).
+The Journal of Sex Research: 1–15. doi:10.1080/00224499.2024.2396457 (https://doi.org/10.108
+0%2F00224499.2024.2396457). ISSN 0022-4499 (https://search.worldcat.org/issn/0022-4499).
+PMC 11891083. PMID 39254628 (https://pubmed.ncbi.nlm.nih.gov/39254628). Archived (https://w
+eb.archive.org/web/20241209185843/https://www.tandfonline.com/doi/full/10.1080/00224499.202
+4.2396457) from the original on 9 December 2024. Retrieved 9 December 2024.
+207. Hanson, Kenneth R.; Bolthouse, Hannah (2024). " "Replika Removing Erotic Role-Play Is Like
+Grand Theft Auto Removing Guns or Cars": Reddit Discourse on Artificial Intelligence Chatbots
+and Sexual Technologies" (https://doi.org/10.1177%2F23780231241259627). Socius: Sociological
+Research for a Dynamic World. 10 23780231241259627. doi:10.1177/23780231241259627 (http
+s://doi.org/10.1177%2F23780231241259627). ISSN 2378-0231 (https://search.worldcat.org/issn/2
+378-0231).
+208. Mania, Karolina (1 January 2024). "Legal Protection of Revenge and Deepfake Porn Victims in the
+European Union: Findings From a Comparative Legal Study" (https://journals.sagepub.com/doi/ab
+s/10.1177/15248380221143772?journalCode=tvaa). Trauma, Violence, & Abuse. 25 (1): 117–129.
+doi:10.1177/15248380221143772 (https://doi.org/10.1177%2F15248380221143772). ISSN 1524-
+8380 (https://search.worldcat.org/issn/1524-8380). PMID 36565267 (https://pubmed.ncbi.nlm.nih.
+gov/36565267).
+209. Singh, Suyesha; Nambiar, Vaishnavi (2024). "Role of Artificial Intelligence in the Prevention of
+Online Child Sexual Abuse: A Systematic Review of Literature" (https://www.tandfonline.com/doi/fu
+ll/10.1080/19361610.2024.2331885). Journal of Applied Security Research. 19 (4): 586–627.
+doi:10.1080/19361610.2024.2331885 (https://doi.org/10.1080%2F19361610.2024.2331885).
+ISSN 1936-1610 (https://search.worldcat.org/issn/1936-1610). Archived (https://web.archive.org/w
+eb/20241209171923/https://www.tandfonline.com/doi/full/10.1080/19361610.2024.2331885) from
+the original on 9 December 2024. Retrieved 9 December 2024.
+210. Razi, Afsaneh; Kim, Seunghyun; Alsoubai, Ashwaq; Stringhini, Gianluca; Solorio, Thamar; De
+Choudhury, Munmun; Wisniewski, Pamela J. (13 October 2021). "A Human-Centered Systematic
+Literature Review of the Computational Approaches for Online Sexual Risk Detection" (https://dl.a
+cm.org/doi/10.1145/3479609). Proceedings of the ACM on Human-Computer Interaction. 5
+(CSCW2): 1–38. doi:10.1145/3479609 (https://doi.org/10.1145%2F3479609). ISSN 2573-0142 (htt
+ps://search.worldcat.org/issn/2573-0142). Archived (https://web.archive.org/web/2024120917173
+5/https://dl.acm.org/doi/10.1145/3479609) from the original on 9 December 2024. Retrieved
+9 December 2024.
+211. Ransbotham, Sam; Kiron, David; Gerbert, Philipp; Reeves, Martin (6 September 2017).
+"Reshaping Business With Artificial Intelligence" (https://sloanreview.mit.edu/projects/reshaping-bu
+siness-with-artificial-intelligence). MIT Sloan Management Review. Archived (https://web.archive.o
+rg/web/20240213070751/https://sloanreview.mit.edu/projects/reshaping-business-with-artificial-int
+elligence) from the original on 13 February 2024.
+212. Sun, Yuran; Zhao, Xilei; Lovreglio, Ruggiero; Kuligowski, Erica (1 January 2024), Naser, M. Z.
+(ed.), "8 – AI for large-scale evacuation modeling: promises and challenges" (https://www.science
+direct.com/science/article/pii/B9780128240731000149), Interpretable Machine Learning for the
+Analysis, Design, Assessment, and Informed Decision Making for Civil Infrastructure, Woodhead
+Publishing Series in Civil and Structural Engineering, Woodhead Publishing, pp. 185–204,
+ISBN 978-0-1282-4073-1, archived (https://web.archive.org/web/20240519121547/https://www.sci
+encedirect.com/science/article/abs/pii/B9780128240731000149) from the original on 19 May
+2024, retrieved 28 June 2024.
+213. Gomaa, Islam; Adelzadeh, Masoud; Gwynne, Steven; Spencer, Bruce; Ko, Yoon; Bénichou,
+Noureddine; Ma, Chunyun; Elsagan, Nour; Duong, Dana; Zalok, Ehab; Kinateder, Max (1
+November 2021). "A Framework for Intelligent Fire Detection and Evacuation System". Fire
+Technology. 57 (6): 3179–3185. doi:10.1007/s10694-021-01157-3 (https://doi.org/10.1007%2Fs10
+694-021-01157-3). ISSN 1572-8099 (https://search.worldcat.org/issn/1572-8099).
+214. Zhao, Xilei; Lovreglio, Ruggiero; Nilsson, Daniel (1 May 2020). "Modelling and interpreting pre-evacuation decision-making using machine learning" (https://www.sciencedirect.com/science/articl
+e/pii/S0926580519313184). Automation in Construction. 113 103140.
+doi:10.1016/j.autcon.2020.103140 (https://doi.org/10.1016%2Fj.autcon.2020.103140).
+hdl:10179/17315 (https://hdl.handle.net/10179%2F17315). ISSN 0926-5805 (https://search.worldc
+at.org/issn/0926-5805). Archived (https://web.archive.org/web/20240519121548/https://www.scien
+cedirect.com/science/article/abs/pii/S0926580519313184) from the original on 19 May 2024.
+Retrieved 5 October 2024.
+215. "India's latest election embraced AI technology. Here are some ways it was used constructively" (h
+ttps://www.pbs.org/newshour/world/indias-latest-election-embraced-ai-technology-here-are-some-ways-it-was-used-constructively). PBS News. 12 June 2024. Archived (https://web.archive.org/we
+b/20240917194950/https://www.pbs.org/newshour/world/indias-latest-election-embraced-ai-techn
+ology-here-are-some-ways-it-was-used-constructively) from the original on 17 September 2024.
+Retrieved 28 October 2024.
+216. "Экономист Дарон Асемоглу написал книгу об угрозах искусственного интеллекта — и о том,
+как правильное управление может обратить его на пользу человечеству Спецкор "Медузы"
+Маргарита Лютова узнала у ученого, как скоро мир сможет приблизиться к этой утопии" (http
+s://meduza.io/feature/2023/06/19/ekonomist-daron-asemoglu-napisal-knigu-ob-ugrozah-iskusstve
+nnogo-intellekta-i-o-tom-kak-pravilnoe-upravlenie-mozhet-obratit-ego-na-polzu-chelovechestvu).
+Meduza (in Russian). Archived (https://web.archive.org/web/20230620234007/https://meduza.io/fe
+ature/2023/06/19/ekonomist-daron-asemoglu-napisal-knigu-ob-ugrozah-iskusstvennogo-intellekta-i-o-tom-kak-pravilnoe-upravlenie-mozhet-obratit-ego-na-polzu-chelovechestvu) from the original
+on 20 June 2023. Retrieved 21 June 2023.
+217. "Learning, thinking, artistic collaboration and other such human endeavours in the age of AI" (http
+s://www.thehindu.com/society/artificial-intelligence-chatgpt-technology-human-labour-intelligence-creativity/article66914412.ece). The Hindu. 2 June 2023. Archived (https://web.archive.org/web/20
+230621174339/https://www.thehindu.com/society/artificial-intelligence-chatgpt-technology-human-l
+abour-intelligence-creativity/article66914412.ece) from the original on 21 June 2023. Retrieved
+21 June 2023.
+218. Müller, Vincent C. (30 April 2020). "Ethics of Artificial Intelligence and Robotics" (https://plato.stanf
+ord.edu/archives/fall2023/entries/ethics-ai/). Stanford Encyclopedia of Philosophy Archive.
+Archived (https://web.archive.org/web/20241005165650/https://plato.stanford.edu/archives/fall202
+3/entries/ethics-ai/) from the original on 5 October 2024. Retrieved 5 October 2024.
+219. Simonite (2016).
+220. Russell & Norvig (2021), p. 987.
+221. "Assessing potential future artificial intelligence risks, benefits and policy imperatives" (https://ww
+w.oecd.org/en/publications/assessing-potential-future-artificial-intelligence-risks-benefits-and-polic
+y-imperatives_3f4e3dfb-en.html). OECD. 14 November 2024. Retrieved 1 August 2025.
+222. Laskowski (2023).
+223. GAO (2022).
+224. Valinsky (2019).
+225. Russell & Norvig (2021), p. 991.
+226. Russell & Norvig (2021), pp. 991–992.
+227. Christian (2020), p. 63.
+228. Vincent (2022).
+229. Kopel, Matthew. "Copyright Services: Fair Use" (https://guides.library.cornell.edu/copyright/fair-us
+e). Cornell University Library. Archived (https://web.archive.org/web/20240926194057/https://guid
+es.library.cornell.edu/copyright/fair-use) from the original on 26 September 2024. Retrieved
+26 April 2024.
+230. Burgess, Matt. "How to Stop Your Data From Being Used to Train AI" (https://www.wired.com/stor
+y/how-to-stop-your-data-from-being-used-to-train-ai). Wired. ISSN 1059-1028 (https://search.world
+cat.org/issn/1059-1028). Archived (https://web.archive.org/web/20241003180100/https://www.wire
+d.com/story/how-to-stop-your-data-from-being-used-to-train-ai/) from the original on 3 October
+2024. Retrieved 26 April 2024.
+231. Reisner (2023).
+232. Alter & Harris (2023).
+233. "Getting the Innovation Ecosystem Ready for AI. An IP policy toolkit" (https://www.wipo.int/edocs/p
+ubdocs/en/wipo-pub-2003-en-getting-the-innovation-ecosystem-ready-for-ai.pdf) (PDF). WIPO.
+234. Hammond, George (27 December 2023). "Big Tech is spending more than VC firms on AI
+startups" (https://arstechnica.com/ai/2023/12/big-tech-is-spending-more-than-vc-firms-on-ai-startu
+ps). Ars Technica. Archived (https://web.archive.org/web/20240110195706/https://arstechnica.co
+m/ai/2023/12/big-tech-is-spending-more-than-vc-firms-on-ai-startups) from the original on 10
+January 2024.
+235. Wong, Matteo (24 October 2023). "The Future of AI Is GOMA" (https://www.theatlantic.com/techno
+logy/archive/2023/10/big-ai-silicon-valley-dominance/675752). The Atlantic. Archived (https://web.
+archive.org/web/20240105020744/https://www.theatlantic.com/technology/archive/2023/10/big-ai-silicon-valley-dominance/675752) from the original on 5 January 2024.
+236. "Big tech and the pursuit of AI dominance" (https://www.economist.com/business/2023/03/26/big-t
+ech-and-the-pursuit-of-ai-dominance). The Economist. 26 March 2023. Archived (https://web.archi
+ve.org/web/20231229021351/https://www.economist.com/business/2023/03/26/big-tech-and-the-p
+ursuit-of-ai-dominance) from the original on 29 December 2023.
+237. Fung, Brian (19 December 2023). "Where the battle to dominate AI may be won" (https://www.cnn.
+com/2023/12/19/tech/cloud-competition-and-ai/index.html). CNN Business. Archived (https://web.
+archive.org/web/20240113053332/https://www.cnn.com/2023/12/19/tech/cloud-competition-and-ai/
+index.html) from the original on 13 January 2024.
+238. Metz, Cade (5 July 2023). "In the Age of A.I., Tech's Little Guys Need Big Friends" (https://www.nyt
+imes.com/2023/07/05/business/artificial-intelligence-power-data-centers.html). The New York
+Times. Archived (https://web.archive.org/web/20240708214644/https://www.nytimes.com/2023/07/
+05/business/artificial-intelligence-power-data-centers.html) from the original on 8 July 2024.
+Retrieved 5 October 2024.
+239. "Electricity 2024 – Analysis" (https://www.iea.org/reports/electricity-2024). IEA. 24 January 2024.
+Retrieved 13 July 2024.
+240. Calvert, Brian (28 March 2024). "AI already uses as much energy as a small country. It's only the
+beginning" (https://www.vox.com/climate/2024/3/28/24111721/ai-uses-a-lot-of-energy-experts-exp
+ect-it-to-double-in-just-a-few-years). Vox. New York, New York. Archived (https://web.archive.org/w
+eb/20240703080555/https://www.vox.com/climate/2024/3/28/24111721/ai-uses-a-lot-of-energy-ex
+perts-expect-it-to-double-in-just-a-few-years) from the original on 3 July 2024. Retrieved 5 October
+2024.
+241. Halper, Evan; O'Donovan, Caroline (21 June 2024). "AI is exhausting the power grid. Tech firms
+are seeking a miracle solution" (https://www.washingtonpost.com/business/2024/06/21/artificial-int
+elligence-nuclear-fusion-climate/?utm_campaign=wp_post_most&utm_medium=email&utm_sourc
+e=newsletter&wpisrc=nl_most&carta-url=https%3A%2F%2Fs2.washingtonpost.com%2Fcar-ln-tr%
+2F3e0d678%2F6675a2d2c2c05472dd9ec0f4%2F596c09009bbc0f20865036e7%2F12%2F52%2F
+6675a2d2c2c05472dd9ec0f4). Washington Post.
+242. Davenport, Carly. "AI Data Centers and the Coming YS Power Demand Surge" (https://web.archiv
+e.org/web/20240726080428/https://www.goldmansachs.com/intelligence/pages/gs-research/gener
+ational-growth-ai-data-centers-and-the-coming-us-power-surge/report.pdf) (PDF). Goldman
+Sachs. Archived from the original (https://www.goldmansachs.com/intelligence/pages/gs-research/
+generational-growth-ai-data-centers-and-the-coming-us-power-surge/report.pdf) (PDF) on 26 July
+2024. Retrieved 5 October 2024.
+243. Ryan, Carol (12 April 2024). "Energy-Guzzling AI Is Also the Future of Energy Savings" (https://ww
+w.wsj.com/business/energy-oil/ai-data-centers-energy-savings-d602296e). Wall Street Journal.
+Dow Jones.
+244. Hiller, Jennifer (1 July 2024). "Tech Industry Wants to Lock Up Nuclear Power for AI" (https://www.
+wsj.com/business/energy-oil/tech-industry-wants-to-lock-up-nuclear-power-for-ai-6cb75316?mod=
+djem10point). Wall Street Journal. Dow Jones. Archived (https://web.archive.org/web/2024100516
+5650/https://www.wsj.com/business/energy-oil/tech-industry-wants-to-lock-up-nuclear-power-for-ai
+-6cb75316?mod=djem10point) from the original on 5 October 2024. Retrieved 5 October 2024.
+245. Kendall, Tyler (28 September 2024). "Nvidia's Huang Says Nuclear Power an Option to Feed Data
+Centers" (https://www.bloomberg.com/news/articles/2024-09-27/nvidia-s-huang-says-nuclear-pow
+er-an-option-to-feed-data-centers). Bloomberg.
+246. Halper, Evan (20 September 2024). "Microsoft deal would reopen Three Mile Island nuclear plant
+to power AI" (https://www.washingtonpost.com/business/2024/09/20/microsoft-three-mile-island-n
+uclear-constellation). Washington Post.
+247. Hiller, Jennifer (20 September 2024). "Three Mile Island's Nuclear Plant to Reopen, Help Power
+Microsoft's AI Centers" (https://www.wsj.com/business/energy-oil/three-mile-islands-nuclear-plant-t
+o-reopen-help-power-microsofts-ai-centers-aebfb3c8?mod=Searchresults_pos1&page=1). Wall
+Street Journal. Dow Jones. Archived (https://web.archive.org/web/20241005170152/https://www.w
+sj.com/business/energy-oil/three-mile-islands-nuclear-plant-to-reopen-help-power-microsofts-ai-ce
+nters-aebfb3c8?mod=Searchresults_pos1&page=1) from the original on 5 October 2024.
+Retrieved 5 October 2024.
+248. Niva Yadav (19 August 2024). "Taiwan to stop large data centers in the North, cites insufficient
+power" (https://www.datacenterdynamics.com/en/news/taiwan-to-stop-large-data-centers-in-the-n
+orth-cites-insufficient-power/). DatacenterDynamics. Archived (https://web.archive.org/web/202411
+08213650/https://www.datacenterdynamics.com/en/news/taiwan-to-stop-large-data-centers-in-the-north-cites-insufficient-power/) from the original on 8 November 2024. Retrieved 7 November
+2024.
+249. Mochizuki, Takashi; Oda, Shoko (18 October 2024). "エヌビディア出資の日本企業、原発近くでＡ
+Ｉデータセンター新設検討" (https://www.bloomberg.co.jp/news/articles/2024-10-18/SLHGKKT0A
+FB400). Bloomberg (in Japanese). Archived (https://web.archive.org/web/20241108213843/https://
+www.bloomberg.co.jp/news/articles/2024-10-18/SLHGKKT0AFB400) from the original on 8
+November 2024. Retrieved 7 November 2024.
+250. Naureen S Malik and Will Wade (5 November 2024). "Nuclear-Hungry AI Campuses Need New
+Plan to Find Power Fast" (https://www.bloomberg.com/news/articles/2024-11-04/nuclear-hungry-ai
+-campuses-need-new-strategy-to-find-power-fast). Bloomberg.
+251. "Energy and AI Executive summary" (https://www.iea.org/reports/energy-and-ai/executive-summar
+y). International Energy Agency. Retrieved 10 April 2025.
+252. Nicas (2018).
+253. Rainie, Lee; Keeter, Scott; Perrin, Andrew (22 July 2019). "Trust and Distrust in America" (https://
+www.pewresearch.org/politics/2019/07/22/trust-and-distrust-in-america). Pew Research Center.
+Archived (https://web.archive.org/web/20240222000601/https://www.pewresearch.org/politics/201
+9/07/22/trust-and-distrust-in-america) from the original on 22 February 2024.
+254. Kosoff, Maya (8 February 2018). "YouTube Struggles to Contain Its Conspiracy Problem" (https://
+www.vanityfair.com/news/2018/02/youtube-conspiracy-problem). Vanity Fair. Retrieved 10 April
+2025.
+255. Berry, David M. (19 March 2025). "Synthetic media and computational capitalism: towards a
+critical theory of artificial intelligence". AI & Society. doi:10.1007/s00146-025-02265-2 (https://doi.o
+rg/10.1007%2Fs00146-025-02265-2). ISSN 1435-5655 (https://search.worldcat.org/issn/1435-565
+5).
+256. "Unreal: A quantum leap in AI video" (https://theweek.com/tech/unreal-quantum-leap-ai-video-goo
+gle). The Week. 17 June 2025. Retrieved 20 June 2025.
+257. Snow, Jackie (16 June 2025). "AI video is getting real. Beware what comes next" (https://qz.com/a
+i-video-will-smith-google-veo-openai-sora-meta). Quartz. Retrieved 20 June 2025.
+258. Chow, Andrew R.; Perrigo, Billy (3 June 2025). "Google's New AI Tool Generates Convincing
+Deepfakes of Riots, Conflict, and Election Fraud" (https://time.com/7290050/veo-3-google-misinfor
+mation-deepfake/). Time. Retrieved 20 June 2025.
+259. Williams (2023).
+260. Olanipekun, Samson Olufemi (2025). "Computational propaganda and misinformation: AI
+technologies as tools of media manipulation" (https://journalwjarr.com/node/366). World Journal of
+Advanced Research and Reviews. 25 (1): 911–923. doi:10.30574/wjarr.2025.25.1.0131 (https://do
+i.org/10.30574%2Fwjarr.2025.25.1.0131). ISSN 2581-9615 (https://search.worldcat.org/issn/2581-
+9615).
+261. Taylor & Hern (2023).
+262. "To fight AI, we need 'personhood credentials,' say AI firms" (http://web.archive.org/web/20250424
+232537/https://www.theregister.com/2024/09/03/ai_personhood_credentials/). Archived from the
+original (https://www.theregister.com/2024/09/03/ai_personhood_credentials/) on 24 April 2025.
+Retrieved 9 May 2025.
+263. Samuel, Sigal (19 April 2022). "Why it's so damn hard to make AI fair and unbiased" (https://www.
+vox.com/future-perfect/22916602/ai-bias-fairness-tradeoffs-artificial-intelligence). Vox. Archived (ht
+tps://web.archive.org/web/20241005170153/https://www.vox.com/future-perfect/22916602/ai-bias-fairness-tradeoffs-artificial-intelligence) from the original on 5 October 2024. Retrieved 24 July
+2024.
+264. Rose (2023).
+265. CNA (2019).
+266. Goffrey (2008), p. 17.
+267. Berdahl et al. (2023); Goffrey (2008, p. 17); Rose (2023); Russell & Norvig (2021, p. 995)
+268. Christian (2020), p. 25.
+269. Russell & Norvig (2021), p. 995.
+270. Grant & Hill (2023).
+271. Larson & Angwin (2016).
+272. Christian (2020), p. 67–70.
+273. Christian (2020, pp. 67–70); Russell & Norvig (2021, pp. 993–994)
+274. Russell & Norvig (2021, p. 995); Lipartito (2011, p. 36); Goodman & Flaxman (2017, p. 6);
+Christian (2020, pp. 39–40, 65)
+275. Quoted in Christian (2020, p. 65).
+276. Russell & Norvig (2021, p. 994); Christian (2020, pp. 40, 80–81)
+277. Quoted in Christian (2020, p. 80)
+278. Dockrill (2022).
+279. Sample (2017).
+280. "Black Box AI" (https://www.techopedia.com/definition/34940/black-box-ai). 16 June 2023.
+Archived (https://web.archive.org/web/20240615100800/https://www.techopedia.com/definition/34
+940/black-box-ai) from the original on 15 June 2024. Retrieved 5 October 2024.
+281. Christian (2020), p. 110.
+282. Christian (2020), pp. 88–91.
+283. Christian (2020, p. 83); Russell & Norvig (2021, p. 997)
+284. Christian (2020), p. 91.
+285. Christian (2020), p. 83.
+286. Verma (2021).
+287. Rothman (2020).
+288. Christian (2020), pp. 105–108.
+289. Christian (2020), pp. 108–112.
+290. Ropek, Lucas (21 May 2024). "New Anthropic Research Sheds Light on AI's 'Black Box' " (https://g
+izmodo.com/new-anthropic-research-sheds-light-on-ais-black-box-1851491333). Gizmodo.
+Archived (https://web.archive.org/web/20241005170309/https://gizmodo.com/new-anthropic-resea
+rch-sheds-light-on-ais-black-box-1851491333) from the original on 5 October 2024. Retrieved
+23 May 2024.
+291. Russell & Norvig (2021), p. 989.
+292. Russell & Norvig (2021), pp. 987–990.
+293. Russell & Norvig (2021), p. 988.
+294. Robitzski (2018); Sainato (2015)
+295. Harari (2018).
+296. Buckley, Chris; Mozur, Paul (22 May 2019). "How China Uses High-Tech Surveillance to Subdue
+Minorities" (https://www.nytimes.com/2019/05/22/world/asia/china-surveillance-xinjiang.html). The
+New York Times. Archived (https://web.archive.org/web/20191125180459/https://www.nytimes.co
+m/2019/05/22/world/asia/china-surveillance-xinjiang.html) from the original on 25 November 2019.
+Retrieved 2 July 2019.
+297. "Security lapse exposed a Chinese smart city surveillance system" (https://techcrunch.com/2019/0
+5/03/china-smart-city-exposed). 3 May 2019. Archived (https://web.archive.org/web/20210307203
+740/https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_c8562b93-9863-4915-
+8523-6c7b930a3efc) from the original on 7 March 2021. Retrieved 14 September 2020.
+298. Urbina et al. (2022).
+299. E. McGaughey, 'Will Robots Automate Your Job Away? Full Employment, Basic Income, and
+Economic Democracy' (2022), 51(3) Industrial Law Journal 511–559 (https://academic.oup.com/ilj/
+article/51/3/511/6321008). Archived (https://web.archive.org/web/20230527163045/https://academ
+ic.oup.com/ilj/article/51/3/511/6321008) 27 May 2023 at the Wayback Machine.
+300. Ford & Colvin (2015);McGaughey (2022)
+301. IGM Chicago (2017).
+302. Arntz, Gregory & Zierahn (2016), p. 33.
+303. Lohr (2017); Frey & Osborne (2017); Arntz, Gregory & Zierahn (2016, p. 33)
+304. Zhou, Viola (11 April 2023). "AI is already taking video game illustrators' jobs in China" (https://rest
+ofworld.org/2023/ai-image-china-video-game-layoffs). Rest of World. Archived (https://web.archiv
+e.org/web/20240221131748/https://restofworld.org/2023/ai-image-china-video-game-layoffs/) from
+the original on 21 February 2024. Retrieved 17 August 2023.
+305. Carter, Justin (11 April 2023). "China's game art industry reportedly decimated by growing AI use"
+(https://www.gamedeveloper.com/art/china-s-game-art-industry-reportedly-decimated-ai-art-use).
+Game Developer. Archived (https://web.archive.org/web/20230817010519/https://www.gamedevel
+oper.com/art/china-s-game-art-industry-reportedly-decimated-ai-art-use) from the original on 17
+August 2023. Retrieved 17 August 2023.
+306. Morgenstern (2015).
+307. Mahdawi (2017); Thompson (2014)
+308. Tarnoff, Ben (4 August 2023). "Lessons from Eliza". The Guardian Weekly. pp. 34–39.
+309. Cellan-Jones (2014).
+310. Russell & Norvig 2021, p. 1001.
+311. Bostrom (2014).
+312. Russell (2019).
+313. Bostrom (2014); Müller & Bostrom (2014); Bostrom (2015).
+314. Harari (2023).
+315. Müller & Bostrom (2014).
+316. Leaders' concerns about the existential risks of AI around 2015: Rawlinson (2015), Holley (2015),
+Gibbs (2014), Sainato (2015)
+317. " "Godfather of artificial intelligence" talks impact and potential of new AI" (https://www.cbsnews.co
+m/video/godfather-of-artificial-intelligence-talks-impact-and-potential-of-new-ai). CBS News. 25
+March 2023. Archived (https://web.archive.org/web/20230328225221/https://www.cbsnews.com/vi
+deo/godfather-of-artificial-intelligence-talks-impact-and-potential-of-new-ai) from the original on 28
+March 2023. Retrieved 28 March 2023.
+318. Pittis, Don (4 May 2023). "Canadian artificial intelligence leader Geoffrey Hinton piles on fears of
+computer takeover" (https://www.cbc.ca/news/business/ai-doom-column-don-pittis-1.6829302).
+CBC. Archived (https://web.archive.org/web/20240707032135/https://www.cbc.ca/news/business/
+ai-doom-column-don-pittis-1.6829302) from the original on 7 July 2024. Retrieved 5 October
+2024.
+319. " '50–50 chance' that AI outsmarts humanity, Geoffrey Hinton says" (https://www.bnnbloomberg.c
+a/50-50-chance-that-ai-outsmarts-humanity-geoffrey-hinton-says-1.2085394). Bloomberg BNN. 14
+June 2024. Archived (https://web.archive.org/web/20240614144506/https://www.bnnbloomberg.c
+a/50-50-chance-that-ai-outsmarts-humanity-geoffrey-hinton-says-1.2085394) from the original on
+14 June 2024. Retrieved 6 July 2024.
+320. Valance (2023).
+321. Taylor, Josh (7 May 2023). "Rise of artificial intelligence is inevitable but should not be feared,
+'father of AI' says" (https://www.theguardian.com/technology/2023/may/07/rise-of-artificial-intellige
+nce-is-inevitable-but-should-not-be-feared-father-of-ai-says). The Guardian. Archived (https://web.
+archive.org/web/20231023061228/https://www.theguardian.com/technology/2023/may/07/rise-of-a
+rtificial-intelligence-is-inevitable-but-should-not-be-feared-father-of-ai-says) from the original on 23
+October 2023. Retrieved 26 May 2023.
+322. Colton, Emma (7 May 2023). " 'Father of AI' says tech fears misplaced: 'You cannot stop it' " (http
+s://www.foxnews.com/tech/father-ai-jurgen-schmidhuber-says-tech-fears-misplaced-cannot-stop).
+Fox News. Archived (https://web.archive.org/web/20230526162642/https://www.foxnews.com/tec
+h/father-ai-jurgen-schmidhuber-says-tech-fears-misplaced-cannot-stop) from the original on 26
+May 2023. Retrieved 26 May 2023.
+323. Jones, Hessie (23 May 2023). "Juergen Schmidhuber, Renowned 'Father Of Modern AI,' Says His
+Life's Work Won't Lead To Dystopia" (https://www.forbes.com/sites/hessiejones/2023/05/23/juerge
+n-schmidhuber-renowned-father-of-modern-ai-says-his-lifes-work-wont-lead-to-dystopia). Forbes.
+Archived (https://web.archive.org/web/20230526163102/https://www.forbes.com/sites/hessiejone
+s/2023/05/23/juergen-schmidhuber-renowned-father-of-modern-ai-says-his-lifes-work-wont-lead-to
+-dystopia/) from the original on 26 May 2023. Retrieved 26 May 2023.
+324. McMorrow, Ryan (19 December 2023). "Andrew Ng: 'Do we think the world is better off with more
+or less intelligence?' " (https://www.ft.com/content/2dc07f9e-d2a9-4d98-b746-b051f9352be3).
+Financial Times. Archived (https://web.archive.org/web/20240125014121/https://www.ft.com/conte
+nt/2dc07f9e-d2a9-4d98-b746-b051f9352be3) from the original on 25 January 2024. Retrieved
+30 December 2023.
+325. Levy, Steven (22 December 2023). "How Not to Be Stupid About AI, With Yann LeCun" (https://ww
+w.wired.com/story/artificial-intelligence-meta-yann-lecun-interview). Wired. Archived (https://web.a
+rchive.org/web/20231228152443/https://www.wired.com/story/artificial-intelligence-meta-yann-lec
+un-interview/) from the original on 28 December 2023. Retrieved 30 December 2023.
+326. Arguments that AI is not an imminent risk: Brooks (2014), Geist (2015), Madrigal (2015), Lee
+(2014)
+327. Christian (2020), pp. 67, 73.
+328. Yudkowsky (2008).
+329. Anderson & Anderson (2011).
+330. AAAI (2014).
+331. Wallach (2010).
+332. Russell (2019), p. 173.
+333. Stewart, Ashley; Melton, Monica. "Hugging Face CEO says he's focused on building a
+'sustainable model' for the $4.5 billion open-source-AI startup" (https://www.businessinsider.com/h
+ugging-face-open-source-ai-approach-2023-12). Business Insider. Archived (https://web.archive.o
+rg/web/20240925013220/https://www.businessinsider.com/hugging-face-open-source-ai-approach
+-2023-12) from the original on 25 September 2024. Retrieved 14 April 2024.
+334. Wiggers, Kyle (9 April 2024). "Google open sources tools to support AI model development" (http
+s://techcrunch.com/2024/04/09/google-open-sources-tools-to-support-ai-model-development).
+TechCrunch. Archived (https://web.archive.org/web/20240910112401/https://techcrunch.com/202
+4/04/09/google-open-sources-tools-to-support-ai-model-development/) from the original on 10
+September 2024. Retrieved 14 April 2024.
+335. Heaven, Will Douglas (12 May 2023). "The open-source AI boom is built on Big Tech's handouts.
+How long will it last?" (https://www.technologyreview.com/2023/05/12/1072950/open-source-ai-go
+ogle-openai-eleuther-meta). MIT Technology Review. Retrieved 14 April 2024.
+336. Brodsky, Sascha (19 December 2023). "Mistral AI's New Language Model Aims for Open Source
+Supremacy" (https://aibusiness.com/nlp/mistral-ai-s-new-language-model-aims-for-open-source-s
+upremacy). AI Business. Archived (https://web.archive.org/web/20240905212607/https://aibusines
+s.com/nlp/mistral-ai-s-new-language-model-aims-for-open-source-supremacy) from the original on
+5 September 2024. Retrieved 5 October 2024.
+337. Edwards, Benj (22 February 2024). "Stability announces Stable Diffusion 3, a next-gen AI image
+generator" (https://arstechnica.com/information-technology/2024/02/stability-announces-stable-diff
+usion-3-a-next-gen-ai-image-generator). Ars Technica. Archived (https://web.archive.org/web/202
+41005170201/https://arstechnica.com/information-technology/2024/02/stability-announces-stable-diffusion-3-a-next-gen-ai-image-generator/) from the original on 5 October 2024. Retrieved
+14 April 2024.
+338. Marshall, Matt (29 January 2024). "How enterprises are using open source LLMs: 16 examples" (h
+ttps://venturebeat.com/ai/how-enterprises-are-using-open-source-llms-16-examples).
+VentureBeat. Archived (https://web.archive.org/web/20240926171131/https://venturebeat.com/ai/h
+ow-enterprises-are-using-open-source-llms-16-examples/) from the original on 26 September
+2024. Retrieved 5 October 2024.
+339. Piper, Kelsey (2 February 2024). "Should we make our most powerful AI models open source to
+all?" (https://www.vox.com/future-perfect/2024/2/2/24058484/open-source-artificial-intelligence-ai-r
+isk-meta-llama-2-chatgpt-openai-deepfake). Vox. Archived (https://web.archive.org/web/20241005
+170204/https://www.vox.com/future-perfect/2024/2/2/24058484/open-source-artificial-intelligence-ai-risk-meta-llama-2-chatgpt-openai-deepfake) from the original on 5 October 2024. Retrieved
+14 April 2024.
+340. Alan Turing Institute (2019). "Understanding artificial intelligence ethics and safety" (https://www.tu
+ring.ac.uk/sites/default/files/2019-06/understanding_artificial_intelligence_ethics_and_safety.pdf)
+(PDF). Archived (https://web.archive.org/web/20240911131935/https://www.turing.ac.uk/sites/defa
+ult/files/2019-06/understanding_artificial_intelligence_ethics_and_safety.pdf) (PDF) from the
+original on 11 September 2024. Retrieved 5 October 2024.
+341. Alan Turing Institute (2023). "AI Ethics and Governance in Practice" (https://www.turing.ac.uk/site
+s/default/files/2023-12/aieg-ati-ai-ethics-an-intro_1.pdf) (PDF). Archived (https://web.archive.org/w
+eb/20240911125504/https://www.turing.ac.uk/sites/default/files/2023-12/aieg-ati-ai-ethics-an-intro_
+1.pdf) (PDF) from the original on 11 September 2024. Retrieved 5 October 2024.
+342. Floridi, Luciano; Cowls, Josh (23 June 2019). "A Unified Framework of Five Principles for AI in
+Society" (https://hdsr.mitpress.mit.edu/pub/l0jsh9d1). Harvard Data Science Review. 1 (1).
+doi:10.1162/99608f92.8cd550d1 (https://doi.org/10.1162%2F99608f92.8cd550d1).
+S2CID 198775713 (https://api.semanticscholar.org/CorpusID:198775713). Archived (https://archiv
+e.today/20190807202909/https://hdsr.mitpress.mit.edu/pub/l0jsh9d1) from the original on 7 August
+2019. Retrieved 5 December 2023.
+343. Buruk, Banu; Ekmekci, Perihan Elif; Arda, Berna (1 September 2020). "A critical perspective on
+guidelines for responsible and trustworthy artificial intelligence". Medicine, Health Care and
+Philosophy. 23 (3): 387–399. doi:10.1007/s11019-020-09948-1 (https://doi.org/10.1007%2Fs1101
+9-020-09948-1). ISSN 1572-8633 (https://search.worldcat.org/issn/1572-8633). PMID 32236794
+(https://pubmed.ncbi.nlm.nih.gov/32236794). S2CID 214766800 (https://api.semanticscholar.org/C
+orpusID:214766800).
+344. Kamila, Manoj Kumar; Jasrotia, Sahil Singh (1 January 2023). "Ethical issues in the development
+of artificial intelligence: recognizing the risks". International Journal of Ethics and Systems. 41
+(ahead-of-print): 45–63. doi:10.1108/IJOES-05-2023-0107 (https://doi.org/10.1108%2FIJOES-05-2
+023-0107). ISSN 2514-9369 (https://search.worldcat.org/issn/2514-9369). S2CID 259614124 (http
+s://api.semanticscholar.org/CorpusID:259614124).
+345. "AI Safety Institute releases new AI safety evaluations platform" (https://www.gov.uk/government/n
+ews/ai-safety-institute-releases-new-ai-safety-evaluations-platform). UK Government. 10 May
+2024. Archived (https://web.archive.org/web/20241005170207/https://www.gov.uk/government/ne
+ws/ai-safety-institute-releases-new-ai-safety-evaluations-platform) from the original on 5 October
+2024. Retrieved 14 May 2024.
+346. Regulation of AI to mitigate risks: Berryhill et al. (2019), Barfield & Pagallo (2018), Iphofen &
+Kritikos (2019), Wirtz, Weyerer & Geyer (2018), Buiten (2019)
+347. Law Library of Congress (U.S.). Global Legal Research Directorate (2019).
+348. Vincent (2023).
+349. Stanford University (2023).
+350. UNESCO (2021).
+351. Kissinger (2021).
+352. Altman, Brockman & Sutskever (2023).
+353. VOA News (25 October 2023). "UN Announces Advisory Body on Artificial Intelligence" (https://ww
+w.voanews.com/a/un-announces-advisory-body-on-artificial-intelligence-/7328732.html). Archived
+(https://web.archive.org/web/20240918071530/https://www.voanews.com/a/un-announces-advisor
+y-body-on-artificial-intelligence-/7328732.html) from the original on 18 September 2024. Retrieved
+5 October 2024.
+354. "AI Act enters into force - European Commission" (https://commission.europa.eu/news-and-media/
+news/ai-act-enters-force-2024-08-01_en). commission.europa.eu. Retrieved 11 August 2025.
+355. "Council of Europe opens first ever global treaty on AI for signature" (https://www.coe.int/en/web/p
+ortal/-/council-of-europe-opens-first-ever-global-treaty-on-ai-for-signature). Council of Europe. 5
+September 2024. Archived (https://web.archive.org/web/20240917001330/https://www.coe.int/en/
+web/portal/-/council-of-europe-opens-first-ever-global-treaty-on-ai-for-signature) from the original
+on 17 September 2024. Retrieved 17 September 2024.
+356. Edwards (2023).
+357. Kasperowicz (2023).
+358. Fox News (2023).
+359. Milmo, Dan (3 November 2023). "Hope or Horror? The great AI debate dividing its pioneers". The
+Guardian Weekly. pp. 10–12.
+360. "The Bletchley Declaration by Countries Attending the AI Safety Summit, 1–2 November 2023" (htt
+ps://web.archive.org/web/20231101123904/https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-saf
+ety-summit-1-2-november-2023). GOV.UK. 1 November 2023. Archived from the original (https://w
+ww.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023) on 1 November
+2023. Retrieved 2 November 2023.
+361. "Countries agree to safe and responsible development of frontier AI in landmark Bletchley
+Declaration" (https://www.gov.uk/government/news/countries-agree-to-safe-and-responsible-devel
+opment-of-frontier-ai-in-landmark-bletchley-declaration). GOV.UK (Press release). Archived (http
+s://web.archive.org/web/20231101115016/https://www.gov.uk/government/news/countries-agree-to
+-safe-and-responsible-development-of-frontier-ai-in-landmark-bletchley-declaration) from the
+original on 1 November 2023. Retrieved 1 November 2023.
+362. "Second global AI summit secures safety commitments from companies" (https://www.reuters.co
+m/technology/global-ai-summit-seoul-aims-forge-new-regulatory-agreements-2024-05-21).
+Reuters. 21 May 2024. Retrieved 23 May 2024.
+363. "Frontier AI Safety Commitments, AI Seoul Summit 2024" (https://web.archive.org/web/202405232
+01611/https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summi
+t-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024). gov.uk. 21 May 2024. Archived from
+the original (https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-s
+ummit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024) on 23 May 2024. Retrieved
+23 May 2024.
+364. Buntz, Brian (3 November 2024). "Quality vs. quantity: US and China chart different paths in
+global AI patent race in 2024 / Geographical breakdown of AI patents in 2024" (https://www.rdworl
+donline.com/quality-vs-quantity-us-and-china-chart-different-paths-in-global-ai-patent-race-in-202
+4/). R&D World. Archived (https://web.archive.org/web/20241209072113/https://www.rdworldonlin
+e.com/quality-vs-quantity-us-and-china-chart-different-paths-in-global-ai-patent-race-in-2024/)
+from the original on 9 December 2024.
+365. Russell & Norvig 2021, p. 9.
+366. Copeland, J., ed. (2004). The Essential Turing: the ideas that gave birth to the computer age.
+Oxford, England: Clarendon Press. ISBN 0-1982-5079-7.
+367. "Google books ngram" (https://books.google.com/ngrams/graph?content=electronic+brain&year_s
+tart=1930&year_end=2019&corpus=en-2019&smoothing=3). Archived (https://web.archive.org/we
+b/20241005170209/https://books.google.com/ngrams/graph?content=electronic+brain&year_start
+=1930&year_end=2019&corpus=en-2019&smoothing=3) from the original on 5 October 2024.
+Retrieved 5 October 2024.
+368. AI's immediate precursors: McCorduck (2004, pp. 51–107), Crevier (1993, pp. 27–32), Russell &
+Norvig (2021, pp. 8–17), Moravec (1988, p. 3)
+369. Turing's original publication of the Turing test in "Computing machinery and intelligence": Turing
+(1950) Historical influence and philosophical implications: Haugeland (1985, pp. 6–9), Crevier
+(1993, p. 24), McCorduck (2004, pp. 70–71), Russell & Norvig (2021, pp. 2, 984)
+370. Crevier (1993), pp. 47–49.
+371. Russell & Norvig (2003), p. 17.
+372. Russell & Norvig (2003), p. 18.
+373. Newquist (1994), pp. 86–86.
+374. Simon (1965, p. 96) quoted in Crevier (1993, p. 109)
+375. Minsky (1967, p. 2) quoted in Crevier (1993, p. 109)
+376. Russell & Norvig (2021), p. 21.
+377. Lighthill (1973).
+378. NRC 1999, pp. 212–213.
+379. Russell & Norvig (2021), p. 22.
+380. Expert systems: Russell & Norvig (2021, pp. 23, 292), Luger & Stubblefield (2004, pp. 227–331),
+Nilsson (1998, chpt. 17.4), McCorduck (2004, pp. 327–335, 434–435), Crevier (1993, pp. 145–
+162, 197–203), Newquist (1994, pp. 155–183)
+381. Russell & Norvig (2021), p. 24.
+382. Nilsson (1998), p. 7.
+383. McCorduck (2004), pp. 454–462.
+384. Moravec (1988).
+385. Brooks (1990).
+386. Developmental robotics: Weng et al. (2001), Lungarella et al. (2003), Asada et al. (2009), Oudeyer
+(2010)
+387. Russell & Norvig (2021), p. 25.
+388. Crevier (1993, pp. 214–215), Russell & Norvig (2021, pp. 24, 26)
+389. Russell & Norvig (2021), p. 26.
+390. Formal and narrow methods adopted in the 1990s: Russell & Norvig (2021, pp. 24–26),
+McCorduck (2004, pp. 486–487)
+391. AI widely used in the late 1990s: Kurzweil (2005, p. 265), NRC (1999, pp. 216–222), Newquist
+(1994, pp. 189–201)
+392. Wong (2023).
+393. Moore's Law and AI: Russell & Norvig (2021, pp. 14, 27)
+394. Clark (2015b).
+395. Big data: Russell & Norvig (2021, p. 26)
+396. Sagar, Ram (3 June 2020). "OpenAI Releases GPT-3, The Largest Model So Far" (https://analytic
+sindiamag.com/open-ai-gpt-3-language-model). Analytics India Magazine. Archived (https://web.ar
+chive.org/web/20200804173452/https://analyticsindiamag.com/open-ai-gpt-3-language-model)
+from the original on 4 August 2020. Retrieved 15 March 2023.
+397. Milmo, Dan (2 February 2023). "ChatGPT reaches 100 million users two months after launch" (htt
+ps://www.theguardian.com/technology/2023/feb/02/chatgpt-100-million-users-open-ai-fastest-grow
+ing-app). The Guardian. ISSN 0261-3077 (https://search.worldcat.org/issn/0261-3077). Archived
+(https://web.archive.org/web/20230203051356/https://www.theguardian.com/technology/2023/feb/
+02/chatgpt-100-million-users-open-ai-fastest-growing-app) from the original on 3 February 2023.
+Retrieved 31 December 2024.
+398. Gorichanaz, Tim (29 November 2023). "ChatGPT turns 1: AI chatbot's success says as much
+about humans as technology" (https://theconversation.com/chatgpt-turns-1-ai-chatbots-success-s
+ays-as-much-about-humans-as-technology-218704). The Conversation. Archived (https://web.arc
+hive.org/web/20241231073513/https://theconversation.com/chatgpt-turns-1-ai-chatbots-success-s
+ays-as-much-about-humans-as-technology-218704) from the original on 31 December 2024.
+Retrieved 31 December 2024.
+399. DiFeliciantonio (2023).
+400. Goswami (2023).
+401. "Nearly 1 in 4 new startups is an AI company" (https://pitchbook.com/news/articles/nearly-1-in-4-n
+ew-startups-is-an-ai-company). PitchBook. 24 December 2024. Retrieved 3 January 2025.
+402. Grayling, Anthony; Ball, Brian (1 August 2024). "Philosophy is crucial in the age of AI" (https://thec
+onversation.com/philosophy-is-crucial-in-the-age-of-ai-235907). The Conversation. Archived (http
+s://web.archive.org/web/20241005170243/https://theconversation.com/philosophy-is-crucial-in-the
+-age-of-ai-235907) from the original on 5 October 2024. Retrieved 4 October 2024.
+403. Jarow, Oshan (15 June 2024). "Will AI ever become conscious? It depends on how you think
+about biology" (https://www.vox.com/future-perfect/351893/consciousness-ai-machines-neuroscie
+nce-mind). Vox. Archived (https://web.archive.org/web/20240921035218/https://www.vox.com/futu
+re-perfect/351893/consciousness-ai-machines-neuroscience-mind) from the original on 21
+September 2024. Retrieved 4 October 2024.
+404. McCarthy, John. "The Philosophy of AI and the AI of Philosophy" (https://web.archive.org/web/201
+81023181725/http://jmc.stanford.edu/articles/aiphil2.html). jmc.stanford.edu. Archived from the
+original (http://jmc.stanford.edu/articles/aiphil2.html) on 23 October 2018. Retrieved 3 October
+2024.
+405. Turing (1950), p. 1.
+406. Turing (1950), Under "The Argument from Consciousness".
+407. Kirk-Giannini, Cameron Domenico; Goldstein, Simon (16 October 2023). "AI is closer than ever to
+passing the Turing test for 'intelligence'. What happens when it does?" (https://theconversation.co
+m/ai-is-closer-than-ever-to-passing-the-turing-test-for-intelligence-what-happens-when-it-does-214
+721). The Conversation. Archived (https://web.archive.org/web/20240925040612/https://theconver
+sation.com/ai-is-closer-than-ever-to-passing-the-turing-test-for-intelligence-what-happens-when-it-does-214721) from the original on 25 September 2024. Retrieved 17 August 2024.
+408. Russell & Norvig (2021), p. 3.
+409. Maker (2006).
+410. McCarthy (1999).
+411. Minsky (1986).
+412. "What Is Artificial Intelligence (AI)?" (https://cloud.google.com/learn/what-is-artificial-intelligence).
+Google Cloud Platform. Archived (https://web.archive.org/web/20230731114802/https://cloud.goog
+le.com/learn/what-is-artificial-intelligence) from the original on 31 July 2023. Retrieved 16 October
+2023.
+413. Suchman, Lucy (2023). "The uncontroversial 'thingness' of AI" (https://doi.org/10.1177%2F205395
+17231206794). Big Data & Society. 10 (2) 20539517231206794.
+doi:10.1177/20539517231206794 (https://doi.org/10.1177%2F20539517231206794).
+414. Rehak, Rainer (2025). "AI Narrative Breakdown: A Critical Assessment of Power and Promise".
+Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency (FAccT
+'25). New York, NY, USA: Association for Computing Machinery. pp. 1250–1260.
+doi:10.1145/3715275.3732083 (https://doi.org/10.1145%2F3715275.3732083).
+415. "One of the Biggest Problems in Regulating AI Is Agreeing on a Definition" (https://carnegieendow
+ment.org/posts/2022/10/one-of-the-biggest-problems-in-regulating-ai-is-agreeing-on-a-definition?l
+ang=en). Carnegie Endowment for International Peace. Retrieved 31 July 2024.
+416. "AI or BS? How to tell if a marketing tool really uses artificial intelligence" (https://www.thedrum.co
+m/opinion/2023/03/30/ai-or-bs-how-tell-if-marketing-tool-really-uses-artificial-intelligence). The
+Drum. Retrieved 31 July 2024.
+417. Musser, George (1 September 2023). "How AI Knows Things No One Told It" (https://www.scientifi
+camerican.com/article/how-ai-knows-things-no-one-told-it/). Scientific American. Retrieved 17 July
+2025.
+418. Nilsson (1983), p. 10.
+419. Haugeland (1985), pp. 112–117.
+420. Physical symbol system hypothesis: Newell & Simon (1976, p. 116) Historical significance:
+McCorduck (2004, p. 153), Russell & Norvig (2021, p. 19)
+421. Moravec's paradox: Moravec (1988, pp. 15–16), Minsky (1986, p. 29), Pinker (2007, pp. 190–191)
+422. Dreyfus' critique of AI: Dreyfus (1972), Dreyfus & Dreyfus (1986) Historical significance and
+philosophical implications: Crevier (1993, pp. 120–132), McCorduck (2004, pp. 211–239), Russell
+& Norvig (2021, pp. 981–982), Fearn (2007, chpt. 3)
+423. Crevier (1993), p. 125.
+424. Langley (2011).
+425. Katz (2012).
+426. Neats vs. scruffies, the historic debate: McCorduck (2004, pp. 421–424, 486–489), Crevier (1993,
+p. 168), Nilsson (1983, pp. 10–11), Russell & Norvig (2021, p. 24) A classic example of the
+"scruffy" approach to intelligence: Minsky (1986) A modern example of neat AI and its aspirations
+in the 21st century: Domingos (2015)
+427. Pennachin & Goertzel (2007).
+428. Roberts (2016).
+429. Russell & Norvig (2021), p. 986.
+430. Chalmers (1995).
+431. Dennett (1991).
+432. Horst (2005).
+433. Searle (1999).
+434. Searle (1980), p. 1.
+435. Russell & Norvig (2021), p. 9817.
+436. Searle's Chinese room argument: Searle (1980). Searle's original presentation of the thought
+experiment., Searle (1999). Discussion: Russell & Norvig (2021, pp. 985), McCorduck (2004,
+pp. 443–445), Crevier (1993, pp. 269–271)
+437. Leith, Sam (7 July 2022). "Nick Bostrom: How can we be certain a machine isn't conscious?" (http
+s://www.spectator.co.uk/article/nick-bostrom-how-can-we-be-certain-a-machine-isnt-conscious).
+The Spectator. Archived (https://web.archive.org/web/20240926155639/https://www.spectator.co.u
+k/article/nick-bostrom-how-can-we-be-certain-a-machine-isnt-conscious/) from the original on 26
+September 2024. Retrieved 23 February 2024.
+438. Thomson, Jonny (31 October 2022). "Why don't robots have rights?" (https://bigthink.com/thinkin
+g/why-dont-robots-have-rights). Big Think. Archived (https://web.archive.org/web/2024091305533
+6/https://bigthink.com/thinking/why-dont-robots-have-rights/) from the original on 13 September
+2024. Retrieved 23 February 2024.
+439. Kateman, Brian (24 July 2023). "AI Should Be Terrified of Humans" (https://time.com/6296234/ai-s
+hould-be-terrified-of-humans). Time. Archived (https://web.archive.org/web/20240925041601/http
+s://time.com/6296234/ai-should-be-terrified-of-humans/) from the original on 25 September 2024.
+Retrieved 23 February 2024.
+440. Wong, Jeff (10 July 2023). "What leaders need to know about robot rights" (https://www.fastcompa
+ny.com/90920769/what-leaders-need-to-know-about-robot-rights). Fast Company.
+441. Hern, Alex (12 January 2017). "Give robots 'personhood' status, EU committee argues" (https://w
+ww.theguardian.com/technology/2017/jan/12/give-robots-personhood-status-eu-committee-argue
+s). The Guardian. ISSN 0261-3077 (https://search.worldcat.org/issn/0261-3077). Archived (https://
+web.archive.org/web/20241005171222/https://www.theguardian.com/technology/2017/jan/12/give-robots-personhood-status-eu-committee-argues) from the original on 5 October 2024. Retrieved
+23 February 2024.
+442. Dovey, Dana (14 April 2018). "Experts Don't Think Robots Should Have Rights" (https://www.news
+week.com/robots-human-rights-electronic-persons-humans-versus-machines-886075).
+Newsweek. Archived (https://web.archive.org/web/20241005171333/https://www.newsweek.com/r
+obots-human-rights-electronic-persons-humans-versus-machines-886075) from the original on 5
+October 2024. Retrieved 23 February 2024.
+443. Cuddy, Alice (13 April 2018). "Robot rights violate human rights, experts warn EU" (https://www.eu
+ronews.com/2018/04/13/robot-rights-violate-human-rights-experts-warn-eu). euronews. Archived
+(https://web.archive.org/web/20240919022327/https://www.euronews.com/2018/04/13/robot-rights
+-violate-human-rights-experts-warn-eu) from the original on 19 September 2024. Retrieved
+23 February 2024.
+444. The Intelligence explosion and technological singularity: Russell & Norvig (2021, pp. 1004–1005),
+Omohundro (2008), Kurzweil (2005) I. J. Good's "intelligence explosion": Good (1965) Vernor
+Vinge's "singularity": Vinge (1993)
+445. Russell & Norvig (2021), p. 1005.
+446. Transhumanism: Moravec (1988), Kurzweil (2005), Russell & Norvig (2021, p. 1005)
+447. AI as evolution: Edward Fredkin is quoted in McCorduck (2004, p. 401), Butler (1863), Dyson
+(1998)
+448. AI in myth: McCorduck (2004, pp. 4–5)
+449. McCorduck (2004), pp. 340–400.
+450. Buttazzo (2001).
+451. Anderson (2008).
+452. McCauley (2007).
+453. Galvan (1997).
+The two most widely used textbooks in 2023 (see the Open Syllabus (https://explorer.opensyllabus.or
+g/result/field?id=Computer+Science)):
+Russell, Stuart J.; Norvig, Peter (2021). Artificial Intelligence: A Modern Approach (4th ed.).
+Hoboken: Pearson. ISBN 978-0-1346-1099-3. LCCN 20190474 (https://lccn.loc.gov/20190474).
+Rich, Elaine; Knight, Kevin; Nair, Shivashankar B (2010). Artificial Intelligence (3rd ed.). New
+Delhi: Tata McGraw Hill India. ISBN 978-0-0700-8770-5.
+The four most widely used AI textbooks in 2008:
+Luger, George; Stubblefield, William (2004). Artificial Intelligence: Structures and Strategies for
+Complex Problem Solving (https://archive.org/details/artificialintell0000luge) (5th ed.).
+Benjamin/Cummings. ISBN 978-0-8053-4780-7. Archived (https://web.archive.org/web/202007
+26220613/https://archive.org/details/artificialintell0000luge) from the original on 26 July 2020.
+Retrieved 17 December 2019.
+Nilsson, Nils (1998). Artificial Intelligence: A New Synthesis (https://archive.org/details/artificialintell00
+00nils). Morgan Kaufmann. ISBN 978-1-5586-0467-4. Archived (https://web.archive.org/web/2
+0200726131654/https://archive.org/details/artificialintell0000nils) from the original on 26 July
+2020. Retrieved 18 November 2019.
+Russell, Stuart J.; Norvig, Peter (2003), Artificial Intelligence: A Modern Approach (http://aima.cs.berk
+eley.edu/) (2nd ed.), Upper Saddle River, New Jersey: Prentice Hall, ISBN 0-13-790395-2.
+Poole, David; Mackworth, Alan; Goebel, Randy (1998). Computational Intelligence: A Logical
+Approach (https://archive.org/details/computationalint00pool). New York: Oxford University
+Press. ISBN 978-0-1951-0270-3. Archived (https://web.archive.org/web/20200726131436/http
+s://archive.org/details/computationalint00pool) from the original on 26 July 2020. Retrieved
+22 August 2020. Later edition: Poole, David; Mackworth, Alan (2017). Artificial Intelligence:
+Foundations of Computational Agents (http://artint.info/index.html) (2nd ed.). Cambridge
+University Press. ISBN 978-1-1071-9539-4. Archived (https://web.archive.org/web/201712070
+13855/http://artint.info/index.html) from the original on 7 December 2017. Retrieved
+6 December 2017.
+Other textbooks:
+Ertel, Wolfgang (2017). Introduction to Artificial Intelligence (2nd ed.). Springer. ISBN 978-3-3195-
+8486-7.
+Ciaramella, Alberto; Ciaramella, Marco (2024). Introduction to Artificial Intelligence: from data
+analysis to generative AI (1st ed.). Intellisemantic Editions. ISBN 978-8-8947-8760-3.
+Crevier, Daniel (1993). AI: The Tumultuous Search for Artificial Intelligence. New York, NY:
+BasicBooks. ISBN 0-465-02997-3.
+McCorduck, Pamela (2004), Machines Who Think (2nd ed.), Natick, Massachusetts: A. K. Peters,
+ISBN 1-5688-1205-1
+Newquist, H. P. (1994). The Brain Makers: Genius, Ego, And Greed In The Quest For Machines That
+Think. New York: Macmillan/SAMS. ISBN 978-0-6723-0412-5.
+Harmon, Paul; Sawyer, Brian (1990). Creating Expert Systems for Business and Industry. Foreword
+by Dr. Edward Feigenbaum. New York: John Wiley & Sons. ISBN 0-471-61496-3.
+AI textbooks
+History of AI
+AI & ML in Fusion (https://suli.pppl.gov/2023/course/Rea-PPPL-SULI2023.pdf)
+AI & ML in Fusion, video lecture (https://drive.google.com/file/d/1npCTrJ8XJn20ZGDA_DfMpANuQZF
+MzKPh/view?usp=drive_link) Archived (https://web.archive.org/web/20230702164332/https://d
+rive.google.com/file/d/1npCTrJ8XJn20ZGDA_DfMpANuQZFMzKPh/view?usp=drive_link) 2
+July 2023 at the Wayback Machine
+Alter, Alexandra; Harris, Elizabeth A. (20 September 2023), "Franzen, Grisham and Other Prominent
+Authors Sue OpenAI" (https://www.nytimes.com/2023/09/20/books/authors-openai-lawsuit-cha
+tgpt-copyright.html?campaign_id=2&emc=edit_th_20230921&instance_id=103259&nl=todays
+headlines&regi_id=62816440&segment_id=145288&user_id=ad24f3545dae0ec44284a38bb4
+a88f1d), The New York Times, archived (https://web.archive.org/web/20240914155020/https://
+www.nytimes.com/2023/09/20/books/authors-openai-lawsuit-chatgpt-copyright.html?campaign
+_id=2&emc=edit_th_20230921&instance_id=103259&nl=todaysheadlines&regi_id=62816440
+&segment_id=145288&user_id=ad24f3545dae0ec44284a38bb4a88f1d) from the original on
+14 September 2024, retrieved 5 October 2024
+Altman, Sam; Brockman, Greg; Sutskever, Ilya (22 May 2023). "Governance of Superintelligence" (htt
+ps://openai.com/blog/governance-of-superintelligence). openai.com. Archived (https://web.arch
+ive.org/web/20230527061619/https://openai.com/blog/governance-of-superintelligence) from
+the original on 27 May 2023. Retrieved 27 May 2023.
+Anderson, Susan Leigh (2008). "Asimov's "three laws of robotics" and machine metaethics". AI &
+Society. 22 (4): 477–493. doi:10.1007/s00146-007-0094-5 (https://doi.org/10.1007%2Fs00146
+-007-0094-5). S2CID 1809459 (https://api.semanticscholar.org/CorpusID:1809459).
+Anderson, Michael; Anderson, Susan Leigh (2011). Machine Ethics. Cambridge University Press.
+Arntz, Melanie; Gregory, Terry; Zierahn, Ulrich (2016), "The risk of automation for jobs in OECD
+countries: A comparative analysis", OECD Social, Employment, and Migration Working Papers
+189
+Asada, M.; Hosoda, K.; Kuniyoshi, Y.; Ishiguro, H.; Inui, T.; Yoshikawa, Y.; Ogino, M.; Yoshida, C.
+(2009). "Cognitive developmental robotics: a survey". IEEE Transactions on Autonomous
+Mental Development. 1 (1): 12–34. Bibcode:2009ITAMD...1...12A (https://ui.adsabs.harvard.ed
+u/abs/2009ITAMD...1...12A). doi:10.1109/tamd.2009.2021702 (https://doi.org/10.1109%2Ftam
+d.2009.2021702). S2CID 10168773 (https://api.semanticscholar.org/CorpusID:10168773).
+"Ask the AI experts: What's driving today's progress in AI?" (https://www.mckinsey.com/business-funct
+ions/mckinsey-analytics/our-insights/ask-the-ai-experts-whats-driving-todays-progress-in-ai).
+McKinsey & Company. Archived (https://web.archive.org/web/20180413190018/https://www.m
+ckinsey.com/business-functions/mckinsey-analytics/our-insights/ask-the-ai-experts-whats-drivi
+ng-todays-progress-in-ai) from the original on 13 April 2018. Retrieved 13 April 2018.
+Barfield, Woodrow; Pagallo, Ugo (2018). Research handbook on the law of artificial intelligence.
+Cheltenham, UK: Edward Elgar Publishing. ISBN 978-1-7864-3904-8. OCLC 1039480085 (htt
+ps://search.worldcat.org/oclc/1039480085).
+Beal, J.; Winston, Patrick (2009), "The New Frontier of Human-Level Artificial Intelligence", IEEE
+Intelligent Systems, 24 (4): 21–24, Bibcode:2009IISys..24d..21B (https://ui.adsabs.harvard.ed
+u/abs/2009IISys..24d..21B), doi:10.1109/MIS.2009.75 (https://doi.org/10.1109%2FMIS.2009.7
+5), hdl:1721.1/52357 (https://hdl.handle.net/1721.1%2F52357), S2CID 32437713 (https://api.s
+emanticscholar.org/CorpusID:32437713)
+Berdahl, Carl Thomas; Baker, Lawrence; Mann, Sean; Osoba, Osonde; Girosi, Federico (7 February
+2023). "Strategies to Improve the Impact of Artificial Intelligence on Health Equity: Scoping
+Review" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11041459). JMIR AI. 2 e42936.
+doi:10.2196/42936 (https://doi.org/10.2196%2F42936). ISSN 2817-1705 (https://search.worldc
+at.org/issn/2817-1705). PMC 11041459 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11041
+459). PMID 38875587 (https://pubmed.ncbi.nlm.nih.gov/38875587). S2CID 256681439 (http
+s://api.semanticscholar.org/CorpusID:256681439).
+Other sources
+Berryhill, Jamie; Heang, Kévin Kok; Clogher, Rob; McBride, Keegan (2019). Hello, World: Artificial
+Intelligence and its Use in the Public Sector (https://oecd-opsi.org/wp-content/uploads/2019/1
+1/AI-Report-Online.pdf) (PDF). Paris: OECD Observatory of Public Sector Innovation. Archived
+(https://web.archive.org/web/20191220021331/https://oecd-opsi.org/wp-content/uploads/2019/
+11/AI-Report-Online.pdf) (PDF) from the original on 20 December 2019. Retrieved 9 August
+2020.
+Bertini, M; Del Bimbo, A; Torniai, C (2006). "Automatic annotation and semantic retrieval of video
+sequences using multimedia ontologies". MM '06 Proceedings of the 14th ACM international
+conference on Multimedia. 14th ACM international conference on Multimedia. Santa Barbara:
+ACM. pp. 679–682.
+Bostrom, Nick (2014). Superintelligence: Paths, Dangers, Strategies. Oxford University Press.
+Bostrom, Nick (2015). "What happens when our computers get smarter than we are?" (https://www.te
+d.com/talks/nick_bostrom_what_happens_when_our_computers_get_smarter_than_we_are/tr
+anscript). TED (conference). Archived (https://web.archive.org/web/20200725005719/https://w
+ww.ted.com/talks/nick_bostrom_what_happens_when_our_computers_get_smarter_than_we_
+are/transcript) from the original on 25 July 2020. Retrieved 30 January 2020.
+Brooks, Rodney (10 November 2014). "artificial intelligence is a tool, not a threat" (https://web.archiv
+e.org/web/20141112130954/http://www.rethinkrobotics.com/artificial-intelligence-tool-threat).
+Archived from the original (http://www.rethinkrobotics.com/artificial-intelligence-tool-threat) on
+12 November 2014.
+Brooks, Rodney (1990). "Elephants Don't Play Chess" (http://people.csail.mit.edu/brooks/papers/elep
+hants.pdf) (PDF). Robotics and Autonomous Systems. 6 (1–2): 3–15.
+CiteSeerX 10.1.1.588.7539 (https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.588.75
+39). doi:10.1016/S0921-8890(05)80025-9 (https://doi.org/10.1016%2FS0921-8890%2805%29
+80025-9). Archived (https://web.archive.org/web/20070809020912/http://people.csail.mit.edu/b
+rooks/papers/elephants.pdf) (PDF) from the original on 9 August 2007.
+Buiten, Miriam C (2019). "Towards Intelligent Regulation of Artificial Intelligence" (https://doi.org/10.10
+17%2Ferr.2019.8). European Journal of Risk Regulation. 10 (1): 41–59.
+doi:10.1017/err.2019.8 (https://doi.org/10.1017%2Ferr.2019.8). ISSN 1867-299X (https://searc
+h.worldcat.org/issn/1867-299X).
+Bushwick, Sophie (16 March 2023), "What the New GPT-4 AI Can Do" (https://www.scientificamerica
+n.com/article/what-the-new-gpt-4-ai-can-do/), Scientific American, archived (https://web.archiv
+e.org/web/20230822233655/https://www.scientificamerican.com/article/what-the-new-gpt-4-ai-can-do/) from the original on 22 August 2023, retrieved 5 October 2024
+Butler, Samuel (13 June 1863). "Darwin among the Machines" (https://nzetc.victoria.ac.nz/tm/scholarl
+y/tei-ButFir-t1-g1-t1-g1-t4-body.html). Letters to the Editor. The Press. Christchurch, New
+Zealand. Archived (https://web.archive.org/web/20080919172551/http://www.nzetc.org/tm/sch
+olarly/tei-ButFir-t1-g1-t1-g1-t4-body.html) from the original on 19 September 2008. Retrieved
+16 October 2014 – via Victoria University of Wellington.
+Buttazzo, G. (July 2001). "Artificial consciousness: Utopia or real possibility?". Computer. 34 (7): 24–
+30. Bibcode:2001Compr..34g..24B (https://ui.adsabs.harvard.edu/abs/2001Compr..34g..24B).
+doi:10.1109/2.933500 (https://doi.org/10.1109%2F2.933500).
+Cambria, Erik; White, Bebo (May 2014). "Jumping NLP Curves: A Review of Natural Language
+Processing Research [Review Article]". IEEE Computational Intelligence Magazine. 9 (2): 48–
+57. doi:10.1109/MCI.2014.2307227 (https://doi.org/10.1109%2FMCI.2014.2307227).
+S2CID 206451986 (https://api.semanticscholar.org/CorpusID:206451986).
+Cellan-Jones, Rory (2 December 2014). "Stephen Hawking warns artificial intelligence could end
+mankind" (https://www.bbc.com/news/technology-30290540). BBC News. Archived (https://we
+b.archive.org/web/20151030054329/http://www.bbc.com/news/technology-30290540) from the
+original on 30 October 2015. Retrieved 30 October 2015.
+Chalmers, David (1995). "Facing up to the problem of consciousness" (http://www.imprint.co.uk/chalm
+ers.html). Journal of Consciousness Studies. 2 (3): 200–219. CiteSeerX 10.1.1.103.8362 (http
+s://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.103.8362). Archived (https://web.archiv
+e.org/web/20050308163649/http://www.imprint.co.uk/chalmers.html) from the original on 8
+March 2005. Retrieved 11 October 2018.
+Challa, Subhash; Moreland, Mark R.; Mušicki, Darko; Evans, Robin J. (2011). Fundamentals of Object
+Tracking. Cambridge University Press. doi:10.1017/CBO9780511975837 (https://doi.org/10.10
+17%2FCBO9780511975837). ISBN 978-0-5218-7628-5.
+Christian, Brian (2020). The Alignment Problem: Machine learning and human values. W. W. Norton &
+Company. ISBN 978-0-3938-6833-3. OCLC 1233266753 (https://search.worldcat.org/oclc/123
+3266753).
+Ciresan, D.; Meier, U.; Schmidhuber, J. (2012). "Multi-column deep neural networks for image
+classification". 2012 IEEE Conference on Computer Vision and Pattern Recognition. pp. 3642–
+3649. arXiv:1202.2745 (https://arxiv.org/abs/1202.2745). doi:10.1109/cvpr.2012.6248110 (http
+s://doi.org/10.1109%2Fcvpr.2012.6248110). ISBN 978-1-4673-1228-8. S2CID 2161592 (http
+s://api.semanticscholar.org/CorpusID:2161592).
+Clark, Jack (2015b). "Why 2015 Was a Breakthrough Year in Artificial Intelligence" (https://www.bloom
+berg.com/news/articles/2015-12-08/why-2015-was-a-breakthrough-year-in-artificial-intelligenc
+e). Bloomberg.com. Archived (https://web.archive.org/web/20161123053855/https://www.bloo
+mberg.com/news/articles/2015-12-08/why-2015-was-a-breakthrough-year-in-artificial-intelligen
+ce) from the original on 23 November 2016. Retrieved 23 November 2016.
+CNA (12 January 2019). "Commentary: Bad news. Artificial intelligence is biased" (https://www.chann
+elnewsasia.com/news/commentary/artificial-intelligence-big-data-bias-hiring-loans-key-challen
+ge-11097374). CNA. Archived (https://web.archive.org/web/20190112104421/https://www.chan
+nelnewsasia.com/news/commentary/artificial-intelligence-big-data-bias-hiring-loans-key-challe
+nge-11097374) from the original on 12 January 2019. Retrieved 19 June 2020.
+Cybenko, G. (1988). Continuous valued neural networks with two hidden layers are sufficient
+(Report). Department of Computer Science, Tufts University.
+Deng, L.; Yu, D. (2014). "Deep Learning: Methods and Applications" (http://research.microsoft.com/pu
+bs/209355/DeepLearning-NowPublishing-Vol7-SIG-039.pdf) (PDF). Foundations and Trends in
+Signal Processing. 7 (3–4): 197–387. doi:10.1561/2000000039 (https://doi.org/10.1561%2F20
+00000039). Archived (https://web.archive.org/web/20160314152112/http://research.microsoft.c
+om/pubs/209355/DeepLearning-NowPublishing-Vol7-SIG-039.pdf) (PDF) from the original on
+14 March 2016. Retrieved 18 October 2014.
+Dennett, Daniel (1991). Consciousness Explained. The Penguin Press. ISBN 978-0-7139-9037-9.
+DiFeliciantonio, Chase (3 April 2023). "AI has already changed the world. This report shows how" (htt
+ps://www.sfchronicle.com/tech/article/ai-artificial-intelligence-report-stanford-17869558.php).
+San Francisco Chronicle. Archived (https://web.archive.org/web/20230619015309/https://www.
+sfchronicle.com/tech/article/ai-artificial-intelligence-report-stanford-17869558.php) from the
+original on 19 June 2023. Retrieved 19 June 2023.
+Dickson, Ben (2 May 2022). "Machine learning: What is the transformer architecture?" (https://bdtecht
+alks.com/2022/05/02/what-is-the-transformer). TechTalks. Archived (https://web.archive.org/we
+b/20231122142948/https://bdtechtalks.com/2022/05/02/what-is-the-transformer/) from the
+original on 22 November 2023. Retrieved 22 November 2023.
+Dockrill, Peter (27 June 2022), "Robots With Flawed AI Make Sexist And Racist Decisions,
+Experiment Shows" (https://web.archive.org/web/20220627225827/https://www.sciencealert.c
+om/robots-with-flawed-ai-make-sexist-racist-and-toxic-decisions-experiment-shows), Science
+Alert, archived from the original (https://www.sciencealert.com/robots-with-flawed-ai-make-sexi
+st-racist-and-toxic-decisions-experiment-shows) on 27 June 2022
+Domingos, Pedro (2015). The Master Algorithm: How the Quest for the Ultimate Learning Machine
+Will Remake Our World. Basic Books. ISBN 978-0-4650-6570-7.
+Dreyfus, Hubert (1972). What Computers Can't Do. New York: MIT Press. ISBN 978-0-0601-1082-6.
+Dreyfus, Hubert; Dreyfus, Stuart (1986). Mind over Machine: The Power of Human Intuition and
+Expertise in the Era of the Computer (https://archive.org/details/mindovermachinep00drey).
+Oxford: Blackwell. ISBN 978-0-0290-8060-3. Archived (https://web.archive.org/web/20200726
+131414/https://archive.org/details/mindovermachinep00drey) from the original on 26 July
+2020. Retrieved 22 August 2020.
+Dyson, George (1998). Darwin among the Machines (https://archive.org/details/darwinamongmachi00
+dyso). Allan Lane Science. ISBN 978-0-7382-0030-9. Archived (https://web.archive.org/web/20
+200726131443/https://archive.org/details/darwinamongmachi00dyso) from the original on 26
+July 2020. Retrieved 22 August 2020.
+Edelson, Edward (1991). The Nervous System (https://archive.org/details/nervoussystem0000edel).
+New York: Chelsea House. ISBN 978-0-7910-0464-7. Archived (https://web.archive.org/web/2
+0200726131758/https://archive.org/details/nervoussystem0000edel) from the original on 26
+July 2020. Retrieved 18 November 2019.
+Edwards, Benj (17 May 2023). "Poll: AI poses risk to humanity, according to majority of Americans" (ht
+tps://arstechnica.com/information-technology/2023/05/poll-61-of-americans-say-ai-threatens-h
+umanitys-future). Ars Technica. Archived (https://web.archive.org/web/20230619013608/http
+s://arstechnica.com/information-technology/2023/05/poll-61-of-americans-say-ai-threatens-hu
+manitys-future) from the original on 19 June 2023. Retrieved 19 June 2023.
+Fearn, Nicholas (2007). The Latest Answers to the Oldest Questions: A Philosophical Adventure with
+the World's Greatest Thinkers. New York: Grove Press. ISBN 978-0-8021-1839-4.
+Ford, Martin; Colvin, Geoff (6 September 2015). "Will robots create more jobs than they destroy?" (htt
+ps://www.theguardian.com/technology/2015/sep/06/will-robots-create-destroy-jobs). The
+Guardian. Archived (https://web.archive.org/web/20180616204119/https://www.theguardian.co
+m/technology/2015/sep/06/will-robots-create-destroy-jobs) from the original on 16 June 2018.
+Retrieved 13 January 2018.
+Fox News (2023). "Fox News Poll" (https://static.foxnews.com/foxnews.com/content/uploads/2023/05/
+Fox_April-21-24-2023_Complete_National_Topline_May-1-Release.pdf) (PDF). Fox News.
+Archived (https://web.archive.org/web/20230512082712/https://static.foxnews.com/foxnews.co
+m/content/uploads/2023/05/Fox_April-21-24-2023_Complete_National_Topline_May-1-Releas
+e.pdf) (PDF) from the original on 12 May 2023. Retrieved 19 June 2023.
+Frey, Carl Benedikt; Osborne, Michael A (1 January 2017). "The future of employment: How
+susceptible are jobs to computerisation?". Technological Forecasting and Social Change. 114:
+254–280. CiteSeerX 10.1.1.395.416 (https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.
+1.395.416). doi:10.1016/j.techfore.2016.08.019 (https://doi.org/10.1016%2Fj.techfore.2016.08.
+019). ISSN 0040-1625 (https://search.worldcat.org/issn/0040-1625).
+"From not working to neural networking" (https://www.economist.com/news/special-report/21700756-a
+rtificial-intelligence-boom-based-old-idea-modern-twist-not). The Economist. 2016. Archived (h
+ttps://web.archive.org/web/20161231203934/https://www.economist.com/news/special-report/2
+1700756-artificial-intelligence-boom-based-old-idea-modern-twist-not) from the original on 31
+December 2016. Retrieved 26 April 2018.
+Galvan, Jill (1 January 1997). "Entering the Posthuman Collective in Philip K. Dick's "Do Androids
+Dream of Electric Sheep?" ". Science Fiction Studies. 24 (3): 413–429.
+doi:10.1525/sfs.24.3.0413 (https://doi.org/10.1525%2Fsfs.24.3.0413). JSTOR 4240644 (http
+s://www.jstor.org/stable/4240644).
+Geist, Edward Moore (9 August 2015). "Is artificial intelligence really an existential threat to
+humanity?" (http://thebulletin.org/artificial-intelligence-really-existential-threat-humanity8577).
+Bulletin of the Atomic Scientists. Archived (https://web.archive.org/web/20151030054330/htt
+p://thebulletin.org/artificial-intelligence-really-existential-threat-humanity8577) from the original
+on 30 October 2015. Retrieved 30 October 2015.
+Gibbs, Samuel (27 October 2014). "Elon Musk: artificial intelligence is our biggest existential threat"
+(https://www.theguardian.com/technology/2014/oct/27/elon-musk-artificial-intelligence-ai-bigge
+st-existential-threat). The Guardian. Archived (https://web.archive.org/web/20151030054330/ht
+tp://www.theguardian.com/technology/2014/oct/27/elon-musk-artificial-intelligence-ai-biggest-e
+xistential-threat) from the original on 30 October 2015. Retrieved 30 October 2015.
+Goffrey, Andrew (2008). "Algorithm". In Fuller, Matthew (ed.). Software studies: a lexicon (https://archi
+ve.org/details/softwarestudiesl00full_007). Cambridge, Mass.: MIT Press. pp. 15 (https://archiv
+e.org/details/softwarestudiesl00full_007/page/n29)–20. ISBN 978-1-4356-4787-9.
+Goldman, Sharon (14 September 2022). "10 years later, deep learning 'revolution' rages on, say AI
+pioneers Hinton, LeCun and Li" (https://venturebeat.com/ai/10-years-on-ai-pioneers-hinton-lec
+un-li-say-deep-learning-revolution-will-continue). VentureBeat. Archived (https://web.archive.or
+g/web/20241005171338/https://venturebeat.com/ai/10-years-on-ai-pioneers-hinton-lecun-li-say
+-deep-learning-revolution-will-continue/) from the original on 5 October 2024. Retrieved
+8 December 2023.
+Good, I. J. (1965), Speculations Concerning the First Ultraintelligent Machine (https://exhibits.stanfor
+d.edu/feigenbaum/catalog/gz727rg3869), archived (https://web.archive.org/web/20230710131
+733/https://exhibits.stanford.edu/feigenbaum/catalog/gz727rg3869) from the original on 10
+July 2023, retrieved 5 October 2024
+Goodfellow, Ian; Bengio, Yoshua; Courville, Aaron (2016), Deep Learning (https://web.archive.org/we
+b/20160416111010/http://www.deeplearningbook.org), MIT Press., archived from the original
+(http://www.deeplearningbook.org) on 16 April 2016, retrieved 12 November 2017
+Goodman, Bryce; Flaxman, Seth (2017). "EU regulations on algorithmic decision-making and a 'right
+to explanation' ". AI Magazine. 38 (3): 50. arXiv:1606.08813 (https://arxiv.org/abs/1606.08813).
+doi:10.1609/aimag.v38i3.2741 (https://doi.org/10.1609%2Faimag.v38i3.2741).
+S2CID 7373959 (https://api.semanticscholar.org/CorpusID:7373959).
+Government Accountability Office (13 September 2022). Consumer Data: Increasing Use Poses Risks
+to Privacy (https://www.gao.gov/products/gao-22-106096). gao.gov (Report). Archived (https://
+web.archive.org/web/20240913011410/https://www.gao.gov/products/gao-22-106096) from the
+original on 13 September 2024. Retrieved 5 October 2024.
+Grant, Nico; Hill, Kashmir (22 May 2023). "Google's Photo App Still Can't Find Gorillas. And Neither
+Can Apple's" (https://www.nytimes.com/2023/05/22/technology/ai-photo-labels-google-apple.ht
+ml). The New York Times. Archived (https://web.archive.org/web/20240914155032/https://ww
+w.nytimes.com/2023/05/22/technology/ai-photo-labels-google-apple.html) from the original on
+14 September 2024. Retrieved 5 October 2024.
+Goswami, Rohan (5 April 2023). "Here's where the A.I. jobs are" (https://www.cnbc.com/2023/04/05/ai
+-jobs-see-the-state-by-state-data-from-a-stanford-study.html). CNBC. Archived (https://web.arc
+hive.org/web/20230619015309/https://www.cnbc.com/2023/04/05/ai-jobs-see-the-state-by-stat
+e-data-from-a-stanford-study.html) from the original on 19 June 2023. Retrieved 19 June 2023.
+Harari, Yuval Noah (October 2018). "Why Technology Favors Tyranny" (https://www.theatlantic.com/m
+agazine/archive/2018/10/yuval-noah-harari-technology-tyranny/568330). The Atlantic.
+Archived (https://web.archive.org/web/20210925221449/https://www.theatlantic.com/magazin
+e/archive/2018/10/yuval-noah-harari-technology-tyranny/568330) from the original on 25
+September 2021. Retrieved 23 September 2021.
+Harari, Yuval Noah (2023). "AI and the future of humanity" (https://www.youtube.com/watch?v=LWiM-LuRe6w). YouTube. Archived (https://web.archive.org/web/20240930110823/https://www.youtu
+be.com/watch?v=LWiM-LuRe6w) from the original on 30 September 2024. Retrieved
+5 October 2024.
+Haugeland, John (1985). Artificial Intelligence: The Very Idea. Cambridge, Mass.: MIT Press.
+ISBN 978-0-2620-8153-5.
+Hinton, G.; Deng, L.; Yu, D.; Dahl, G.; Mohamed, A.; Jaitly, N.; Senior, A.; Vanhoucke, V.; Nguyen, P.;
+Sainath, T.; Kingsbury, B. (2012). "Deep Neural Networks for Acoustic Modeling in Speech
+Recognition – The shared views of four research groups". IEEE Signal Processing Magazine.
+29 (6): 82–97. Bibcode:2012ISPM...29...82H (https://ui.adsabs.harvard.edu/abs/2012ISPM...2
+9...82H). doi:10.1109/msp.2012.2205597 (https://doi.org/10.1109%2Fmsp.2012.2205597).
+S2CID 206485943 (https://api.semanticscholar.org/CorpusID:206485943).
+Holley, Peter (28 January 2015). "Bill Gates on dangers of artificial intelligence: 'I don't understand
+why some people are not concerned' " (https://www.washingtonpost.com/news/the-switch/wp/2
+015/01/28/bill-gates-on-dangers-of-artificial-intelligence-dont-understand-why-some-people-ar
+e-not-concerned). The Washington Post. ISSN 0190-8286 (https://search.worldcat.org/issn/01
+90-8286). Archived (https://web.archive.org/web/20151030054330/https://www.washingtonpos
+t.com/news/the-switch/wp/2015/01/28/bill-gates-on-dangers-of-artificial-intelligence-dont-under
+stand-why-some-people-are-not-concerned) from the original on 30 October 2015. Retrieved
+30 October 2015.
+Hornik, Kurt; Stinchcombe, Maxwell; White, Halbert (1989). Multilayer Feedforward Networks are
+Universal Approximators (http://cognitivemedium.com/magic_paper/assets/Hornik.pdf) (PDF).
+Neural Networks. Vol. 2. Pergamon Press. pp. 359–366. Archived (https://web.archive.org/we
+b/20230421140436/https://cognitivemedium.com/magic_paper/assets/Hornik.pdf) (PDF) from
+the original on 21 April 2023. Retrieved 5 October 2024.
+Horst, Steven (2005). "The Computational Theory of Mind" (http://plato.stanford.edu/entries/computati
+onal-mind). The Stanford Encyclopedia of Philosophy. Archived (https://web.archive.org/web/2
+0160306083748/http://plato.stanford.edu/entries/computational-mind) from the original on 6
+March 2016. Retrieved 7 March 2016.
+Howe, J. (November 1994). "Artificial Intelligence at Edinburgh University: a Perspective" (http://www.i
+nf.ed.ac.uk/about/AIhistory.html). Archived (https://web.archive.org/web/20070515072641/htt
+p://www.inf.ed.ac.uk/about/AIhistory.html) from the original on 15 May 2007. Retrieved
+30 August 2007.
+IGM Chicago (30 June 2017). "Robots and Artificial Intelligence" (http://www.igmchicago.org/surveys/r
+obots-and-artificial-intelligence). igmchicago.org. Archived (https://web.archive.org/web/20190
+501114826/http://www.igmchicago.org/surveys/robots-and-artificial-intelligence) from the
+original on 1 May 2019. Retrieved 3 July 2019.
+Iphofen, Ron; Kritikos, Mihalis (3 January 2019). "Regulating artificial intelligence and robotics: ethics
+by design in a digital society". Contemporary Social Science. 16 (2): 170–184.
+doi:10.1080/21582041.2018.1563803 (https://doi.org/10.1080%2F21582041.2018.1563803).
+ISSN 2158-2041 (https://search.worldcat.org/issn/2158-2041). S2CID 59298502 (https://api.se
+manticscholar.org/CorpusID:59298502).
+Jordan, M. I.; Mitchell, T. M. (16 July 2015). "Machine learning: Trends, perspectives, and prospects".
+Science. 349 (6245): 255–260. Bibcode:2015Sci...349..255J (https://ui.adsabs.harvard.edu/ab
+s/2015Sci...349..255J). doi:10.1126/science.aaa8415 (https://doi.org/10.1126%2Fscience.aaa
+8415). PMID 26185243 (https://pubmed.ncbi.nlm.nih.gov/26185243). S2CID 677218 (https://a
+pi.semanticscholar.org/CorpusID:677218).
+Kahneman, Daniel (2011). Thinking, Fast and Slow (https://books.google.com/books?id=ZuKTvERuP
+G8C). Macmillan. ISBN 978-1-4299-6935-2. Archived (https://web.archive.org/web/202303151
+91803/https://books.google.com/books?id=ZuKTvERuPG8C) from the original on 15 March
+2023. Retrieved 8 April 2012.
+Kahneman, Daniel; Slovic, D.; Tversky, Amos (1982). "Judgment under uncertainty: Heuristics and
+biases". Science. 185 (4157). New York: Cambridge University Press: 1124–1131.
+Bibcode:1974Sci...185.1124T (https://ui.adsabs.harvard.edu/abs/1974Sci...185.1124T).
+doi:10.1126/science.185.4157.1124 (https://doi.org/10.1126%2Fscience.185.4157.1124).
+ISBN 978-0-5212-8414-1. PMID 17835457 (https://pubmed.ncbi.nlm.nih.gov/17835457).
+S2CID 143452957 (https://api.semanticscholar.org/CorpusID:143452957).
+Kasperowicz, Peter (1 May 2023). "Regulate AI? GOP much more skeptical than Dems that
+government can do it right: poll" (https://www.foxnews.com/politics/regulate-ai-gop-much-more
+-skeptical-than-dems-that-the-government-can-do-it-right-poll). Fox News. Archived (https://we
+b.archive.org/web/20230619013616/https://www.foxnews.com/politics/regulate-ai-gop-much-m
+ore-skeptical-than-dems-that-the-government-can-do-it-right-poll) from the original on 19 June
+2023. Retrieved 19 June 2023.
+Katz, Yarden (1 November 2012). "Noam Chomsky on Where Artificial Intelligence Went Wrong" (http
+s://www.theatlantic.com/technology/archive/2012/11/noam-chomsky-on-where-artificial-intellig
+ence-went-wrong/261637/?single_page=true). The Atlantic. Archived (https://web.archive.org/
+web/20190228154403/https://www.theatlantic.com/technology/archive/2012/11/noam-chomsky
+-on-where-artificial-intelligence-went-wrong/261637/?single_page=true) from the original on 28
+February 2019. Retrieved 26 October 2014.
+"Kismet" (http://www.ai.mit.edu/projects/humanoid-robotics-group/kismet/kismet.html). MIT Artificial
+Intelligence Laboratory, Humanoid Robotics Group. Archived (https://web.archive.org/web/201
+41017040432/http://www.ai.mit.edu/projects/humanoid-robotics-group/kismet/kismet.html)
+from the original on 17 October 2014. Retrieved 25 October 2014.
+Kissinger, Henry (1 November 2021). "The Challenge of Being Human in the Age of AI" (https://www.
+wsj.com/articles/being-human-artifical-intelligence-ai-chess-antibiotic-philosophy-ethics-bill-of-r
+ights-11635795271). The Wall Street Journal. Archived (https://web.archive.org/web/20211104
+012825/https://www.wsj.com/articles/being-human-artifical-intelligence-ai-chess-antibiotic-philo
+sophy-ethics-bill-of-rights-11635795271) from the original on 4 November 2021. Retrieved
+4 November 2021.
+Kobielus, James (27 November 2019). "GPUs Continue to Dominate the AI Accelerator Market for
+Now" (https://www.informationweek.com/ai-or-machine-learning/gpus-continue-to-dominate-th
+e-ai-accelerator-market-for-now). InformationWeek. Archived (https://web.archive.org/web/202
+11019031104/https://www.informationweek.com/ai-or-machine-learning/gpus-continue-to-domi
+nate-the-ai-accelerator-market-for-now) from the original on 19 October 2021. Retrieved
+11 June 2020.
+Kuperman, G. J.; Reichley, R. M.; Bailey, T. C. (1 July 2006). "Using Commercial Knowledge Bases
+for Clinical Decision Support: Opportunities, Hurdles, and Recommendations" (https://www.nc
+bi.nlm.nih.gov/pmc/articles/PMC1513681). Journal of the American Medical Informatics
+Association. 13 (4): 369–371. doi:10.1197/jamia.M2055 (https://doi.org/10.1197%2Fjamia.M20
+55). PMC 1513681 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1513681). PMID 16622160
+(https://pubmed.ncbi.nlm.nih.gov/16622160).
+Kurzweil, Ray (2005). The Singularity is Near. Penguin Books. ISBN 978-0-6700-3384-3.
+Langley, Pat (2011). "The changing science of machine learning" (https://doi.org/10.1007%2Fs10994-
+011-5242-y). Machine Learning. 82 (3): 275–279. doi:10.1007/s10994-011-5242-y (https://doi.
+org/10.1007%2Fs10994-011-5242-y).
+Larson, Jeff; Angwin, Julia (23 May 2016). "How We Analyzed the COMPAS Recidivism Algorithm" (ht
+tps://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm).
+ProPublica. Archived (https://web.archive.org/web/20190429190950/https://www.propublica.or
+g/article/how-we-analyzed-the-compas-recidivism-algorithm) from the original on 29 April
+2019. Retrieved 19 June 2020.
+Laskowski, Nicole (November 2023). "What is Artificial Intelligence and How Does AI Work?
+TechTarget" (https://www.techtarget.com/searchenterpriseai/definition/AI-Artificial-Intelligence).
+Enterprise AI. Archived (https://web.archive.org/web/20241005171229/https://www.techtarget.
+com/searchenterpriseai/definition/AI-Artificial-Intelligence) from the original on 5 October 2024.
+Retrieved 30 October 2023.
+Law Library of Congress (U.S.). Global Legal Research Directorate, issuing body. (2019). Regulation
+of artificial intelligence in selected jurisdictions. LCCN 2019668143 (https://lccn.loc.gov/20196
+68143). OCLC 1110727808 (https://search.worldcat.org/oclc/1110727808).
+Lee, Timothy B. (22 August 2014). "Will artificial intelligence destroy humanity? Here are 5 reasons
+not to worry" (https://www.vox.com/2014/8/22/6043635/5-reasons-we-shouldnt-worry-about-su
+per-intelligent-computers-taking). Vox. Archived (https://web.archive.org/web/2015103009220
+3/http://www.vox.com/2014/8/22/6043635/5-reasons-we-shouldnt-worry-about-super-intelligent
+-computers-taking) from the original on 30 October 2015. Retrieved 30 October 2015.
+Lenat, Douglas; Guha, R. V. (1989). Building Large Knowledge-Based Systems. Addison-Wesley.
+ISBN 978-0-2015-1752-1.
+Lighthill, James (1973). "Artificial Intelligence: A General Survey". Artificial Intelligence: a paper
+symposium. Science Research Council.
+Lipartito, Kenneth (6 January 2011), The Narrative and the Algorithm: Genres of Credit Reporting
+from the Nineteenth Century to Today (https://mpra.ub.uni-muenchen.de/28142/1/MPRA_pape
+r_28142.pdf) (PDF) (Unpublished manuscript), doi:10.2139/ssrn.1736283 (https://doi.org/10.21
+39%2Fssrn.1736283), S2CID 166742927 (https://api.semanticscholar.org/CorpusID:16674292
+7), archived (https://ghostarchive.org/archive/20221009/https://mpra.ub.uni-muenchen.de/281
+42/1/MPRA_paper_28142.pdf) (PDF) from the original on 9 October 2022
+Lohr, Steve (2017). "Robots Will Take Jobs, but Not as Fast as Some Fear, New Report Says" (http
+s://www.nytimes.com/2017/01/12/technology/robots-will-take-jobs-but-not-as-fast-as-some-fea
+r-new-report-says.html). The New York Times. Archived (https://web.archive.org/web/2018011
+4073704/https://www.nytimes.com/2017/01/12/technology/robots-will-take-jobs-but-not-as-fast-as-some-fear-new-report-says.html) from the original on 14 January 2018. Retrieved
+13 January 2018.
+Lungarella, M.; Metta, G.; Pfeifer, R.; Sandini, G. (2003). "Developmental robotics: a survey".
+Connection Science. 15 (4): 151–190. Bibcode:2003ConSc..15..151L (https://ui.adsabs.harvar
+d.edu/abs/2003ConSc..15..151L). CiteSeerX 10.1.1.83.7615 (https://citeseerx.ist.psu.edu/view
+doc/summary?doi=10.1.1.83.7615). doi:10.1080/09540090310001655110 (https://doi.org/10.1
+080%2F09540090310001655110). S2CID 1452734 (https://api.semanticscholar.org/CorpusID:
+1452734).
+"Machine Ethics" (https://web.archive.org/web/20141129044821/http://www.aaai.org/Library/Symposi
+a/Fall/fs05-06). aaai.org. Archived from the original (http://www.aaai.org/Library/Symposia/Fall/
+fs05-06) on 29 November 2014.
+Madrigal, Alexis C. (27 February 2015). "The case against killer robots, from a guy actually working
+on artificial intelligence" (https://www.hrw.org/report/2012/11/19/losing-humanity/case-against-k
+iller-robots). Fusion.net. Archived (https://web.archive.org/web/20160204175716/http://fusion.n
+et/story/54583/the-case-against-killer-robots-from-a-guy-actually-building-ai) from the original
+on 4 February 2016. Retrieved 31 January 2016.
+Mahdawi, Arwa (26 June 2017). "What jobs will still be around in 20 years? Read this to prepare your
+future" (https://www.theguardian.com/us-news/2017/jun/26/jobs-future-automation-robots-skills
+-creative-health). The Guardian. Archived (https://web.archive.org/web/20180114021804/http
+s://www.theguardian.com/us-news/2017/jun/26/jobs-future-automation-robots-skills-creative-he
+alth) from the original on 14 January 2018. Retrieved 13 January 2018.
+Maker, Meg Houston (2006), AI@50: AI Past, Present, Future (https://web.archive.org/web/20081008
+120238/http://www.engagingexperience.com/2006/07/ai50_ai_past_pr.html), Dartmouth
+College, archived from the original (http://www.engagingexperience.com/2006/07/ai50_ai_past
+_pr.html) on 8 October 2008, retrieved 16 October 2008
+Marmouyet, Françoise (15 December 2023). "Google's Gemini: is the new AI model really better than
+ChatGPT?" (https://theconversation.com/googles-gemini-is-the-new-ai-model-really-better-tha
+n-chatgpt-219526). The Conversation. Archived (https://web.archive.org/web/2024030421562
+5/https://theconversation.com/googles-gemini-is-the-new-ai-model-really-better-than-chatgpt-2
+19526) from the original on 4 March 2024. Retrieved 25 December 2023.
+Minsky, Marvin (1986), The Society of Mind, Simon and Schuster
+McCarthy, John; Minsky, Marvin; Rochester, Nathan; Shannon, Claude (1955). "A Proposal for the
+Dartmouth Summer Research Project on Artificial Intelligence" (https://web.archive.org/web/20
+070826230310/http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html).
+Archived from the original (http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.ht
+ml) on 26 August 2007. Retrieved 30 August 2007.
+McCarthy, John (2007), "From Here to Human-Level AI", Artificial Intelligence, p. 171
+McCarthy, John (1999), What is AI? (http://jmc.stanford.edu/artificial-intelligence/what-is-ai/index.htm
+l), archived (https://web.archive.org/web/20221204051737/http://jmc.stanford.edu/artificial-intel
+ligence/what-is-ai/index.html) from the original on 4 December 2022, retrieved 4 December
+2022
+McCauley, Lee (2007). "AI armageddon and the three laws of robotics". Ethics and Information
+Technology. 9 (2): 153–164. CiteSeerX 10.1.1.85.8904 (https://citeseerx.ist.psu.edu/viewdoc/s
+ummary?doi=10.1.1.85.8904). doi:10.1007/s10676-007-9138-2 (https://doi.org/10.1007%2Fs1
+0676-007-9138-2). S2CID 37272949 (https://api.semanticscholar.org/CorpusID:37272949).
+McGarry, Ken (1 December 2005). "A survey of interestingness measures for knowledge discovery".
+The Knowledge Engineering Review. 20 (1): 39–61. doi:10.1017/S0269888905000408 (http
+s://doi.org/10.1017%2FS0269888905000408). S2CID 14987656 (https://api.semanticscholar.o
+rg/CorpusID:14987656).
+McGaughey, E (2022), Will Robots Automate Your Job Away? Full Employment, Basic Income, and
+Economic Democracy (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3044448),
+p. 51(3) Industrial Law Journal 511–559, doi:10.2139/ssrn.3044448 (https://doi.org/10.2139%2
+Fssrn.3044448), S2CID 219336439 (https://api.semanticscholar.org/CorpusID:219336439),
+SSRN 3044448 (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3044448), archived (htt
+ps://web.archive.org/web/20210131074722/https://papers.ssrn.com/sol3/papers.cfm?abstract_
+id=3044448) from the original on 31 January 2021, retrieved 27 May 2023
+Merkle, Daniel; Middendorf, Martin (2013). "Swarm Intelligence". In Burke, Edmund K.; Kendall,
+Graham (eds.). Search Methodologies: Introductory Tutorials in Optimization and Decision
+Support Techniques. Springer Science & Business Media. ISBN 978-1-4614-6940-7.
+Minsky, Marvin (1967), Computation: Finite and Infinite Machines, Englewood Cliffs, N.J.: Prentice-Hall
+Moravec, Hans (1988). Mind Children (https://archive.org/details/mindchildrenfutu00mora). Harvard
+University Press. ISBN 978-0-6745-7616-2. Archived (https://web.archive.org/web/202007261
+31644/https://archive.org/details/mindchildrenfutu00mora) from the original on 26 July 2020.
+Retrieved 18 November 2019.
+Morgenstern, Michael (9 May 2015). "Automation and anxiety" (https://www.economist.com/news/spe
+cial-report/21700758-will-smarter-machines-cause-mass-unemployment-automation-and-anxie
+ty). The Economist. Archived (https://web.archive.org/web/20180112214621/https://www.econ
+omist.com/news/special-report/21700758-will-smarter-machines-cause-mass-unemployment-a
+utomation-and-anxiety) from the original on 12 January 2018. Retrieved 13 January 2018.
+Müller, Vincent C.; Bostrom, Nick (2014). "Future Progress in Artificial Intelligence: A Poll Among
+Experts" (http://www.sophia.de/pdf/2014_PT-AI_polls.pdf) (PDF). AI Matters. 1 (1): 9–11.
+doi:10.1145/2639475.2639478 (https://doi.org/10.1145%2F2639475.2639478).
+S2CID 8510016 (https://api.semanticscholar.org/CorpusID:8510016). Archived (https://web.arc
+hive.org/web/20160115114604/http://www.sophia.de/pdf/2014_PT-AI_polls.pdf) (PDF) from the
+original on 15 January 2016.
+Neumann, Bernd; Möller, Ralf (January 2008). "On scene interpretation with description logics".
+Image and Vision Computing. 26 (1): 82–101. doi:10.1016/j.imavis.2007.08.013 (https://doi.or
+g/10.1016%2Fj.imavis.2007.08.013). S2CID 10767011 (https://api.semanticscholar.org/Corpus
+ID:10767011).
+Nilsson, Nils (1995), "Eyes on the Prize", AI Magazine, vol. 16, pp. 9–17
+Newell, Allen; Simon, H. A. (1976). "Computer Science as Empirical Inquiry: Symbols and Search" (htt
+ps://doi.org/10.1145%2F360018.360022). Communications of the ACM. 19 (3): 113–126.
+doi:10.1145/360018.360022 (https://doi.org/10.1145%2F360018.360022).
+Nicas, Jack (7 February 2018). "How YouTube Drives People to the Internet's Darkest Corners" (http
+s://www.wsj.com/articles/how-youtube-drives-viewers-to-the-internets-darkest-corners-151802
+0478). The Wall Street Journal. ISSN 0099-9660 (https://search.worldcat.org/issn/0099-9660).
+Archived (https://web.archive.org/web/20241005171230/https://www.wsj.com/articles/how-yout
+ube-drives-viewers-to-the-internets-darkest-corners-1518020478) from the original on 5
+October 2024. Retrieved 16 June 2018.
+Nilsson, Nils (1983). "Artificial Intelligence Prepares for 2001" (https://ai.stanford.edu/~nilsson/Online
+Pubs-Nils/General%20Essays/AIMag04-04-002.pdf) (PDF). AI Magazine. 1 (1). Archived (http
+s://web.archive.org/web/20200817194457/http://ai.stanford.edu/~nilsson/OnlinePubs-Nils/Gen
+eral%20Essays/AIMag04-04-002.pdf) (PDF) from the original on 17 August 2020. Retrieved
+22 August 2020. Presidential Address to the Association for the Advancement of Artificial
+Intelligence.
+NRC (United States National Research Council) (1999). "Developments in Artificial Intelligence".
+Funding a Revolution: Government Support for Computing Research. National Academy
+Press.
+Omohundro, Steve (2008). The Nature of Self-Improving Artificial Intelligence. presented and
+distributed at the 2007 Singularity Summit, San Francisco, CA.
+Oudeyer, P-Y. (2010). "On the impact of robotics in behavioral and cognitive sciences: from insect
+navigation to human cognitive development" (http://www.pyoudeyer.com/IEEETAMDOudeyer1
+0.pdf) (PDF). IEEE Transactions on Autonomous Mental Development. 2 (1): 2–16.
+Bibcode:2010ITAMD...2....2O (https://ui.adsabs.harvard.edu/abs/2010ITAMD...2....2O).
+doi:10.1109/tamd.2009.2039057 (https://doi.org/10.1109%2Ftamd.2009.2039057).
+S2CID 6362217 (https://api.semanticscholar.org/CorpusID:6362217). Archived (https://web.arc
+hive.org/web/20181003202543/http://www.pyoudeyer.com/IEEETAMDOudeyer10.pdf) (PDF)
+from the original on 3 October 2018. Retrieved 4 June 2013.
+Pennachin, C.; Goertzel, B. (2007). "Contemporary Approaches to Artificial General Intelligence".
+Artificial General Intelligence. Cognitive Technologies. Berlin, Heidelberg: Springer. pp. 1–30.
+doi:10.1007/978-3-540-68677-4_1 (https://doi.org/10.1007%2F978-3-540-68677-4_1).
+ISBN 978-3-5402-3733-4.
+Pinker, Steven (2007) [1994], The Language Instinct, Perennial Modern Classics, Harper, ISBN 978-
+0-0613-3646-1
+Poria, Soujanya; Cambria, Erik; Bajpai, Rajiv; Hussain, Amir (September 2017). "A review of affective
+computing: From unimodal analysis to multimodal fusion" (http://researchrepository.napier.ac.u
+k/Output/1792429). Information Fusion. 37: 98–125. doi:10.1016/j.inffus.2017.02.003 (https://d
+oi.org/10.1016%2Fj.inffus.2017.02.003). hdl:1893/25490 (https://hdl.handle.net/1893%2F2549
+0). S2CID 205433041 (https://api.semanticscholar.org/CorpusID:205433041). Archived (http
+s://web.archive.org/web/20230323165407/https://www.napier.ac.uk/research-and-innovation/re
+search-search/outputs/a-review-of-affective-computing-from-unimodal-analysis-to-multimodal-f
+usion) from the original on 23 March 2023. Retrieved 27 April 2021.
+Rawlinson, Kevin (29 January 2015). "Microsoft's Bill Gates insists AI is a threat" (https://www.bbc.co.
+uk/news/31047780). BBC News. Archived (https://web.archive.org/web/20150129183607/htt
+p://www.bbc.co.uk/news/31047780) from the original on 29 January 2015. Retrieved
+30 January 2015.
+Reisner, Alex (19 August 2023), "Revealed: The Authors Whose Pirated Books are Powering
+Generative AI" (https://www.theatlantic.com/technology/archive/2023/08/books3-ai-meta-llama
+-pirated-books/675063/), The Atlantic, archived (https://web.archive.org/web/2024100307150
+5/https://www.theatlantic.com/technology/archive/2023/08/books3-ai-meta-llama-pirated-book
+s/675063/) from the original on 3 October 2024, retrieved 5 October 2024
+Roberts, Jacob (2016). "Thinking Machines: The Search for Artificial Intelligence" (https://web.archive.
+org/web/20180819152455/https://www.sciencehistory.org/distillations/magazine/thinking-machi
+nes-the-search-for-artificial-intelligence). Distillations. Vol. 2, no. 2. pp. 14–23. Archived from
+the original (https://www.sciencehistory.org/distillations/magazine/thinking-machines-the-searc
+h-for-artificial-intelligence) on 19 August 2018. Retrieved 20 March 2018.
+Robitzski, Dan (5 September 2018). "Five experts share what scares them the most about AI" (https://
+futurism.com/artificial-intelligence-experts-fear/amp). Archived (https://web.archive.org/web/20
+191208094101/https://futurism.com/artificial-intelligence-experts-fear/amp) from the original on
+8 December 2019. Retrieved 8 December 2019.
+Rose, Steve (11 July 2023). "AI Utopia or dystopia?". The Guardian Weekly. pp. 42–43.
+Russell, Stuart (2019). Human Compatible: Artificial Intelligence and the Problem of Control. United
+States: Viking. ISBN 978-0-5255-5861-3. OCLC 1083694322 (https://search.worldcat.org/oclc/
+1083694322).
+Sainato, Michael (19 August 2015). "Stephen Hawking, Elon Musk, and Bill Gates Warn About
+Artificial Intelligence" (https://observer.com/2015/08/stephen-hawking-elon-musk-and-bill-gates
+-warn-about-artificial-intelligence). Observer. Archived (https://web.archive.org/web/201510300
+53323/http://observer.com/2015/08/stephen-hawking-elon-musk-and-bill-gates-warn-about-arti
+ficial-intelligence) from the original on 30 October 2015. Retrieved 30 October 2015.
+Sample, Ian (5 November 2017). "Computer says no: why making AIs fair, accountable and
+transparent is crucial" (https://www.theguardian.com/science/2017/nov/05/computer-says-no-w
+hy-making-ais-fair-accountable-and-transparent-is-crucial). The Guardian. Archived (https://we
+b.archive.org/web/20221010134155/https://theguardian.com/science/2017/nov/05/computer-s
+ays-no-why-making-ais-fair-accountable-and-transparent-is-crucial) from the original on 10
+October 2022. Retrieved 30 January 2018.
+Rothman, Denis (7 October 2020). "Exploring LIME Explanations and the Mathematics Behind It" (htt
+ps://www.codemotion.com/magazine/ai-ml/lime-explainable-ai). Codemotion. Archived (https://
+web.archive.org/web/20231125045932/https://www.codemotion.com/magazine/ai-ml/lime-expl
+ainable-ai/) from the original on 25 November 2023. Retrieved 25 November 2023.
+Scassellati, Brian (2002). "Theory of mind for a humanoid robot". Autonomous Robots. 12 (1): 13–24.
+doi:10.1023/A:1013298507114 (https://doi.org/10.1023%2FA%3A1013298507114).
+S2CID 1979315 (https://api.semanticscholar.org/CorpusID:1979315).
+Schmidhuber, J. (2015). "Deep Learning in Neural Networks: An Overview". Neural Networks. 61: 85–
+117. arXiv:1404.7828 (https://arxiv.org/abs/1404.7828). doi:10.1016/j.neunet.2014.09.003 (http
+s://doi.org/10.1016%2Fj.neunet.2014.09.003). PMID 25462637 (https://pubmed.ncbi.nlm.nih.g
+ov/25462637). S2CID 11715509 (https://api.semanticscholar.org/CorpusID:11715509).
+Schmidhuber, Jürgen (2022). "Annotated History of Modern AI and Deep Learning" (https://people.idsi
+a.ch/~juergen/). Archived (https://web.archive.org/web/20230807173414/https://people.idsia.c
+h/~juergen/) from the original on 7 August 2023. Retrieved 5 October 2024.
+Searle, John (1980). "Minds, Brains and Programs" (http://cogprints.org/7150/1/10.1.1.83.5248.pdf)
+(PDF). Behavioral and Brain Sciences. 3 (3): 417–457. doi:10.1017/S0140525X00005756 (htt
+ps://doi.org/10.1017%2FS0140525X00005756). S2CID 55303721 (https://api.semanticscholar.
+org/CorpusID:55303721). Archived (https://web.archive.org/web/20190317230215/http://cogpri
+nts.org/7150/1/10.1.1.83.5248.pdf) (PDF) from the original on 17 March 2019. Retrieved
+22 August 2020.
+Searle, John (1999). Mind, language and society (https://archive.org/details/mindlanguagesoci00sea
+r). New York: Basic Books. ISBN 978-0-4650-4521-1. OCLC 231867665 (https://search.worldc
+at.org/oclc/231867665). Archived (https://web.archive.org/web/20200726220615/https://archiv
+e.org/details/mindlanguagesoci00sear) from the original on 26 July 2020. Retrieved 22 August
+2020.
+Simon, H. A. (1965), The Shape of Automation for Men and Management, New York: Harper & Row
+Simonite, Tom (31 March 2016). "How Google Plans to Solve Artificial Intelligence" (https://www.techn
+ologyreview.com/2016/03/31/161234/how-google-plans-to-solve-artificial-intelligence). MIT
+Technology Review. Archived (https://web.archive.org/web/20240916003430/https://www.tech
+nologyreview.com/2016/03/31/161234/how-google-plans-to-solve-artificial-intelligence/) from
+the original on 16 September 2024. Retrieved 5 October 2024.
+Smith, Craig S. (15 March 2023). "ChatGPT-4 Creator Ilya Sutskever on AI Hallucinations and AI
+Democracy" (https://www.forbes.com/sites/craigsmith/2023/03/15/gpt-4-creator-ilya-sutskever-on-ai-hallucinations-and-ai-democracy). Forbes. Archived (https://web.archive.org/web/202409
+18141325/https://www.forbes.com/sites/craigsmith/2023/03/15/gpt-4-creator-ilya-sutskever-on-ai-hallucinations-and-ai-democracy/) from the original on 18 September 2024. Retrieved
+25 December 2023.
+Smoliar, Stephen W.; Zhang, HongJiang (1994). "Content based video indexing and retrieval" (http://s
+cholarbank.nus.edu.sg/handle/10635/111162). IEEE MultiMedia. 1 (2): 62–72.
+doi:10.1109/93.311653 (https://doi.org/10.1109%2F93.311653). S2CID 32710913 (https://api.s
+emanticscholar.org/CorpusID:32710913).
+Solomonoff, Ray (1956). An Inductive Inference Machine (http://world.std.com/~rjs/indinf56.pdf)
+(PDF). Dartmouth Summer Research Conference on Artificial Intelligence. Archived (https://we
+b.archive.org/web/20110426161749/http://world.std.com/~rjs/indinf56.pdf) (PDF) from the
+original on 26 April 2011. Retrieved 22 March 2011 – via std.com, pdf scanned copy of the
+original. Later published as
+Solomonoff, Ray (1957). "An Inductive Inference Machine". IRE Convention Record.
+Vol. Section on Information Theory, part 2. pp. 56–62.
+Stanford University (2023). "Artificial Intelligence Index Report 2023/Chapter 6: Policy and
+Governance" (https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report-2
+023_CHAPTER_6-1.pdf) (PDF). AI Index. Archived (https://web.archive.org/web/20230619013
+609/https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report-2023_CHA
+PTER_6-1.pdf) (PDF) from the original on 19 June 2023. Retrieved 19 June 2023.
+Tao, Jianhua; Tan, Tieniu (2005). Affective Computing and Intelligent Interaction. Affective Computing:
+A Review. Lecture Notes in Computer Science. Vol. 3784. Springer. pp. 981–995.
+doi:10.1007/11573548 (https://doi.org/10.1007%2F11573548). ISBN 978-3-5402-9621-8.
+Taylor, Josh; Hern, Alex (2 May 2023). " 'Godfather of AI' Geoffrey Hinton quits Google and warns
+over dangers of misinformation" (https://www.theguardian.com/technology/2023/may/02/geoffr
+ey-hinton-godfather-of-ai-quits-google-warns-dangers-of-machine-learning). The Guardian.
+Archived (https://web.archive.org/web/20241005171343/https://www.theguardian.com/technol
+ogy/2023/may/02/geoffrey-hinton-godfather-of-ai-quits-google-warns-dangers-of-machine-lear
+ning) from the original on 5 October 2024. Retrieved 5 October 2024.
+Thompson, Derek (23 January 2014). "What Jobs Will the Robots Take?" (https://www.theatlantic.co
+m/business/archive/2014/01/what-jobs-will-the-robots-take/283239). The Atlantic. Archived (htt
+ps://web.archive.org/web/20180424202435/https://www.theatlantic.com/business/archive/201
+4/01/what-jobs-will-the-robots-take/283239) from the original on 24 April 2018. Retrieved
+24 April 2018.
+Thro, Ellen (1993). Robotics: The Marriage of Computers and Machines (https://archive.org/details/isb
+n_9780816026289). New York: Facts on File. ISBN 978-0-8160-2628-9. Archived (https://web.
+archive.org/web/20200726131505/https://archive.org/details/isbn_9780816026289) from the
+original on 26 July 2020. Retrieved 22 August 2020.
+Toews, Rob (3 September 2023). "Transformers Revolutionized AI. What Will Replace Them?" (http
+s://www.forbes.com/sites/robtoews/2023/09/03/transformers-revolutionized-ai-what-will-replac
+e-them). Forbes. Archived (https://web.archive.org/web/20231208232145/https://www.forbes.c
+om/sites/robtoews/2023/09/03/transformers-revolutionized-ai-what-will-replace-them/) from the
+original on 8 December 2023. Retrieved 8 December 2023.
+Turing, Alan (October 1950). "Computing Machinery and Intelligence" (https://academic.oup.com/min
+d/article/LIX/236/433/986238). Mind. 59 (236): 433–460. doi:10.1093/mind/LIX.236.433 (http
+s://doi.org/10.1093%2Fmind%2FLIX.236.433). ISSN 1460-2113 (https://search.worldcat.org/is
+sn/1460-2113). JSTOR 2251299 (https://www.jstor.org/stable/2251299). S2CID 14636783 (htt
+ps://api.semanticscholar.org/CorpusID:14636783).
+UNESCO Science Report: the Race Against Time for Smarter Development (https://unesdoc.unesco.
+org/ark:/48223/pf0000377433/PDF/377433eng.pdf.multi). Paris: UNESCO. 2021. ISBN 978-9-
+2310-0450-6. Archived (https://web.archive.org/web/20220618233752/https://unesdoc.unesco.
+org/ark:/48223/pf0000377433/PDF/377433eng.pdf.multi) from the original on 18 June 2022.
+Retrieved 18 September 2021.
+Urbina, Fabio; Lentzos, Filippa; Invernizzi, Cédric; Ekins, Sean (7 March 2022). "Dual use of artificial-intelligence-powered drug discovery" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC954428
+0). Nature Machine Intelligence. 4 (3): 189–191. doi:10.1038/s42256-022-00465-9 (https://doi.
+org/10.1038%2Fs42256-022-00465-9). PMC 9544280 (https://www.ncbi.nlm.nih.gov/pmc/articl
+es/PMC9544280). PMID 36211133 (https://pubmed.ncbi.nlm.nih.gov/36211133).
+S2CID 247302391 (https://api.semanticscholar.org/CorpusID:247302391).
+Valance, Christ (30 May 2023). "Artificial intelligence could lead to extinction, experts warn" (https://w
+ww.bbc.com/news/uk-65746524). BBC News. Archived (https://web.archive.org/web/20230617
+200355/https://www.bbc.com/news/uk-65746524) from the original on 17 June 2023. Retrieved
+18 June 2023.
+Valinsky, Jordan (11 April 2019), "Amazon reportedly employs thousands of people to listen to your
+Alexa conversations" (https://www.cnn.com/2019/04/11/tech/amazon-alexa-listening/index.htm
+l), CNN.com, archived (https://web.archive.org/web/20240126033535/https://www.cnn.com/20
+19/04/11/tech/amazon-alexa-listening/index.html) from the original on 26 January 2024,
+retrieved 5 October 2024
+Verma, Yugesh (25 December 2021). "A Complete Guide to SHAP – SHAPley Additive exPlanations
+for Practitioners" (https://analyticsindiamag.com/a-complete-guide-to-shap-shapley-additive-ex
+planations-for-practitioners). Analytics India Magazine. Archived (https://web.archive.org/web/2
+0231125045938/https://analyticsindiamag.com/a-complete-guide-to-shap-shapley-additive-exp
+lanations-for-practitioners/) from the original on 25 November 2023. Retrieved 25 November
+2023.
+Vincent, James (7 November 2019). "OpenAI has published the text-generating AI it said was too
+dangerous to share" (https://www.theverge.com/2019/11/7/20953040/openai-text-generation-ai
+-gpt-2-full-model-release-1-5b-parameters). The Verge. Archived (https://web.archive.org/web/
+20200611054114/https://www.theverge.com/2019/11/7/20953040/openai-text-generation-ai-gpt
+-2-full-model-release-1-5b-parameters) from the original on 11 June 2020. Retrieved 11 June
+2020.
+Vincent, James (15 November 2022). "The scary truth about AI copyright is nobody knows what will
+happen next" (https://www.theverge.com/23444685/generative-ai-copyright-infringement-legal-fair-use-training-data). The Verge. Archived (https://web.archive.org/web/20230619055201/htt
+ps://www.theverge.com/23444685/generative-ai-copyright-infringement-legal-fair-use-training-data) from the original on 19 June 2023. Retrieved 19 June 2023.
+Vincent, James (3 April 2023). "AI is entering an era of corporate control" (https://www.theverge.com/2
+3667752/ai-progress-2023-report-stanford-corporate-control). The Verge. Archived (https://we
+b.archive.org/web/20230619005803/https://www.theverge.com/23667752/ai-progress-2023-re
+port-stanford-corporate-control) from the original on 19 June 2023. Retrieved 19 June 2023.
+Vinge, Vernor (1993). "The Coming Technological Singularity: How to Survive in the Post-Human Era"
+(https://web.archive.org/web/20070101133646/http://www-rohan.sdsu.edu/faculty/vinge/misc/si
+ngularity.html). Vision 21: Interdisciplinary Science and Engineering in the Era of Cyberspace:
+11. Bibcode:1993vise.nasa...11V (https://ui.adsabs.harvard.edu/abs/1993vise.nasa...11V).
+Archived from the original (http://www-rohan.sdsu.edu/faculty/vinge/misc/singularity.html) on 1
+January 2007. Retrieved 14 November 2011.
+Waddell, Kaveh (2018). "Chatbots Have Entered the Uncanny Valley" (https://www.theatlantic.com/tec
+hnology/archive/2017/04/uncanny-valley-digital-assistants/523806). The Atlantic. Archived (htt
+ps://web.archive.org/web/20180424202350/https://www.theatlantic.com/technology/archive/20
+17/04/uncanny-valley-digital-assistants/523806) from the original on 24 April 2018. Retrieved
+24 April 2018.
+Wallach, Wendell (2010). Moral Machines. Oxford University Press.
+Wason, P. C.; Shapiro, D. (1966). "Reasoning" (https://archive.org/details/newhorizonsinpsy0000fos
+s). In Foss, B. M. (ed.). New horizons in psychology. Harmondsworth: Penguin. Archived (http
+s://web.archive.org/web/20200726131518/https://archive.org/details/newhorizonsinpsy0000fos
+s) from the original on 26 July 2020. Retrieved 18 November 2019.
+Weng, J.; McClelland; Pentland, A.; Sporns, O.; Stockman, I.; Sur, M.; Thelen, E. (2001).
+"Autonomous mental development by robots and animals" (http://www.cse.msu.edu/dl/Science
+Paper.pdf) (PDF). Science. 291 (5504): 599–600. doi:10.1126/science.291.5504.599 (https://d
+oi.org/10.1126%2Fscience.291.5504.599). PMID 11229402 (https://pubmed.ncbi.nlm.nih.gov/1
+1229402). S2CID 54131797 (https://api.semanticscholar.org/CorpusID:54131797). Archived (h
+ttps://web.archive.org/web/20130904235242/http://www.cse.msu.edu/dl/SciencePaper.pdf)
+(PDF) from the original on 4 September 2013. Retrieved 4 June 2013 – via msu.edu.
+"What is 'fuzzy logic'? Are there computers that are inherently fuzzy and do not apply the usual binary
+logic?" (https://www.scientificamerican.com/article/what-is-fuzzy-logic-are-t). Scientific
+American. 21 October 1999. Archived (https://web.archive.org/web/20180506035133/https://w
+ww.scientificamerican.com/article/what-is-fuzzy-logic-are-t) from the original on 6 May 2018.
+Retrieved 5 May 2018.
+Williams, Rhiannon (28 June 2023), "Humans may be more likely to believe disinformation generated
+by AI" (https://www.technologyreview.com/2023/06/28/1075683/humans-may-be-more-likely-to
+-believe-disinformation-generated-by-ai/), MIT Technology Review, archived (https://web.archi
+ve.org/web/20240916014613/https://www.technologyreview.com/2023/06/28/1075683/humans
+-may-be-more-likely-to-believe-disinformation-generated-by-ai/) from the original on 16
+September 2024, retrieved 5 October 2024
+Wirtz, Bernd W.; Weyerer, Jan C.; Geyer, Carolin (24 July 2018). "Artificial Intelligence and the Public
+Sector – Applications and Challenges" (https://zenodo.org/record/3569435). International
+Journal of Public Administration. 42 (7): 596–615. doi:10.1080/01900692.2018.1498103 (http
+s://doi.org/10.1080%2F01900692.2018.1498103). ISSN 0190-0692 (https://search.worldcat.or
+g/issn/0190-0692). S2CID 158829602 (https://api.semanticscholar.org/CorpusID:158829602).
+Archived (https://web.archive.org/web/20200818131415/https://zenodo.org/record/3569435)
+from the original on 18 August 2020. Retrieved 22 August 2020.
+Wong, Matteo (19 May 2023), "ChatGPT Is Already Obsolete" (https://www.theatlantic.com/technolog
+y/archive/2023/05/ai-advancements-multimodal-models/674113/), The Atlantic, archived (http
+s://web.archive.org/web/20240918022529/https://www.theatlantic.com/technology/archive/202
+3/05/ai-advancements-multimodal-models/674113/) from the original on 18 September 2024,
+retrieved 5 October 2024
+Yudkowsky, E (2008), "Artificial Intelligence as a Positive and Negative Factor in Global Risk" (http://in
+telligence.org/files/AIPosNegFactor.pdf) (PDF), Global Catastrophic Risks, Oxford University
+Press, 2008, Bibcode:2008gcr..book..303Y (https://ui.adsabs.harvard.edu/abs/2008gcr..book..
+303Y), archived (https://web.archive.org/web/20131019182403/http://intelligence.org/files/AIPo
+sNegFactor.pdf) (PDF) from the original on 19 October 2013, retrieved 24 September 2021
+Autor, David H., "Why Are There Still So Many Jobs? The History and Future of Workplace
+Automation" (2015) 29(3) Journal of Economic Perspectives 3.
+Further reading
+Boyle, James, The Line: AI and the Future of Personhood (https://direct.mit.edu/books/book/5859/The
+-LineAI-and-the-Future-of-Personhood), MIT Press, 2024.
+Cukier, Kenneth, "Ready for Robots? How to Think about the Future of AI", Foreign Affairs, vol. 98,
+no. 4 (July/August 2019), pp. 192–198. George Dyson, historian of computing, writes (in what
+might be called "Dyson's Law") that "Any system simple enough to be understandable will not
+be complicated enough to behave intelligently, while any system complicated enough to
+behave intelligently will be too complicated to understand." (p. 197.) Computer scientist Alex
+Pentland writes: "Current AI machine-learning algorithms are, at their core, dead simple stupid.
+They work, but they work by brute force." (p. 198.)
+Evans, Woody (2015). "Posthuman Rights: Dimensions of Transhuman Worlds" (https://doi.org/10.52
+09%2Frev_TK.2015.v12.n2.49072). Teknokultura. 12 (2).
+doi:10.5209/rev_TK.2015.v12.n2.49072 (https://doi.org/10.5209%2Frev_TK.2015.v12.n2.4907
+2). S2CID 147612763 (https://api.semanticscholar.org/CorpusID:147612763).
+Frank, Michael (22 September 2023). "US Leadership in Artificial Intelligence Can Shape the 21st
+Century Global Order" (https://thediplomat.com/2023/09/us-leadership-in-artificial-intelligence-can-shape-the-21st-century-global-order). The Diplomat. Archived (https://web.archive.org/we
+b/20240916014433/https://thediplomat.com/2023/09/us-leadership-in-artificial-intelligence-can-shape-the-21st-century-global-order/) from the original on 16 September 2024. Retrieved
+8 December 2023. "Instead, the United States has developed a new area of dominance that
+the rest of the world views with a mixture of awe, envy, and resentment: artificial intelligence...
+From AI models and research to cloud computing and venture capital, U.S. companies,
+universities, and research labs – and their affiliates in allied countries – appear to have an
+enormous lead in both developing cutting-edge AI and commercializing it. The value of U.S.
+venture capital investments in AI start-ups exceeds that of the rest of the world combined."
+Gertner, Jon. (2023) "Wikipedia's Moment of Truth: Can the online encyclopedia help teach A.I.
+chatbots to get their facts right — without destroying itself in the process?" New York Times
+Magazine (July 18, 2023) online (https://www.nytimes.com/2023/07/18/magazine/wikipedia-ai-chatgpt.html) Archived (https://web.archive.org/web/20230720125400/https://www.nytimes.co
+m/2023/07/18/magazine/wikipedia-ai-chatgpt.html) 20 July 2023 at the Wayback Machine
+Gleick, James, "The Fate of Free Will" (review of Kevin J. Mitchell, Free Agents: How Evolution Gave
+Us Free Will, Princeton University Press, 2023, 333 pp.), The New York Review of Books, vol.
+LXXI, no. 1 (18 January 2024), pp. 27–28, 30. "Agency is what distinguishes us from
+machines. For biological creatures, reason and purpose come from acting in the world and
+experiencing the consequences. Artificial intelligences – disembodied, strangers to blood,
+sweat, and tears – have no occasion for that." (p. 30.)
+Gleick, James, "The Parrot in the Machine (https://www.nybooks.com/articles/2025/07/24/the-parrot-in
+-the-machine-the-ai-con-bender-hanna/)" (review of Emily M. Bender and Alex Hanna, The AI
+Con: How to Fight Big Tech's Hype and Create the Future We Want, Harper, 274 pp.; and
+James Boyle, The Line: AI and the Future of Personhood, MIT Press, 326 pp.), The New York
+Review of Books, vol. LXXII, no. 12 (24 July 2025), pp. 43–46. "[C]hatbox 'writing' has a bland,
+regurgitated quality. Textures are flattened, sharp edges are sanded. No chatbox could ever
+have said that April is the cruelest month or that fog comes on little cat feet (though they might
+now, because one of their chief skills is plagiarism). And when synthetically extruded text turns
+out wrong, it can be comically wrong. When a movie fan asked Google whether a certain actor
+was in Heat, he received this 'AI Overview': 'No, Angelina Jolie is not in heat.'" (p. 44.)
+Halpern, Sue, "The Coming Tech Autocracy" (review of Verity Harding, AI Needs You: How We Can
+Change AI's Future and Save Our Own, Princeton University Press, 274 pp.; Gary Marcus,
+Taming Silicon Valley: How We Can Ensure That AI Works for Us, MIT Press, 235 pp.; Daniela
+Rus and Gregory Mone, The Mind's Mirror: Risk and Reward in the Age of AI, Norton, 280 pp.;
+Madhumita Murgia, Code Dependent: Living in the Shadow of AI, Henry Holt, 311 pp.), The
+New York Review of Books, vol. LXXI, no. 17 (7 November 2024), pp. 44–46. "'We can't
+realistically expect that those who hope to get rich from AI are going to have the interests of
+the rest of us close at heart,' ... writes [Gary Marcus]. 'We can't count on governments driven
+by campaign finance contributions [from tech companies] to push back.'... Marcus details the
+demands that citizens should make of their governments and the tech companies. They
+include transparency on how AI systems work; compensation for individuals if their data [are]
+used to train LLMs (large language model)s and the right to consent to this use; and the ability
+to hold tech companies liable for the harms they cause by eliminating Section 230, imposing
+cash penalties, and passing stricter product liability laws... Marcus also suggests... that a new,
+AI-specific federal agency, akin to the FDA, the FCC, or the FTC, might provide the most
+robust oversight.... [T]he Fordham law professor Chinmayi Sharma... suggests... establish[ing]
+a professional licensing regime for engineers that would function in a similar way to medical
+licenses, malpractice suits, and the Hippocratic oath in medicine. 'What if, like doctors,' she
+asks..., 'AI engineers also vowed to do no harm?'" (p. 46.)
+Henderson, Mark (24 April 2007). "Human rights for robots? We're getting carried away" (https://www.
+thetimes.com/uk/science/article/human-rights-for-robots-were-getting-carried-away-xfbdkpgwn
+0v). The Times Online. London. Archived (https://web.archive.org/web/20140531104850/http://
+www.thetimes.co.uk/tto/technology/article1966391.ece) from the original on 31 May 2014.
+Retrieved 31 May 2014.
+Hughes-Castleberry, Kenna, "A Murder Mystery Puzzle: The literary puzzle Cain's Jawbone, which
+has stumped humans for decades, reveals the limitations of natural-language-processing
+algorithms", Scientific American, vol. 329, no. 4 (November 2023), pp. 81–82. "This murder
+mystery competition has revealed that although NLP (natural-language processing) models
+are capable of incredible feats, their abilities are very much limited by the amount of context
+they receive. This [...] could cause [difficulties] for researchers who hope to use them to do
+things such as analyze ancient languages. In some cases, there are few historical records on
+long-gone civilizations to serve as training data for such a purpose." (p. 82.)
+Immerwahr, Daniel, "Your Lying Eyes: People now use A.I. to generate fake videos indistinguishable
+from real ones. How much does it matter?", The New Yorker, 20 November 2023, pp. 54–59.
+"If by 'deepfakes' we mean realistic videos produced using artificial intelligence that actually
+deceive people, then they barely exist. The fakes aren't deep, and the deeps aren't fake. [...]
+A.I.-generated videos are not, in general, operating in our media as counterfeited evidence.
+Their role better resembles that of cartoons, especially smutty ones." (p. 59.)
+Johnston, John (2008) The Allure of Machinic Life: Cybernetics, Artificial Life, and the New AI, MIT
+Press.
+Jumper, John; Evans, Richard; Pritzel, Alexander; et al. (26 August 2021). "Highly accurate protein
+structure prediction with AlphaFold" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8371605).
+Nature. 596 (7873): 583–589. Bibcode:2021Natur.596..583J (https://ui.adsabs.harvard.edu/ab
+s/2021Natur.596..583J). doi:10.1038/s41586-021-03819-2 (https://doi.org/10.1038%2Fs41586
+-021-03819-2). PMC 8371605 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8371605).
+PMID 34265844 (https://pubmed.ncbi.nlm.nih.gov/34265844). S2CID 235959867 (https://api.s
+emanticscholar.org/CorpusID:235959867).
+LeCun, Yann; Bengio, Yoshua; Hinton, Geoffrey (28 May 2015). "Deep learning" (https://www.nature.c
+om/articles/nature14539). Nature. 521 (7553): 436–444. Bibcode:2015Natur.521..436L (https://
+ui.adsabs.harvard.edu/abs/2015Natur.521..436L). doi:10.1038/nature14539 (https://doi.org/10.
+1038%2Fnature14539). PMID 26017442 (https://pubmed.ncbi.nlm.nih.gov/26017442).
+S2CID 3074096 (https://api.semanticscholar.org/CorpusID:3074096). Archived (https://web.arc
+hive.org/web/20230605235832/https://www.nature.com/articles/nature14539) from the original
+on 5 June 2023. Retrieved 19 June 2023.
+Leffer, Lauren, "The Risks of Trusting AI: We must avoid humanizing machine-learning models used
+in scientific research", Scientific American, vol. 330, no. 6 (June 2024), pp. 80–81.
+Lepore, Jill, "The Chit-Chatbot: Is talking with a machine a conversation?", The New Yorker, 7
+October 2024, pp. 12–16.
+Maschafilm (2010). "Content: Plug & Pray Film – Artificial Intelligence – Robots" (http://www.plugandp
+ray-film.de/en/content.html). plugandpray-film.de. Archived (https://web.archive.org/web/20160
+212040134/http://www.plugandpray-film.de/en/content.html) from the original on 12 February
+2016.
+Marcus, Gary, "Artificial Confidence: Even the newest, buzziest systems of artificial general
+intelligence are stymmied by the same old problems", Scientific American, vol. 327, no. 4
+(October 2022), pp. 42–45.
+Mitchell, Melanie (2019). Artificial intelligence: a guide for thinking humans. New York: Farrar, Straus
+and Giroux. ISBN 978-0-3742-5783-5.
+Mnih, Volodymyr; Kavukcuoglu, Koray; Silver, David; et al. (26 February 2015). "Human-level control
+through deep reinforcement learning" (https://www.nature.com/articles/nature14236). Nature.
+518 (7540): 529–533. Bibcode:2015Natur.518..529M (https://ui.adsabs.harvard.edu/abs/2015
+Natur.518..529M). doi:10.1038/nature14236 (https://doi.org/10.1038%2Fnature14236).
+PMID 25719670 (https://pubmed.ncbi.nlm.nih.gov/25719670). S2CID 205242740 (https://api.s
+emanticscholar.org/CorpusID:205242740). Archived (https://web.archive.org/web/2023061905
+5525/https://www.nature.com/articles/nature14236) from the original on 19 June 2023.
+Retrieved 19 June 2023. Introduced DQN, which produced human-level performance on some
+Atari games.
+Press, Eyal, "In Front of Their Faces: Does facial-recognition technology lead police to ignore
+contradictory evidence?", The New Yorker, 20 November 2023, pp. 20–26.
+"Robots could demand legal rights" (https://news.bbc.co.uk/2/hi/technology/6200005.stm). BBC
+News. 21 December 2006. Archived (https://web.archive.org/web/20191015042628/http://new
+s.bbc.co.uk/2/hi/technology/6200005.stm) from the original on 15 October 2019. Retrieved
+3 February 2011.
+Roivainen, Eka, "AI's IQ: ChatGPT aced a [standard intelligence] test but showed that intelligence
+cannot be measured by IQ alone", Scientific American, vol. 329, no. 1 (July/August 2023), p. 7.
+"Despite its high IQ, ChatGPT fails at tasks that require real humanlike reasoning or an
+understanding of the physical and social world.... ChatGPT seemed unable to reason logically
+and tried to rely on its vast database of... facts derived from online texts."
+Scharre, Paul, "Killer Apps: The Real Dangers of an AI Arms Race", Foreign Affairs, vol. 98, no. 3
+(May/June 2019), pp. 135–144. "Today's AI technologies are powerful but unreliable. Rules-based systems cannot deal with circumstances their programmers did not anticipate. Learning
+systems are limited by the data on which they were trained. AI failures have already led to
+tragedy. Advanced autopilot features in cars, although they perform well in some
+circumstances, have driven cars without warning into trucks, concrete barriers, and parked
+cars. In the wrong situation, AI systems go from supersmart to superdumb in an instant. When
+an enemy is trying to manipulate and hack an AI system, the risks are even greater." (p. 140.)
+Schulz, Hannes; Behnke, Sven (1 November 2012). "Deep Learning" (https://www.researchgate.net/p
+ublication/230690795). KI – Künstliche Intelligenz. 26 (4): 357–363. doi:10.1007/s13218-012-
+0198-z (https://doi.org/10.1007%2Fs13218-012-0198-z). ISSN 1610-1987 (https://search.worl
+dcat.org/issn/1610-1987). S2CID 220523562 (https://api.semanticscholar.org/CorpusID:22052
+3562).
+Serenko, Alexander; Michael Dohan (2011). "Comparing the expert survey and citation impact journal
+ranking methods: Example from the field of Artificial Intelligence" (http://www.aserenko.com/pa
+pers/JOI_AI_Journal_Ranking_Serenko.pdf) (PDF). Journal of Informetrics. 5 (4): 629–649.
+doi:10.1016/j.joi.2011.06.002 (https://doi.org/10.1016%2Fj.joi.2011.06.002). Archived (https://w
+eb.archive.org/web/20131004212839/http://www.aserenko.com/papers/JOI_AI_Journal_Ranki
+ng_Serenko.pdf) (PDF) from the original on 4 October 2013. Retrieved 12 September 2013.
+Silver, David; Huang, Aja; Maddison, Chris J.; et al. (28 January 2016). "Mastering the game of Go
+with deep neural networks and tree search" (https://www.nature.com/articles/nature16961).
+Nature. 529 (7587): 484–489. Bibcode:2016Natur.529..484S (https://ui.adsabs.harvard.edu/ab
+s/2016Natur.529..484S). doi:10.1038/nature16961 (https://doi.org/10.1038%2Fnature16961).
+PMID 26819042 (https://pubmed.ncbi.nlm.nih.gov/26819042). S2CID 515925 (https://api.sema
+nticscholar.org/CorpusID:515925). Archived (https://web.archive.org/web/20230618213059/htt
+ps://www.nature.com/articles/nature16961) from the original on 18 June 2023. Retrieved
+19 June 2023.
+Tarnoff, Ben, "The Labor Theory of AI" (review of Matteo Pasquinelli, The Eye of the Master: A Social
+History of Artificial Intelligence, Verso, 2024, 264 pp.), The New York Review of Books, vol.
+LXXII, no. 5 (27 March 2025), pp. 30–32. The reviewer, Ben Tarnoff, writes: "The strangeness
+at the heart of the generative AI boom is that nobody really knows how the technology works.
+We know how the large language models within ChatGPT and its counterparts are trained,
+even if we don't always know which data they're being trained on: they are asked to predict the
+next string of characters in a sequence. But exactly how they arrive at any given prediction is a
+mystery. The computations that occur inside the model are simply too intricate for any human
+to comprehend." (p. 32.)
+Vaswani, Ashish, Noam Shazeer, Niki Parmar et al. "Attention is all you need." Advances in neural
+information processing systems 30 (2017). Seminal paper on transformers.
+Vincent, James, "Horny Robot Baby Voice: James Vincent on AI chatbots", London Review of Books,
+vol. 46, no. 19 (10 October 2024), pp. 29–32. "[AI chatbot] programs are made possible by
+new technologies but rely on the timelelss human tendency to anthropomorphise." (p. 29.)
+White Paper: On Artificial Intelligence – A European approach to excellence and trust (https://ec.europ
+a.eu/info/sites/info/files/commission-white-paper-artificial-intelligence-feb2020_en.pdf) (PDF).
+Brussels: European Commission. 2020. Archived (https://web.archive.org/web/202002201734
+19/https://ec.europa.eu/info/sites/info/files/commission-white-paper-artificial-intelligence-feb20
+20_en.pdf) (PDF) from the original on 20 February 2020. Retrieved 20 February 2020.
+Fieser, James; Dowden, Bradley (eds.). "Artificial Intelligence" (https://iep.utm.edu/art-inte).
+Internet Encyclopedia of Philosophy. ISSN 2161-0002 (https://search.worldcat.org/issn/2161-000
+2). OCLC 37741658 (https://search.worldcat.org/oclc/37741658). {{cite encyclopedia}}: Text
+"art-inte" ignored (help)
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Artificial_intelligence&oldid=1314568599"
+External links

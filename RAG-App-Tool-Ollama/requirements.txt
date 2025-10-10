@@ -10,5 +10,5 @@ chromadb
 tqdm
 streamlit
 markdown2
-python-frontmatter==1.1.0
+python-frontmatter
 python-multipart

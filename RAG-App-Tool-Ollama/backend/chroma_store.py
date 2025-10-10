@@ -1,8 +1,15 @@
 import chromadb
+import logging
 from chromadb.config import Settings
 from typing import List, Dict, Any
 from .ollama_client import embed_texts
 from .config import CHROMA_PERSIST_DIR
+
+# Get a logger instance
+logger = logging.getLogger(__name__)
+
+# Configure basic logging to console (optional, Uvicorn usually handles this)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class ChromaStore:
     def __init__(self, collection_name: str = "rag_docs"):
@@ -18,20 +25,23 @@ class ChromaStore:
     def add_texts(self, texts: List[str], metadatas: List[Dict[str, Any]] | None = None, ids: List[str] | None = None):
         if ids is None:
             ids = [f"doc-{i}" for i in range(len(texts))]
-        
-        # print("id: " + str(ids))
-
-        # print("texts: " + str(texts))
-        # print("embeddings: " + str(embeddings))
 
         embeddings = embed_texts(texts)
         
-        self.collection.add(
-            ids=ids,
-            embeddings=embeddings,
-            documents=texts,
-            metadatas=metadatas or [{} for _ in texts],
-        )
+        # logger.info(f"Number of embeddings: {len(embeddings)}")
+        if embeddings:
+
+            # logger.info(f"First embedding element: {embeddings[0]}")
+            # logger.info(f"Type of first embedding element: {type(embeddings[0])}")
+
+            self.collection.add(
+                ids=ids,
+                embeddings=embeddings,
+                documents=texts,
+                metadatas=metadatas or [{} for _ in texts],
+            )
+        else:
+            print("Warning: No embeddings to add. Skipping the `add` call.")
 
     def query(self, query: str, top_k: int = 6):
         q_emb = embed_texts([query])[0]

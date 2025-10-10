@@ -214,4 +214,4 @@ vectorstore/
 .env*
 */.env*
 
-RAG-App-Tool-Ollama/data/chroma/chroma.sqlite3
+*/data/chroma/*
