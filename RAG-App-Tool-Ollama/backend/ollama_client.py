@@ -20,7 +20,7 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
     resp.raise_for_status()
     data = resp.json()
     # Handle list vs single input response formats
-    return data.get("embeddings") or [data["embedding"]]
+    return data.get("embeddings") or [data["embeddings"]]
 
 def generate(prompt: str, temperature: float = 0.2, max_tokens: int = 1024) -> str:
     resp = requests.post(
