@@ -66,8 +66,8 @@ if query:
                 "top_k": top_k,
             }).json()
         st.markdown(resp["answer"])
-        if resp.get("sources"):
-            st.caption("Sources")
-            for s in resp["sources"]:
-                st.write(f"- [{s['index']}] {s['label']}")
+        # if resp.get("sources"):
+        #     st.caption("Sources")
+        #     for s in resp["sources"]:
+        #         st.write(f"- [{s['index']}] {s['label']}")
         st.session_state.messages.append({"role": "assistant", "content": resp["answer"]})

@@ -12,3 +12,4 @@ streamlit
 markdown2
 python-frontmatter
 python-multipart
+markdownify

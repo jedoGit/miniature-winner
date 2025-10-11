@@ -41,7 +41,7 @@ class ChromaStore:
                 metadatas=metadatas or [{} for _ in texts],
             )
         else:
-            print("Warning: No embeddings to add. Skipping the `add` call.")
+            logger.warning("Warning: No embeddings to add. Skipping the `add` call.")
 
     def query(self, query: str, top_k: int = 6):
         q_emb = embed_texts([query])[0]
