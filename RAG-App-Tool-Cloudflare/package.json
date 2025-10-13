@@ -12,13 +12,14 @@
   "dependencies": {
     "@langchain/core": "^0.3.78",
     "@langchain/openai": "^0.6.16",
+    "langchain": "^0.3.36",
     "dotenv": "^16.4.5",
     "hono": "^4.4.6",
     "marked": "^12.0.2"
   },
   "devDependencies": {
+    "dotenv-cli": "^7.4.0",
     "@types/node": "^24.7.2",
-    "langchain": "^0.3.36",
     "typescript": "^5.6.3",
     "wrangler": "^4.42.2"
   }
