@@ -1,32 +1,44 @@
 import { Hono } from "hono";
 import { embedText } from "../services/embedding";
 import { insertVectors } from "../services/vectorstore";
-import { splitRecursively } from "../services/splitter";
-import { parseMarkdown } from "../utils/mdParser";
+import { splitRecursively } from "../services/splitter-langchain";
+// import { parseMarkdown } from "../utils/mdParser";
 
 export const uploadRoute = new Hono<{
   Bindings: { AI: Ai; VECTORIZE: VectorizeIndex; DB: D1Database };
 }>();
 
 uploadRoute.post("/upload", async (c) => {
+  // Get the form data. This is a markdown file.
   const formData = await c.req.formData();
   const file = formData.get("file") as File;
 
+  // If there's no file received, return a 400 status
   if (!file) return c.text("No file uploaded", 400);
 
-  const content = await file.text();
-  const plainText = await parseMarkdown(content);
-  const chunks = splitRecursively(plainText, 800, 100);
+  // Get the content of the markdown file received then split the file recursively
+  const mdFileContent = await file.text();
+  /* 
+  const plainText = await parseMarkdown(content);   // this is not required. we want to load the md file not a plain text file
+  */
+  const chunks = await splitRecursively(mdFileContent, 800, 100);
 
+  // Let's process each chunks from after splitting recursively
   const vectors = [];
   for (const chunk of chunks) {
-    const embedding = await embedText(c.env.AI, chunk);
-    vectors.push({ id: crypto.randomUUID(), values: embedding, metadata: { chunk } });
+    // Get the chunk text
+    const chunkText = chunk.pageContent
+    // Call the embedding model to get the embedded values of the chunk text
+    const embedding = await embedText(c.env.AI, chunkText);
+    // Add the vectors to our vectors list
+    vectors.push({ id: crypto.randomUUID(), values: embedding, metadata: { chunkText } });
   }
 
+  // Upsert the vectors to our vector database
   await insertVectors(c.env, vectors);
 
   // Save document metadata to D1
+  // We want to save the the file name of the uploaded document, and how many chunks were generated
   const docId = crypto.randomUUID();
   await c.env.DB.prepare(
     "INSERT INTO documents (id, name, chunks) VALUES (?1, ?2, ?3)"
