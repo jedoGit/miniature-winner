@@ -10,7 +10,7 @@ if (typeof process !== "undefined") {
 const app = new Hono<{
   Bindings: {
     AI: Ai;
-    VECTORIZE: VectorizeBinding;
+    VECTORIZE: VectorizeIndex;
     DB: D1Database;
     SYSTEM_PROMPT: string;
   };

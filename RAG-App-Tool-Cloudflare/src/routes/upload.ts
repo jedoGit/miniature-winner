@@ -5,7 +5,7 @@ import { splitRecursively } from "../services/splitter";
 import { parseMarkdown } from "../utils/mdParser";
 
 export const uploadRoute = new Hono<{
-  Bindings: { AI: Ai; VECTORIZE: VectorizeBinding; DB: D1Database };
+  Bindings: { AI: Ai; VECTORIZE: VectorizeIndex; DB: D1Database };
 }>();
 
 uploadRoute.post("/upload", async (c) => {

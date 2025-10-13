@@ -4,7 +4,7 @@ import { querySimilar } from "../services/vectorstore";
 import { generateResponse } from "../services/llm";
 
 export const chatRoute = new Hono<{
-  Bindings: { AI: Ai; VECTORIZE: VectorizeBinding; SYSTEM_PROMPT: string };
+  Bindings: { AI: Ai; VECTORIZE: VectorizeIndex; SYSTEM_PROMPT: string };
 }>();
 
 chatRoute.post("/chat", async (c) => {
@@ -13,7 +13,7 @@ chatRoute.post("/chat", async (c) => {
   const queryEmbedding = await embedText(c.env.AI, question);
   const similars = await querySimilar(c.env, queryEmbedding, 3);
 
-  const context = similars.map((v) => v.metadata?.chunk ?? "").join("\n\n");
+  const context = similars.map((v: { metadata: { chunk: any; }; }) => v.metadata?.chunk ?? "").join("\n\n");
   const systemPrompt =
     process?.env?.SYSTEM_PROMPT || c.env.SYSTEM_PROMPT;
 
@@ -21,6 +21,6 @@ chatRoute.post("/chat", async (c) => {
 
   return c.json({
     answer,
-    contextUsed: similars.map((v) => v.id),
+    contextUsed: similars.map((v: { id: any; }) => v.id),
   });
 });
