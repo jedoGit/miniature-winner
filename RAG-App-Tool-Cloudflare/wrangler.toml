@@ -5,14 +5,16 @@ compatibility_flags = [ "nodejs_compat" ]
 
 [ai]
 binding = "AI"
+remote = true
 
 [[vectorize]]
 binding = "VECTORIZE"
 index_name = "rag-chatbot-index"
+remote = true
 
 [[d1_databases]]
 binding = "DB"
-database_name = "rag_chatbot_db"
+database_name = "rag-chatbot-db"
 database_id = "your-d1-database-id"
 
 [vars]
