@@ -6,8 +6,7 @@
     "dev": "dotenv -- wrangler dev",
     "build": "wrangler dev",
     "deploy": "wrangler deploy",
-    "clean" : "tsc --build --clean",
-    "cf-generate-types": "wrangler types",
+    "tsc-clean" : "tsc --build --clean",
     "type-check": "wrangler types && tsc"
   },
   "dependencies": {
