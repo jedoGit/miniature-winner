@@ -1,7 +1,7 @@
 import { marked } from "marked";
 
-export function parseMarkdown(md: string): string {
-  const html = marked(md);
+export async function parseMarkdown(md: string): Promise<string> {
+  const html = await marked(md); // `marked()` is async now
   const text = html.replace(/<[^>]*>?/gm, ""); // strip HTML tags
   return text.replace(/\s+/g, " ").trim();
 }

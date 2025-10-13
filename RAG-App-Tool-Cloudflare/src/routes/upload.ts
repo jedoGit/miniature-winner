@@ -15,7 +15,7 @@ uploadRoute.post("/upload", async (c) => {
   if (!file) return c.text("No file uploaded", 400);
 
   const content = await file.text();
-  const plainText = parseMarkdown(content);
+  const plainText = await parseMarkdown(content);
   const chunks = splitRecursively(plainText, 800, 100);
 
   const vectors = [];
