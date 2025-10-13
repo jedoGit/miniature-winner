@@ -1,0 +1,6 @@
+CREATE TABLE documents (
+  id TEXT PRIMARY KEY,
+  name TEXT,
+  chunks INTEGER,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

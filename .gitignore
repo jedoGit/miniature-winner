@@ -215,3 +215,8 @@ vectorstore/
 */.env*
 
 */data/chroma/*
+
+
+node_modules
+dist
+.env

@@ -1,0 +1,18 @@
+name = "rag-chatbot-worker"
+main = "src/index.ts"
+compatibility_date = "2025-10-12"
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "rag-chatbot-index"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rag_chatbot_db"
+database_id = "your-d1-database-id"
+
+[vars]
+SYSTEM_PROMPT = "You are a helpful and knowledgeable AI assistant. Use only the provided context to answer clearly and politely."
