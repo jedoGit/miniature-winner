@@ -3,15 +3,16 @@
 Create your resources:
 
 ```
-wrangler vectorize create rag-chatbot-index --dimensions 1024
-wrangler d1 create rag-chatbot-db
+npx wrangler vectorize create rag-chatbot-index --dimensions 768 -- metric=cosine
+
+npx wrangler d1 create rag-chatbot-db
 
 ```
 
 Initialize D1 Schema:
 
 ```
-wrangler d1 execute rag-chatbot-db --file=./schema/D1schema.sql
+npx wrangler d1 execute rag-chatbot-db --file=./schema/D1schema.sql
 ```
 
 # Setup Cloudflare types
