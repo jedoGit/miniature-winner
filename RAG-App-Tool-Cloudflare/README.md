@@ -3,7 +3,7 @@
 Create your resources:
 
 ```
-wrangler vectorize create rag-chatbot-index
+wrangler vectorize create rag-chatbot-index --dimensions 1024
 wrangler d1 create rag-chatbot-db
 
 ```
