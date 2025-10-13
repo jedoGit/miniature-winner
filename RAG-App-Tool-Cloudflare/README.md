@@ -1,23 +1,44 @@
 # Prepare the database
 
-Create your resources:
+## Create your resources:
+
+### Vectorize DB Init:
+
+If using `@cf/baai/bge-base-en-v1.5`
 
 ```
-npx wrangler vectorize create rag-chatbot-index --dimensions 768 -- metric=cosine
+npx wrangler vectorize create rag-chatbot-index --dimensions 768 --metric=cosine
+```
 
+If using `@cf/baai/bge-small-en-v1.5`
+
+```
+npx wrangler vectorize create rag-chatbot-index --dimensions 384 --metric=cosine
+```
+
+### D1 DB Init:
+
+```
 npx wrangler d1 create rag-chatbot-db
-
 ```
 
-Initialize D1 Schema:
+# Initialize D1 DB Schema:
+
+## Local DB Schema:
 
 ```
-npx wrangler d1 execute rag-chatbot-db --file=./schema/D1schema.sql
+npx wrangler d1 execute rag-chatbot-db --local --file=./schema/D1schema.sql
+```
+
+## Remote DB Schema:
+
+```
+npx wrangler d1 execute rag-chatbot-db --remote --file=./schema/D1schema.sql
 ```
 
 # Setup Cloudflare types
 
-Ensure Wrangler is installed
+Ensure `Wrangler` is installed
 
 ```
 npm install -g wrangler
@@ -74,3 +95,33 @@ npm run deploy
 | POST   | /api/upload | Upload .md file → Embeds to Vectorize + saves to D1 |
 | POST   | /api/chat   | Ask a question                                      |
 | GET    | /           | Health check                                        |
+
+# D1 DB Usefull Calls
+
+## LOCAL DB:
+
+### List all documents:
+
+```
+npx wrangler d1 execute rag-chatbot-db --local --command "select * from documents;"
+```
+
+### Delete a record:
+
+```
+npx wrangler d1 execute rag-chatbot-db --local --command "delete from documents where id='<record_id>';"
+```
+
+# CURL Commands
+
+## Upload Endpoint
+
+```
+curl -X POST "http://127.0.0.1:8787/api/upload" -F "file=@./docs/company_faq.md" -H "Accept: application/json"
+```
+
+## Chat Endpoint
+
+```
+curl -X POST "http://127.0.0.1:8787/api/chat" -H "Content-Type: application/json" -d '{"question": "What are the membership packages available at nZone?"}'
+```
