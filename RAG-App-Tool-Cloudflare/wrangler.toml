@@ -1,6 +1,7 @@
 name = "rag-chatbot-worker"
 main = "src/index.ts"
 compatibility_date = "2025-10-12"
+compatibility_flags = [ "nodejs_compat" ]
 
 [ai]
 binding = "AI"
