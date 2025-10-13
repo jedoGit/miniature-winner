@@ -9,6 +9,7 @@ export async function generateResponse(
       { role: "system", content: systemPrompt },
       { role: "user", content: `Context:\n${context}\n\nQuestion: ${question}` }
     ],
+    stream: false
   });
 
   if (typeof result === "string") return result;
