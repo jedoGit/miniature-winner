@@ -222,3 +222,4 @@ dist
 .env
 *.js
 RAG-App-Tool-Cloudflare/package-lock.json
+.wrangler
