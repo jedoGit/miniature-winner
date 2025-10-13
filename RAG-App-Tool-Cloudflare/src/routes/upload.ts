@@ -2,7 +2,6 @@ import { Hono } from "hono";
 import { embedText } from "../services/embedding";
 import { insertVectors } from "../services/vectorstore";
 import { splitRecursively } from "../services/splitter-langchain";
-// import { parseMarkdown } from "../utils/mdParser";
 
 export const uploadRoute = new Hono<{
   Bindings: { AI: Ai; VECTORIZE: VectorizeIndex; DB: D1Database };
@@ -18,9 +17,6 @@ uploadRoute.post("/upload", async (c) => {
 
   // Get the content of the markdown file received then split the file recursively
   const mdFileContent = await file.text();
-  /* 
-  const plainText = await parseMarkdown(content);   // this is not required. we want to load the md file not a plain text file
-  */
   const chunks = await splitRecursively(mdFileContent, 800, 100);
 
   // Let's process each chunks from after splitting recursively
@@ -38,7 +34,7 @@ uploadRoute.post("/upload", async (c) => {
   await insertVectors(c.env, vectors);
 
   // Save document metadata to D1
-  // We want to save the the file name of the uploaded document, and how many chunks were generated
+  // We want to save the the file name of the uploaded document and how many chunks were generated
   const docId = crypto.randomUUID();
   await c.env.DB.prepare(
     "INSERT INTO documents (id, name, chunks) VALUES (?1, ?2, ?3)"
