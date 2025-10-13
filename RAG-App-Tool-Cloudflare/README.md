@@ -14,12 +14,27 @@ Initialize D1 Schema:
 wrangler d1 execute rag-chatbot-db --file=./schema/D1schema.sql
 ```
 
+# Setup Cloudflare types
+
+Ensure Wrangler is installed
+
+```
+npm install -g wrangler
+```
+
+Generate types. Run this everytime you update the wrangler.toml file
+
+```
+npx wrangler types
+```
+
 # Local Development
 
 1. Install dependencies
 
 ```
 npm install
+tsc --init
 ```
 
 2. Create .env
