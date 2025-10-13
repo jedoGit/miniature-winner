@@ -220,3 +220,5 @@ vectorstore/
 node_modules
 dist
 .env
+*.js
+RAG-App-Tool-Cloudflare/package-lock.json
