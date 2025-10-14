@@ -219,7 +219,7 @@ vectorstore/
 
 node_modules
 dist
-.env
+.env*
 *.js
 RAG-App-Tool-Cloudflare/package-lock.json
 .wrangler
