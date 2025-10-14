@@ -8,7 +8,5 @@ export async function querySimilar(env: any, embedding: number[], topK = 3) {
     returnValues: true,
     returnMetadata: "all",
   });
-
-  // console.log("querySimilar: " + results)
   return results.matches || [];
 }
