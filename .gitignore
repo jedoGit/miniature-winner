@@ -223,3 +223,4 @@ dist
 *.js
 RAG-App-Tool-Cloudflare/package-lock.json
 .wrangler
+*.tmp
