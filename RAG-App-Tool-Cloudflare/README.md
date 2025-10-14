@@ -64,6 +64,15 @@ tsc --init
 ```
 SYSTEM_PROMPT="You are a helpful and knowledgeable AI assistant."
 VECTORIZE_INDEX="rag-chatbot-index"
+D1_DATABASE="rag-chatbot-db"
+CLOUD_FLARE_ORIGIN_CORS="list-of-urls-for CORS"
+CLOUD_FLARE_ACCOUNT_ID="your account id"
+CLOUD_FLARE_WORKER_AI_API_KEY="your api key"
+TOP_K_VALUE="6"
+CHUNK_SIZE="200"
+CHUNK_OVERLAP="30"
+LLM_CHAT_MODEL="@cf/meta/llama-3.2-1b-instruct"
+LLM_EMBED_MODEL="@cf/baai/bge-base-en-v1.5"
 ```
 
 3. Run locally
@@ -72,7 +81,11 @@ VECTORIZE_INDEX="rag-chatbot-index"
 npm run dev
 ```
 
-→ Open: http://localhost:8787
+4. Send REST Calls to:
+
+```
+http://localhost:8787
+```
 
 # Deploy to Cloudflare
 
@@ -96,23 +109,13 @@ npm run deploy
 | POST   | /api/chat   | Ask a question                                      |
 | GET    | /           | Health check                                        |
 
-# D1 DB Usefull Calls
-
-## LOCAL DB:
-
-### List all documents:
-
-```
-npx wrangler d1 execute rag-chatbot-db --local --command "select * from documents;"
-```
-
-### Delete a record:
-
-```
-npx wrangler d1 execute rag-chatbot-db --local --command "delete from documents where id='<record_id>';"
-```
-
 # CURL Commands
+
+## Health Endpoint
+
+```
+curl -G  "http://127.0.0.1:8787/"
+```
 
 ## Upload Endpoint
 
@@ -123,5 +126,43 @@ curl -X POST "http://127.0.0.1:8787/api/upload" -F "file=@./docs/company_faq.md"
 ## Chat Endpoint
 
 ```
-curl -X POST "http://127.0.0.1:8787/api/chat" -H "Content-Type: application/json" -d '{"question": "What are the membership packages available at nZone?"}'
+curl -X POST "http://127.0.0.1:8787/api/chat" -H "Content-Type: application/json" -d '{"question": "What are the membership packages available?"}'
+```
+
+# D1 DB Usefull Calls
+
+## LOCAL DB:
+
+### List all documents:
+
+```
+npx wrangler d1 execute rag-chatbot-db --local --command "SELECT * FROM documents;"
+```
+
+### Delete a record:
+
+```
+npx wrangler d1 execute rag-chatbot-db --local --command "DELETE FROM documents WHERE id='<record_id>';"
+```
+
+## REMOTE DB:
+
+### List all documents:
+
+```
+npx wrangler d1 execute rag-chatbot-db --remote --command "SELECT * FROM documents;"
+```
+
+### Delete a record:
+
+```
+npx wrangler d1 execute rag-chatbot-db --remote --command "DELETE FROM documents WHERE id='<record_id>';"
+```
+
+# Vectorize DB Usefull Calls
+
+### Delete a vector index:
+
+```
+curl -X DELETE "https://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/vectorize/v2/indexes/<VECTOR_INDEX>" -H "Authorization: Bearer <VECTORIZE_API_KEY>"
 ```
