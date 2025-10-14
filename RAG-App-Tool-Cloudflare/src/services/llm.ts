@@ -4,7 +4,10 @@ export async function generateResponse(
   question: string,
   systemPrompt: string
 ): Promise<string> {
-  const result = await ai.run("@cf/meta/llama-3.1-8b-instruct-fp8", {
+  
+  const chatModel = process?.env?.LLM_CHAT_MODEL || "@cf/meta/llama-3.2-1b-instruct";
+
+  const result = await ai.run((chatModel as keyof AiModels), {
     messages: [
       { role: "system", content: systemPrompt },
       { role: "user", content: `Context:\n${context}\n\nQuestion: ${question}` }

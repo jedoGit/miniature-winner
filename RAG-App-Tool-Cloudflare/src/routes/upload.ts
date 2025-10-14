@@ -17,7 +17,11 @@ uploadRoute.post("/upload", async (c) => {
 
   // Get the content of the markdown file received then split the file recursively
   const mdFileContent = await file.text();
-  const chunks = await splitRecursively(mdFileContent, 800, 100);
+
+  const chunkSize = Number(process?.env?.CHUNK_SIZE) || 800
+  const chunkOverlap = Number(process?.env?.CHUNK_OVERLAP) || 100
+
+  const chunks = await splitRecursively(mdFileContent, chunkSize, chunkOverlap);
 
   // Let's process each chunks from after splitting recursively
   const vectors = [];
@@ -27,7 +31,8 @@ uploadRoute.post("/upload", async (c) => {
     // Call the embedding model to get the embedded values of the chunk text
     const embedding = await embedText(c.env.AI, chunkText);
     // Add the vectors to our vectors list
-    vectors.push({ id: crypto.randomUUID(), values: embedding, metadata: { chunkText } });
+    const saveToVector = { id: crypto.randomUUID(), values: embedding, metadata: { chunkText } }
+    vectors.push(saveToVector);
   }
 
   // Upsert the vectors to our vector database

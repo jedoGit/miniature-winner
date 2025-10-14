@@ -13,14 +13,13 @@ chatRoute.post("/chat", async (c) => {
   // Create embedding to the question received from chat
   const queryEmbedding = await embedText(c.env.AI, question);
   // Query the vector database and pass the embeded values for the received question and tell the database to only requturn the top 3
-  const similars = await querySimilar(c.env, queryEmbedding, 6);
+  const topK = Number(process?.env?.TOP_K_VALUE) || 3;
+  const similars = await querySimilar(c.env, queryEmbedding, topK);
 
   // Create the context list.
   const context = similars.map((v: { metadata: { chunkText: any; }; }) => v.metadata?.chunkText ?? "").join("\n\n");
   const systemPrompt =
     process?.env?.SYSTEM_PROMPT || c.env.SYSTEM_PROMPT;
-
-  console.log("SYSTEM_PROMPT: " + process.env.SYSTEM_PROMPT);
   
   // Ask the LLM to generate a response based on context, question and system prompt
   const answer = await generateResponse(c.env.AI, context, question, systemPrompt);
