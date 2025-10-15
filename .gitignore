@@ -224,3 +224,5 @@ dist
 RAG-App-Tool-Cloudflare/package-lock.json
 .wrangler
 *.tmp
+*/worker-configuration.d.ts
+*/*.toml-bak
