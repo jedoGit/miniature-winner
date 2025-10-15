@@ -2,7 +2,7 @@ export async function embedText(ai: Ai, text: string): Promise<number[]> {
 
   const input = text.slice(0, 2000);
 
-  const embedModel = process?.env?.LLM_EMBED_MODEL || "@cf/baai/bge-base-en-v1.5"
+  const embedModel = process?.env?.LLM_EMBED_MODEL;
 
   const result = await ai.run((embedModel as keyof AiModels), { text: input });
 

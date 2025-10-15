@@ -18,8 +18,7 @@ chatRoute.post("/chat", async (c) => {
 
   // Create the context list.
   const context = similars.map((v: { metadata: { chunkText: any; }; }) => v.metadata?.chunkText ?? "").join("\n\n");
-  const systemPrompt =
-    process?.env?.SYSTEM_PROMPT || c.env.SYSTEM_PROMPT;
+  const systemPrompt = process?.env?.SYSTEM_PROMPT;
   
   // Ask the LLM to generate a response based on context, question and system prompt
   const answer = await generateResponse(c.env.AI, context, question, systemPrompt);

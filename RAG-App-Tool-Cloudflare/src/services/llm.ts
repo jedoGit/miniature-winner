@@ -5,7 +5,7 @@ export async function generateResponse(
   systemPrompt: string
 ): Promise<string> {
   
-  const chatModel = process?.env?.LLM_CHAT_MODEL || "@cf/meta/llama-3.2-1b-instruct";
+  const chatModel = process?.env?.LLM_CHAT_MODEL;
 
   const result = await ai.run((chatModel as keyof AiModels), {
     messages: [
