@@ -107,14 +107,14 @@ npm run deploy
 | ------ | ----------- | --------------------------------------------------- |
 | POST   | /api/upload | Upload .md file → Embeds to Vectorize + saves to D1 |
 | POST   | /api/chat   | Ask a question                                      |
-| GET    | /           | Health check                                        |
+| GET    | /health     | Health check                                        |
 
 # CURL Commands
 
 ## Health Endpoint
 
 ```
-curl -G  "http://127.0.0.1:8787/"
+curl -G  "http://127.0.0.1:8787/health"
 ```
 
 ## Upload Endpoint

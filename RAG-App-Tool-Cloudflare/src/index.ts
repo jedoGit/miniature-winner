@@ -17,7 +17,7 @@ const app = new Hono<{
   };
 }>();
 
-const cloudflareOriginCors = process?.env?.CLOUD_FLARE_ORIGIN_CORS || '*';
+const cloudflareOriginCors = process?.env?.CLOUD_FLARE_ORIGIN_CORS;
 
 app.use("/*",
   cors({
@@ -29,9 +29,11 @@ app.use("/*",
   })
 );
 
-app.get("/", (c) => c.text("🤖 RAG Chatbot Worker is running!"));
-
+// app.get("/", (c) => c.text("🤖 RAG Chatbot Worker is running!"));
+app.get("/health", (c) => c.json({
+  status: "ok",
+}));
 app.route("/api", chatRoute);
-app.route("/api", uploadRoute);
+// app.route("/api", uploadRoute);
 
 export default app;
