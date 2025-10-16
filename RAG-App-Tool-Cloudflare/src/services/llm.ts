@@ -2,9 +2,13 @@ export async function generateResponse(
   ai: Ai,
   context: string,
   question: string,
-  systemPrompt: string
+  systemPrompt: string,
+  max_tokens: number,
+  temperature: number,
+  top_p: number,
+  top_k: number
 ): Promise<string> {
-  
+
   const chatModel = process?.env?.LLM_CHAT_MODEL;
 
   const result = await ai.run((chatModel as keyof AiModels), {
@@ -12,7 +16,11 @@ export async function generateResponse(
       { role: "system", content: systemPrompt },
       { role: "user", content: `Context:\n${context}\n\nQuestion: ${question}` }
     ],
-    stream: false
+    stream: false,
+    max_tokens: max_tokens,
+    temperature: temperature,
+    top_p: top_p,
+    top_k: top_k
   });
 
   if (typeof result === "string") return result;

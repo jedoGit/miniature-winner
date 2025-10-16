@@ -19,9 +19,13 @@ chatRoute.post("/chat", async (c) => {
   // Create the context list.
   const context = similars.map((v: { metadata: { chunkText: any; }; }) => v.metadata?.chunkText ?? "").join("\n\n");
   const systemPrompt = process?.env?.SYSTEM_PROMPT;
+  const temperature = process?.env?.LLM_CHAT_TEMPERATURE;
+  const max_tokens = process?.env?.LLM_CHAT_MAX_TOKENS;
+  const top_p = process?.env?.LLM_CHAT_TOP_P;
+  const top_k = process?.env?.LLM_CHAT_TOP_K;
   
   // Ask the LLM to generate a response based on context, question and system prompt
-  const answer = await generateResponse(c.env.AI, context, question, systemPrompt);
+  const answer = await generateResponse(c.env.AI, context, question, systemPrompt, Number(max_tokens), Number(temperature), Number(top_p), Number(top_k));
 
   return c.json({
     answer,
