@@ -4,14 +4,57 @@ import { querySimilar } from "../services/vectorstore";
 import { generateResponse } from "../services/llm";
 import { env } from "cloudflare:workers";
 
+interface KV_RATE_LIMIT_RETURN_TYPE {
+  start: number;
+  count: number;
+}
+
 export const chatRoute = new Hono<{
-  Bindings: { AI: Ai; VECTORIZE: VectorizeIndex; SYSTEM_PROMPT: string };
+  Bindings: Env
 }>();
+
+// Helper: rate-limit key
+function rateLimitKey(ip: string) {
+  return `rate:${ip}`;
+}
+
+// Rate limit settings
+const RATE_LIMIT_MAX = 10; // 10 requests
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // per minute
 
 chatRoute.post("/chat", async (c) => {
   const body = await c.req.json();
   const turnstileToken = body["cf-turnstile-response"];
   const question = body["question"];
+
+  const ip = c.req.header("CF-Connecting-IP") || "unknown";
+
+  // Rate limiting
+  if (!c.env.RATE_LIMIT_KV) {
+    console.warn("RATE_LIMIT_KV binding not found.");
+  } else {
+    const key = rateLimitKey(ip);
+    const current : KV_RATE_LIMIT_RETURN_TYPE | null = await c.env.RATE_LIMIT_KV.get(key, "json");
+    const now = Date.now();
+
+    if (current && now - current.start < RATE_LIMIT_WINDOW_MS) {
+      if (current.count >= RATE_LIMIT_MAX) {
+        return c.json({ error: "Rate limit exceeded. Try again later." }, 429);
+      } else {
+        await c.env.RATE_LIMIT_KV.put(
+          key,
+          JSON.stringify({ start: current.start, count: current.count + 1 }),
+          { expirationTtl: 120 }
+        );
+      }
+    } else {
+      await c.env.RATE_LIMIT_KV.put(
+        key,
+        JSON.stringify({ start: now, count: 1 }),
+        { expirationTtl: 120 }
+      );
+    }
+  }
 
   // console.log(question)
   // console.log(turnstileToken)
@@ -22,8 +65,7 @@ chatRoute.post("/chat", async (c) => {
   // }
 
   // Verify Turnstile Token
-  // const ip = c.req.header("CF-Connecting-IP") || "";
-
+  
   // console.log(ip)
 
   // const formData = new FormData();
