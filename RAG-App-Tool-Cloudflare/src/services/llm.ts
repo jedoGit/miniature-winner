@@ -1,3 +1,5 @@
+import { env } from "cloudflare:workers";
+
 export async function generateResponse(
   ai: Ai,
   context: string,
@@ -9,7 +11,7 @@ export async function generateResponse(
   top_k: number
 ): Promise<string> {
 
-  const chatModel = process?.env?.LLM_CHAT_MODEL;
+  const chatModel = env.LLM_CHAT_MODEL;
 
   const result = await ai.run((chatModel as keyof AiModels), {
     messages: [

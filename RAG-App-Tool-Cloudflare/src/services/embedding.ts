@@ -1,9 +1,11 @@
+import { env } from "cloudflare:workers";
+
 export async function embedText(ai: Ai, text: string): Promise<number[]> {
 
   const input = text.slice(0, 2000);
 
-  const embedModel = process?.env?.LLM_EMBED_MODEL;
-  const pooling = process?.env?.LLM_EMBED_POOLING;
+  const embedModel = env.LLM_EMBED_MODEL;
+  const pooling = env.LLM_EMBED_POOLING;
 
   const result = await ai.run((embedModel as keyof AiModels), { text: input, pooling: pooling });
 

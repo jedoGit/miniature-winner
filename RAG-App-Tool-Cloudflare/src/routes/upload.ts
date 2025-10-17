@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { embedText } from "../services/embedding";
 import { insertVectors } from "../services/vectorstore";
 import { splitRecursively } from "../services/splitter-langchain";
+import { env } from "cloudflare:workers";
 
 export const uploadRoute = new Hono<{
   Bindings: { AI: Ai; VECTORIZE: VectorizeIndex; DB: D1Database };
@@ -18,8 +19,8 @@ uploadRoute.post("/upload", async (c) => {
   // Get the content of the markdown file received then split the file recursively
   const mdFileContent = await file.text();
 
-  const chunkSize = Number(process?.env?.CHUNK_SIZE) || 800
-  const chunkOverlap = Number(process?.env?.CHUNK_OVERLAP) || 100
+  const chunkSize = Number(env.UPLOAD_CHUNK_SIZE) || 800
+  const chunkOverlap = Number(env.UPLOAD_CHUNK_OVERLAP) || 100
 
   const chunks = await splitRecursively(mdFileContent, chunkSize, chunkOverlap);
 
