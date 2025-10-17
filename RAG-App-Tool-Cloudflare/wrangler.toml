@@ -27,6 +27,10 @@ binding = "DB"
 database_name = "rag-chatbot-db"
 database_id = "YOUR D1 DB ID"
 
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "your_rate_limit_kv_id"
+
 [vars]
 CLOUD_FLARE_CORS_ORIGIN = "URL1, URL2, URL3"
 CLOUD_FLARE_CORS_ALLOW_HEADERS = "Origin, Content-Type, Authorization"
