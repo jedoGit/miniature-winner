@@ -21,6 +21,7 @@ function rateLimitKey(ip: string) {
 // Rate limit settings
 const RATE_LIMIT_MAX = 10; // 10 requests
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // per minute
+const RATE_KV_TTL = 120
 
 chatRoute.post("/chat", async (c) => {
   const body = await c.req.json();
@@ -44,14 +45,14 @@ chatRoute.post("/chat", async (c) => {
         await c.env.RATE_LIMIT_KV.put(
           key,
           JSON.stringify({ start: current.start, count: current.count + 1 }),
-          { expirationTtl: 120 }
+          { expirationTtl: RATE_KV_TTL }
         );
       }
     } else {
       await c.env.RATE_LIMIT_KV.put(
         key,
         JSON.stringify({ start: now, count: 1 }),
-        { expirationTtl: 120 }
+        { expirationTtl: RATE_KV_TTL }
       );
     }
   }
