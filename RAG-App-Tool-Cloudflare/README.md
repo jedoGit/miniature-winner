@@ -1,3 +1,12 @@
+# RAG Application Flow
+
+## Upload Flow
+<img width="823" height="268" alt="image" src="https://github.com/user-attachments/assets/f94bb8c5-4d81-4918-a2af-3c36f98478f0" />
+
+## Chat Flow
+<img width="979" height="376" alt="image" src="https://github.com/user-attachments/assets/06d97f93-dab0-4113-8fc3-89a99a5b1ef8" />
+
+
 # Prepare the database
 
 ## Create your resources:
