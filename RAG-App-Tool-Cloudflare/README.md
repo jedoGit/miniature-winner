@@ -1,6 +1,11 @@
 # RAG Application Flow
 Use-case: Chatbot for Sports and Fitness Facility that responds to guests for questions about company FAQ. It uses a company FAQ document as source of context to generate the response.
 
+## Parameter definition:
+- top_p: Adjusts how many words that are available for the LLM model to choose from. Lower value means less words available and less creative and higher value means more choices of words and more creative.
+- top_k: Limits the LLM to use the top k most probably words. Lower value means focused response and higher value means more variety and potential surprises.
+- temperature: Controls the randomness of the output. Higher values produce more random results.
+
 ## Upload Flow
 <img width="833" height="336" alt="image" src="https://github.com/user-attachments/assets/66802056-ee2a-44d4-bde7-d27475cd0c7b" />
 
