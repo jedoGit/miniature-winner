@@ -3,7 +3,7 @@ Use-case: Chatbot for Sports and Fitness Facility that responds to guests for qu
 
 ## Parameter definition:
 - top_p: Adjusts how many words that are available for the LLM model to choose from. Lower value means less words available and less creative and higher value means more choices of words and more creative.
-- top_k: Limits the LLM to use the top k most probably words. Lower value means focused response and higher value means more variety and potential surprises.
+- top_k: Limits the LLM to use the top k most probable words. Lower value means focused response and higher value means more variety and potential surprises.
 - temperature: Controls the randomness of the output. Higher values produce more random results.
 
 ## Upload Flow
