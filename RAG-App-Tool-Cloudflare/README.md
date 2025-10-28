@@ -1,4 +1,4 @@
-# RAG Application Flow
+# Retreival Augmented Generation (RAG) Application Flow
 Use-case: Chatbot for Sports and Fitness Facility that responds to guests for questions about company FAQ. It uses a company FAQ document as source of context to generate the response.
 
 ## Parameter definition:
