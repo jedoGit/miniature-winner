@@ -1,6 +1,9 @@
 # Retreival Augmented Generation (RAG) Application Flow
 Use-case: Chatbot for Sports and Fitness Facility that responds to guests for questions about company FAQ. It uses a company FAQ document as source of context to generate the response.
 
+## Infrastructure
+This applicattion is written in typescript and is hosted in Cloudflare using Cloudflare Workers and Workers AI.
+
 ## Parameter definition:
 - top_p: Adjusts how many words that are available for the LLM model to choose from. Lower value means less words available and less creative and higher value means more choices of words and more creative.
 - top_k: Limits the LLM to use the top k most probable words. Lower value means focused response and higher value means more variety and potential surprises.
@@ -11,9 +14,6 @@ Use-case: Chatbot for Sports and Fitness Facility that responds to guests for qu
 
 ## Chat Flow
 <img width="979" height="376" alt="image" src="https://github.com/user-attachments/assets/06d97f93-dab0-4113-8fc3-89a99a5b1ef8" />
-
-## Infrastructure
-This applicattion is hosted in Cloudflare using Cloudflare Workers and Workers AI.
 
 ## Future plans
 Implement an agentic AI flow using OSS-GPT-20B and provide access to tools such as web search, gmail, google sheets and google calendar using Langchain agent executor library.
