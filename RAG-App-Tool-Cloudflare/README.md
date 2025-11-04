@@ -12,6 +12,11 @@ Use-case: Chatbot for Sports and Fitness Facility that responds to guests for qu
 ## Chat Flow
 <img width="979" height="376" alt="image" src="https://github.com/user-attachments/assets/06d97f93-dab0-4113-8fc3-89a99a5b1ef8" />
 
+## Infrastructure
+This applicattion is hosted in Cloudflare using Cloudflare Workers and Workers AI.
+
+## Future plans
+Implement an agentic AI flow using OSS-GPT-20B and provide access to tools such as web search, gmail, google sheets and google calendar using Langchain agent executor library.
 
 # Prepare the database
 
