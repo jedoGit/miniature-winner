@@ -2,7 +2,7 @@
 Use-case: Chatbot for Sports and Fitness Facility that responds to guests for questions about company FAQ. It uses a company FAQ document as source of context to generate the response.
 
 ## Infrastructure
-This applicattion is written in typescript and is hosted in Cloudflare using Cloudflare Workers and Workers AI.
+This applicattion is written in typescript and is hosted in Cloudflare using Cloudflare Workers and Cloudflare Workers AI.
 
 ## Parameter definition:
 - top_p: Adjusts how many words that are available for the LLM model to choose from. Lower value means less words available and less creative and higher value means more choices of words and more creative.
